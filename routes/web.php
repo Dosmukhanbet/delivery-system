@@ -68,11 +68,11 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth','admin']], function()
 });
 
 Route::get('emailtest', function(){
-	$admin = User::where('type', 'admin')->first();
+	// $admin = User::where('type', 'admin')->first();
 
     $order = Order::find(1)->first();
 
-    Mail::to($admin)->send(new OrderCreated($order));
+    Mail::to('sdsd@asdsddsd.wewewewe')->send(new OrderCreated($order));
 });
 
 Route::get('updatepass', function(){
