@@ -72,7 +72,7 @@ Route::get('emailtest', function(){
 
     $order = Order::find(1)->first();
 
-    Mail::to(112)->send(new OrderCreated($order));
+    Mail::to($admin)->send(new OrderCreated($order));
 });
 
 Route::get('updatepass', function(){
