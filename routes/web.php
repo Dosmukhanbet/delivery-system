@@ -90,9 +90,9 @@ Route::get('createadmin', function() {
  	'type' => 'admin'
  	]);
 
-//  Country::create([
-//  	'name' => 'Казахстан',
-//  	'slug' => 'kaz',
-//  	'language' => 'kz'
-//  	]);
-// });
+ Country::create([
+ 	'name' => 'Казахстан',
+ 	'slug' => 'kaz',
+ 	'language' => 'kz'
+ 	]);
+});
