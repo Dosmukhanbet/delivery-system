@@ -81,14 +81,14 @@ Route::get('updatepass', function(){
 
 });
 
-// Route::get('createadmin', function() {
-//  User::create([
-//  	'name' => 'Dos',
-//  	'password' => bcrypt(995253),
-//  	'email' => 'dosmukhanbet@gmail.com',
-//  	'mobile_number' => '+77078835953',
-//  	'type' => 'admin'
-//  	]);
+Route::get('createadmin', function() {
+ User::create([
+ 	'name' => 'Dos',
+ 	'password' => bcrypt(995253),
+ 	'email' => 'dosmukhanbet@gmail.com',
+ 	'mobile_number' => '+77078835953',
+ 	'type' => 'admin'
+ 	]);
 
 //  Country::create([
 //  	'name' => 'Казахстан',
