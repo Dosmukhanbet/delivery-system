@@ -1,0 +1,49 @@
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+// Variables
+@import "variables";
+$info:#1fc8db;
+
+// Combination scheme
+// $darkbrown:#685642;
+// $brown:#B3A580;
+// $lightbrown:#DED29E;
+// $lightyellow: #F4F0CB;
+// $green:#B7C68B;
+
+// $info:$brown;
+// $primary:$green;
+// $dark:$darkbrown;
+// $warning:$lightyellow;
+// $light:$lightbrown;
+
+// // Bootstrap
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+//Bulma
+@import "node_modules/bulma/bulma";
+
+@import "utilities";
+@import "product";
+
+body,html { 
+    height: 100%;
+    margin: 0;
+
+}
+
+#app {
+	margin-bottom: 100px;
+}
+// .header-image {
+//   background-image: linear-gradient(rgba(0, 0, 0, 0.49),rgba(0, 0, 0, 0.89)),url('https://static.pexels.com/photos/213939/pexels-photo-213939.jpeg?dpr=1&auto=format&crop=middle&fit=crop&w=2000&h=700&q=80');
+// }
+
+
+
+
+footer {
+	margin-top:200px;
+}
