@@ -68,7 +68,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth','admin']], function()
 });
 
 Route::get('emailtest', function(){
-	// $admin = User::where('type', 'admin')->first();
+	$admin = User::where('type', 'admin')->first();
 
     $order = Order::find(1)->first();
 
