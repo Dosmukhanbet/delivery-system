@@ -9,13 +9,13 @@
              <div class="columns"> 
              	 <div class="column is-4">
              	 	<div class="media">
-             	 		<div class="meida-left">
+             	 		{{-- <div class="meida-left">
              	 			 <figure class="media-left">
 							    <p class="image is-64x64">
 							      <img src="http://bulma.io/images/placeholders/128x128.png">
 							    </p>
 							  </figure>
-             	 		</div>
+             	 		</div> --}}
              	 		<div class="media-content">
              	 			<h3 class="title is-4">Выберите заведение с лучшими условиями вашего города</h3>
              	 		</div>
@@ -23,13 +23,13 @@
                 </div>
                 <div class="column is-4">
                     <div class="media">
-                        <div class="meida-left">
+                        {{-- <div class="meida-left">
                              <figure class="media-left">
                                 <p class="image is-64x64">
                                   <img src="http://bulma.io/images/placeholders/128x128.png">
                                 </p>
                               </figure>
-                        </div>
+                        </div> --}}
                         <div class="media-content">
                             <h3 class="title is-4">Ознакомьтесь с меню. И добавьте в корзину</h3>
                         </div>
@@ -37,13 +37,13 @@
                 </div>
                 <div class="column is-4">
                     <div class="media">
-                        <div class="meida-left">
+                        {{-- <div class="meida-left">
                              <figure class="media-left">
                                 <p class="image is-64x64">
                                   <img src="http://bulma.io/images/placeholders/128x128.png">
                                 </p>
                               </figure>
-                        </div>
+                        </div> --}}
                         <div class="media-content">
                             <h3 class="title is-4">Оформите заявку, указавь Ваш район. Вы увидите рестораны, готовые привезти вам вкусную еду</h3>
                         </div>
