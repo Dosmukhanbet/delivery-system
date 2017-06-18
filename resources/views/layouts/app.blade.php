@@ -7,6 +7,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="/css/app.css" >
+    <link rel="stylesheet" href="/css/animate.css" >
     <link rel="stylesheet" href="/css/admin.css" >
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Kelly+Slab" rel="stylesheet">
@@ -29,7 +30,6 @@
                 @yield('content') 
                <flash message="{{ session('flash') }}"></flash>
         </div>
-      
        <div>
               @include('partials.footer')
        </div>

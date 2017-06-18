@@ -11,10 +11,12 @@
 						@foreach ($chunk as $category) 
 							<div class="column is-4 has-text-centered">
 								<a href="{{ route('shops', [$city->slug,$category->slug] )}}">
-									<div class="cat_block">
+									<div class="cat_block gradient">
 										<figure class="image is-3by2">
 											<img class="category_image" src="/app/{{$category->photo_path}}" alt="">
+											{{-- <div class="gradient"></div> --}}
 										</figure>
+										
 										<p class="cat_block_text title is-3">
 											{{ $category->name }}
 										</p>
