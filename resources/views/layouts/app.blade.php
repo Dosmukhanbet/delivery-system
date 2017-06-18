@@ -27,12 +27,7 @@
        @include('partials.nav')     
         <div id="app">
                 @yield('content') 
-
-      @if (session('flash'))
-        {{ dd(session('flash')) }}
-      @endif
-
-              <flash message="{{ session('flash') }}"></flash>
+               <flash message="{{ session('flash') }}"></flash>
         </div>
       
        <div>

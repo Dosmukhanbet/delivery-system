@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<section class="hero is-fullheight is-dark">
+<section class="hero is-fullheight is-light">
 <div class="hero-body">
 <div class="container">
     <div class="columns is-vcentered">

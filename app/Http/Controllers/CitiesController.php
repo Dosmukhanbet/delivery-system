@@ -14,6 +14,6 @@ class CitiesController extends Controller
     {
     	$groups = Group::with('shopCategories')->get();
 
-    	return view('cities.show', compact('city', 'groups'));
+    	return view('cities.main', compact('city', 'groups'));
     } 
 }
