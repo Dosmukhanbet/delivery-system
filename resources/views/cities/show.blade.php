@@ -4,7 +4,7 @@
 @endsection
 
 @section('content')
-		<section class="hero is-medium is-dark">
+		<section class="hero is-dark">
 		 	<div class="hero-body">
 			    <div class="container has-text-centered">
 			      <h1 class="title is-1">
@@ -33,7 +33,7 @@
 											        	<a href="{{ route('shops', [$city->slug,$category->slug] )}}">
 											        		<div class="cat_block">
 												            	<figure class="image is-3by2">
-																	<img src="/app/{{$category->photo_path}}" alt="">
+																	<img class="category_image" src="/app/{{$category->photo_path}}" alt="">
 																</figure>
 																<p class="cat_block_text title is-3">
 													                    {{ $category->name }}
@@ -61,10 +61,10 @@
              </div>
              <div class="columns">
              	 <div class="column is-4">
-                    <h3 class="title is-1 has-text-centered">1</h3>
+                    <h3 class="title is-1 has-text-centered">1. Выберите понравившиеся вам заведение</h3>
                 </div>
                 <div class="column is-4">
-                     <h3 class="title is-1 has-text-centered">2</h3>
+                     <h3 class="title is-1 has-text-centered">2. </h3>
                 </div>
                 <div class="column is-4">
                     <h3 class="title is-1 has-text-centered">3</h3>

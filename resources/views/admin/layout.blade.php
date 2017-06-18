@@ -54,7 +54,7 @@
                         <a href="/admin/manage" class="nav-item is-active">
                           Управление сайтом
                         </a>
-                        <a href="#" class="nav-item">
+                        <a href="/admin/shops" class="nav-item">
                           Магазины, рестораны
                         </a>
                         <a href="#" class="nav-item">
