@@ -7,33 +7,16 @@ use App\User;
 use App\Order;
 use App\Customer;
 use App\OrderProduct;
-use App\Mail\OrderCreated;
 use Illuminate\Http\Request;
 use App\Events\OrderWasCreated;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Mail;
 
 class OrdersController extends Controller
 {	
 	protected $user;
 
     
-    public function index()
-    {
-        
-        $orders = auth()->user()->shopOrders ;
-        
-        return view('shopadmin.orders', compact('orders'));
-    } 
-
-    // SHOW SHOP ORDER
-    public function show(Order $order)
-    {
-        $this->authorize('view', $order);
-        return view('shopadmin.order', compact('order')); 
-    } 
-
-    // STORE NEW ORDER
+     // STORE NEW ORDER
     public function store()
     {
     	$user = User::where('mobile_number', request('mobilenumber'))->first();
@@ -78,8 +61,6 @@ class OrdersController extends Controller
     		'shop_id'=> request('shopId'),
     		'city_id'=> request('cityId')
     		]);
-
-        Mail::to($this->admin)->send(new OrderCreated($order));
 
     	foreach (request('products') as $product) {
     		// return $product;

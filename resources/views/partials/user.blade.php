@@ -1,7 +1,7 @@
 @if( !Auth::check())
           <div class="nav-item field is-grouped">
             <p class="control">
-              <a href="/login" class="button is-info" >
+              <a href="/login" class="button is-danger is-outlined" >
                 <span>Войти</span>
               </a>
             </p>

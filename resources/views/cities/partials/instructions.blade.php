@@ -1,53 +1,45 @@
-<section class="hero is-info is-medium mt-2">
+<section class="hero is-primary instructions mt-2">
           <div class="hero-body">
             <div class="container">
-             <div class="columns">
-             	<div class="column is-12">             	
-             		<h3 class="title is-2 is-spaced has-text-centered">Как сделать заказ?</h3>
-             	</div>
+             <div class="level">
+             		<h3 class="level-item title is-2 has-text-centered">Как сделать заказ?</h3>
              </div>
-             <div class="columns"> 
+             <div class="columns mt-4"> 
              	 <div class="column is-4">
-             	 	<div class="media">
-             	 		{{-- <div class="meida-left">
-             	 			 <figure class="media-left">
-							    <p class="image is-64x64">
-							      <img src="http://bulma.io/images/placeholders/128x128.png">
-							    </p>
-							  </figure>
-             	 		</div> --}}
-             	 		<div class="media-content">
-             	 			<h3 class="title is-4">Выберите заведение с лучшими условиями вашего города</h3>
-             	 		</div>
-             	 	</div>	
+                    <div class="level">
+                        <div class="level-item has-text-centered">
+                          <figure class="image is-64x64">
+                            <img src="/app/instructions/restaurant2.png">
+                          </figure>
+                        </div>
+                    </div>        
+             	 	<h3 class="title is-4 has-text-centered">
+                        Выберите заведение с лучшими условиями в вашем городе
+                    </h3>
                 </div>
                 <div class="column is-4">
-                    <div class="media">
-                        {{-- <div class="meida-left">
-                             <figure class="media-left">
-                                <p class="image is-64x64">
-                                  <img src="http://bulma.io/images/placeholders/128x128.png">
-                                </p>
-                              </figure>
-                        </div> --}}
-                        <div class="media-content">
-                            <h3 class="title is-4">Ознакомьтесь с меню. И добавьте в корзину</h3>
+                    <div class="level">
+                        <div class="level-item has-text-centered">
+                          <figure class="image is-64x64">
+                            <img src="/app/instructions/menu.png">
+                          </figure>
                         </div>
                     </div>  
+                    <h3 class="title is-4 has-text-centered">Ознакомьтесь с меню. <br>
+                        И добавьте в корзину
+                    </h3>
                 </div>
                 <div class="column is-4">
-                    <div class="media">
-                        {{-- <div class="meida-left">
-                             <figure class="media-left">
-                                <p class="image is-64x64">
-                                  <img src="http://bulma.io/images/placeholders/128x128.png">
-                                </p>
-                              </figure>
-                        </div> --}}
-                        <div class="media-content">
-                            <h3 class="title is-4">Оформите заявку, указавь Ваш район. Вы увидите рестораны, готовые привезти вам вкусную еду</h3>
+                    <div class="level">
+                        <div class="level-item has-text-centered">
+                          <figure class="image is-64x64">
+                            <img src="/app/instructions/form.png">
+                          </figure>
                         </div>
                     </div>  
+                    <h3 class="title is-4 has-text-centered">
+                       Оформите заявку, указавь Ваш район. Вы увидите рестораны, готовые привезти вам вкусную еду
+                    </h3>
                 </div>
              </div>
             </div>

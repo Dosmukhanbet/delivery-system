@@ -1,6 +1,8 @@
  <p class="title is-3 nav-item">
-    <a href="/">
-    	zakaz.express
+    <a href="/" class="logo marmelad">
+    	zakaz.<span>express</span>
     </a>
  </p>
+ 
+
 

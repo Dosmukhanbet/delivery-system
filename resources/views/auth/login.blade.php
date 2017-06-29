@@ -1,13 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-<section class="hero is-fullheight is-light">
+<section class="hero is-fullheight">
 <div class="hero-body">
 <div class="container">
     <div class="columns is-vcentered">
         <div class="column is-4 is-offset-4">
-                <h3 class="title is-4 has-text-centered"><strong>Авторизация</strong></h3>
+                {{-- <h3 class="title is-4 has-text-centered"><strong>Авторизация</strong></h3> --}}
                 <div class="login box">
+                  <h3 class="title is-4 has-text-centered"><strong>Авторизация</strong></h3><hr>
                     <form role="form" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
 
@@ -61,7 +62,7 @@
 
                         <div class="field">
                             <p class="control">
-                                <button type="submit" class="button is-info">
+                                <button type="submit" class="button is-primary">
                                     Вход
                                 </button>
                             </p>

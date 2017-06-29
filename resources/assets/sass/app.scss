@@ -23,27 +23,34 @@ $info:#1fc8db;
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
 //Bulma
-@import "node_modules/bulma/bulma";
-
+// @import "node_modules/bulma/bulma";
+@import "themes/flatly";
 @import "utilities";
+@import "fonts";
+@import "intro";
+@import "categories";
 @import "product";
+@import "shop";
+@import "why_us";
+@import "logo";
 
 body,html { 
     height: 100%;
     margin: 0;
-
+    background: #F5F5F5;
 }
 
-#app {
-	margin-bottom: 100px;
-}
 // .header-image {
 //   background-image: linear-gradient(rgba(0, 0, 0, 0.49),rgba(0, 0, 0, 0.89)),url('https://static.pexels.com/photos/213939/pexels-photo-213939.jpeg?dpr=1&auto=format&crop=middle&fit=crop&w=2000&h=700&q=80');
 // }
 
-
-
-
-footer {
-	margin-top:200px;
+.nav {
+	height:70px;
 }
+
+
+
+
+// footer {
+// 	margin-top:200px;
+// }

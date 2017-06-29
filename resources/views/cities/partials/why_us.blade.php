@@ -1,51 +1,52 @@
- <div class="container mt-2">
-        	<div class="columns">
-        		<div class="column is-12">
-        			<h3 class="title is-2 has-text-centered">Почему заказывать через наш сервис удобно?</h3>
-        		</div>
+ <section class="hero">
+    <div class="hero-body why_us">
+        <div class="container">
+        	
+          <div class="level">
+        		<h3 class="level-item title is-2 has-text-centered">
+               Почему заказывать через наш сервис удобно?
+            </h3>
         	</div>
-        	<div class="columns">
-        		<div class="column is-4">
-                            <div class="media">
-                               {{--  <div class="meida-left">
-                                     <figure class="media-left">
-                                        <p class="image is-64x64">
-                                          <img src="http://bulma.io/images/placeholders/128x128.png">
-                                        </p>
-                                      </figure>
-                                </div> --}}
-                                <div class="media-content">
-                                    <h3 class="title is-4">У нас собраны все заведения вашего города, вам не придется искать в интернете</h3>
-                                </div>
-                            </div>  
-                        </div>
-                        <div class="column is-4">
-                            <div class="media">
-                               {{--  <div class="meida-left">
-                                     <figure class="media-left">
-                                        <p class="image is-64x64">
-                                          <img src="http://bulma.io/images/placeholders/128x128.png">
-                                        </p>
-                                      </figure>
-                                </div> --}}
-                                <div class="media-content">
-                                    <h3 class="title is-4">У нас собраны все заведения вашего города, вам не придется искать в интернете</h3>
-                                </div>
-                            </div>  
-                        </div>
-                        <div class="column is-4">
-                            <div class="media">
-                              {{--   <div class="meida-left">
-                                     <figure class="media-left">
-                                        <p class="image is-64x64">
-                                          <img src="http://bulma.io/images/placeholders/128x128.png">
-                                        </p>
-                                      </figure>
-                                </div> --}}
-                                <div class="media-content">
-                                    <h3 class="title is-4">У нас собраны все заведения вашего города, вам не придется искать в интернете</h3>
-                                </div>
-                            </div>  
-                        </div>
+
+        	<div class="columns mt-4">
+        		  <div class="column is-4">
+                  <div class="level">
+                    <div class="level-item has-text-centered">
+                      <figure class="image is-64x64">
+                        <img src="/app/why_us/list.png">
+                      </figure>
+                    </div>
+                  </div>
+                  <h3 class="title is-4 has-text-centered">
+                    Все рестораны и заведения города на одном сайте
+                  </h3>
+              </div>
+              <div class="column is-4">
+                   <div class="level">
+                    <div class="level-item has-text-centered">
+                      <figure class="image is-64x64">
+                        <img src="/app/why_us/no_call.png">
+                      </figure>
+                    </div>
+                  </div>
+                  <h3 class="title is-4 has-text-centered">
+                    Вам не нужно звонить и диктовать адрес курьеру.
+                  </h3>
+              </div>
+              <div class="column is-4">
+                   <div class="level">
+                    <div class="level-item has-text-centered">
+                      <figure class="image is-64x64">
+                        <img src="/app/why_us/free3.png">
+                      </figure>
+                    </div>
+                  </div>
+                   <h3 class="title is-4 has-text-centered">
+                      Доставка по городу бесплатная!
+                   </h3>
+              </div>
         	</div>
+
         </div>
+    </div>
+</section>        

@@ -15,7 +15,7 @@
 					<div class="field">
 						  <label class="label">City</label>
 						  <p class="control">
-						    <span class="select {{ $errors->has('unit') ? ' is-danger' : '' }}">
+						    <span class="select {{ $errors->has('city_id') ? ' is-danger' : '' }}">
 						      <select name="city_id">
 						      	@foreach($cities as $city)
 						        	<option value="{{$city->id}}">{{$city->name}}</option>
