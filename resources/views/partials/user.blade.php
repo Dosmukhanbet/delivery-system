@@ -10,7 +10,7 @@
             <p class="nav-item">{{auth()->user()->name}}</p>
             <div class="nav-item field">
               <p class="control">
-                <a href="{{url('/logout')}}" class="button is-info" >
+                <a href="{{url('/logout')}}" class="button is-danger is-outlined" >
                   <span>Выйти</span>
                 </a>
               </p>

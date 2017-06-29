@@ -14,6 +14,7 @@
 			</div>
 			<div class="columns">
 				<div class="column is-4">
+				 @include('admin.list.shopcategories')
 					@include('admin.forms.addshopcategory')
 				</div>
 				<div class="column is-4">
