@@ -9,7 +9,7 @@
 					  			<h5 class="subtitle is-4">lorem text dolor ser sereerer</h5>
 					  		</div>
 					  		<div class="column is-5 is-offset-1">
-					  			<figure class="image is-16by9 intro_image">
+					  			<figure class="image intro_image">
 					  				<img src="/app/intro/food-1.jpg" alt="">
 					  			</figure>
 					  		</div>
@@ -22,7 +22,7 @@
 					  			<h5 class="subtitle is-3">lorem text dolor ser sereerer</h5>
 					  		</div>
 					  		<div class="column is-5 is-offset-1">
-					  			<figure class="image is-16by9 intro_image">
+					  			<figure class="image intro_image">
 					  				<img src="/app/intro/fast-food-logos.jpg" alt="">
 					  			</figure>
 					  		</div>
