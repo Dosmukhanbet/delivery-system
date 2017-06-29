@@ -1,4 +1,4 @@
-<section class="hero is-primary intro">
+<section class="hero is-primary intro is-hidden-mobile">
 		 	<div class="hero-body">
 			    <div class="container has-text-centered">
 			        <div id="owl-demo" class="owl-carousel owl-theme">

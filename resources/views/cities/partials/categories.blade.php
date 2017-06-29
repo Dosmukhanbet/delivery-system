@@ -1,7 +1,7 @@
 <div class="container mt-2">
 	@foreach($groups as $group)
 		<div class="groupnames  has-text-centered">
-			<p class="title is-4">
+			<p class="title is-4 marmelad">
 				Выберите категорию
 			</p>
 		</div>
