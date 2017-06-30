@@ -1,3 +1,7 @@
+.shops {
+margin-bottom: 3rem;
+}
+
 .shop {
 	display: flex;
 }
@@ -5,6 +9,7 @@
 .shop > div {
 	flex:1;
 }
+
 .shop_terms > p{
 	margin-right: 1rem;
 }

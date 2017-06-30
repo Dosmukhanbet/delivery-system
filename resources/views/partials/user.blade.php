@@ -1,7 +1,7 @@
 @if( !Auth::check())
           <div class="nav-item field is-grouped">
             <p class="control">
-              <a href="/login" class="button is-danger is-outlined" >
+              <a href="/login" class="button is-warning is-outlined" >
                 <span>Войти</span>
               </a>
             </p>
@@ -10,7 +10,7 @@
             <p class="nav-item">{{auth()->user()->name}}</p>
             <div class="nav-item field">
               <p class="control">
-                <a href="{{url('/logout')}}" class="button is-danger is-outlined" >
+                <a href="{{url('/logout')}}" class="button is-warning is-outlined" >
                   <span>Выйти</span>
                 </a>
               </p>

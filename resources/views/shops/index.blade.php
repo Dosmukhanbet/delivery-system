@@ -4,7 +4,7 @@
 @endsection
 
 @section('content')
-		<section class="hero is-info">
+		<section class="hero is-success">
 		  <div class="hero-body">
 		    <div class="container">
 		      <h1 class="title">
@@ -18,7 +18,7 @@
 		</section>
  		<div class="container">
  			<div class="columns">
- 				<div class="column is-8 mt-2">
+ 				<div class="column is-8 mt-2 shops">
 		 			@foreach($shops as $shop)
 								<div class="box shop">
 											@include('shops.shop')

@@ -1,27 +1,28 @@
 
-$logo : #CBB292;
+$logo : $warning;
 
 .nav .nav-item a.logo {
-	border: 3px solid rgb(131, 185, 63);
+	border: 2px solid $logo;
 	border-radius: 70px;
-	padding: 4px 12px 0px 12px;
-	font-family: 'Baloo Bhaina', cursive;
-    color: rgb(131, 185, 63);
-    &:hover {
-    	background:#34495E;
-    	color: rgb(131, 185, 63);
-    }
+	padding: 0px 12px 3px 12px;
+	font-family: 'Marmelad', sans-serif;
+    text-transform: uppercase;
+    color: $logo;
+    // &:hover {
+    // 	background:$primary;
+    // 	color: rgb(131, 185, 63);
+    // }
 }
 
 
 
 a.logo > span {
-   color: $logo;
+   color: #EF7D1A;
 }
 
 p.footer_logo > a {
 	font-family: 'Baloo Bhaina', cursive;
-    color: rgb(131, 185, 63) !important;
+    color: $logo !important;
 }
 
 .footer_logo > a >span {

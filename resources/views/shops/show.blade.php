@@ -3,7 +3,7 @@
     {{ $shop->brand_name }} - {{ $shop->description }}
 @endsection
 @section('content')
-        <section class="hero is-info ">
+        <section class="hero is-success">
           <div class="hero-body">
             <div class="container">
              <div class="columns">
@@ -18,7 +18,7 @@
             </div>
           </div>
         </section>
-        <div class="container mt-2">
+        <div class="container mt-2 cart_products">
         	<div class="columns">
         					@include('products.index')
              </div>

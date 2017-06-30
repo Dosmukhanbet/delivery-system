@@ -1,4 +1,4 @@
-<section class="hero is-primary instructions mt-2">
+<section class="hero is-info instructions mt-2">
           <div class="hero-body">
             <div class="container">
              <div class="level">
@@ -38,7 +38,7 @@
                         </div>
                     </div>  
                     <h3 class="title is-4 has-text-centered">
-                       Оформите заявку, указавь Ваш район. Вы увидите рестораны, готовые привезти вам вкусную еду
+                       Укажите ваш район и адрес и вам доставять еду 
                     </h3>
                 </div>
              </div>

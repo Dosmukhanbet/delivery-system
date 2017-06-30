@@ -1,4 +1,4 @@
- <nav class="nav" style="border-bottom:1px solid #5D6D7E;">
+ <nav class="nav is-primary" >
   <div class="container">
       <div class="nav-left">
          @include('partials.logo')
