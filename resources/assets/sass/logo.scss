@@ -4,7 +4,7 @@ $logo : $warning;
 .nav .nav-item a.logo {
 	border: 2px solid $logo;
 	border-radius: 70px;
-	padding: 0px 12px 3px 12px;
+	padding: 0px 12px 0px 12px;
 	font-family: 'Marmelad', sans-serif;
     text-transform: uppercase;
     color: $logo;
@@ -18,10 +18,11 @@ $logo : $warning;
 
 a.logo > span {
    color: #EF7D1A;
+   font-weight:bold;
 }
 
 p.footer_logo > a {
-	font-family: 'Baloo Bhaina', cursive;
+    font-family: 'Marmelad', sans-serif;
     color: $logo !important;
 }
 
