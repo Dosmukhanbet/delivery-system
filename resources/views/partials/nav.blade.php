@@ -18,7 +18,7 @@
         
           {{-- Tablet, Mobile screen --}}
       <div class="nav-right nav-menu is-hidden-tablet">
-        @include('partials.user')
+         @include('partials.user')
       </div>
   </div>
 </nav>

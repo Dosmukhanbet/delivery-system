@@ -37,12 +37,12 @@
                    <div class="level">
                     <div class="level-item has-text-centered">
                       <figure class="image is-64x64">
-                        <img src="/app/why_us/free3.png">
+                        <img src="/app/why_us/percent6.png">
                       </figure>
                     </div>
                   </div>
                    <h3 class="title is-4 has-text-centered">
-                      Доставка по городу бесплатная!
+                      Акции, Скидки, Бонусы
                    </h3>
               </div>
         	</div>

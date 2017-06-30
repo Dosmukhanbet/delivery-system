@@ -5,7 +5,7 @@
 					  <div class="item">
 					  	<div class="columns">
 					  		<div class="column is-6">
-					  			<h3 class="title is-2 is-spaced"><strong>Все лучшие заведения вашего города на одном сайте</strong></h3>
+					  			<h3 class="title is-2 is-spaced"><strong>Все <span class="text-orange">лучшие заведения</span> вашего города на одном сайте</strong></h3>
 					  			<h5 class="subtitle is-4">lorem text dolor ser sereerer</h5>
 					  		</div>
 					  		<div class="column is-5 is-offset-1">
