@@ -34,6 +34,10 @@ Route::post('rates', 'ShopAdminController@saveRate')->middleware('auth', 'shop')
 Route::post('products/{product}/activate','ShopAdminController@activateProduct')->middleware('auth', 'shop');
 Route::delete('products/{product}/deactivate','ShopAdminController@deactivateProduct')->middleware('auth', 'shop');
 
+
+//Partnership
+Route::get('partnership', 'PartnershipController@offer');
+
  // deactivate() {
 	// 			axios.delete('/products/' + this.productid + '/deactivate');
  //                this.active = false;
