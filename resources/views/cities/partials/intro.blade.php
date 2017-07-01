@@ -5,8 +5,13 @@
 					  <div class="item">
 					  	<div class="columns">
 					  		<div class="column is-6">
-					  			<h3 class="title is-2 is-spaced"><strong>Все <span class="text-orange">лучшие заведения</span> вашего города на одном сайте</strong></h3>
-					  			<h5 class="subtitle is-4">lorem text dolor ser sereerer</h5>
+					  			<h3 class="title is-1 is-spaced">
+					  				<strong>
+					  					<span class="text-warning">Сайт №1 в {{ $city->name }}</span><br>
+					  			 		по доставке еды
+					  			 	</strong>
+					  			 </h3>
+					  			<h5 class="subtitle is-4"></h5>
 					  		</div>
 					  		<div class="column is-5 is-offset-1">
 					  			<figure class="image intro_image">
@@ -18,12 +23,17 @@
 					  <div class="item">
 					  	<div class="columns">
 					  		<div class="column is-6">
-					  			<h3 class="title is-1 is-spaced"><strong>Все лучшие заведения вашего города на одном сайте</strong></h3>
-					  			<h5 class="subtitle is-3">lorem text dolor ser sereerer</h5>
+					  			<h3 class="title is-2 is-spaced">
+					  				<strong>
+					  					Лучшие рестораны, заведения <br>
+					  					{{ $city->name }} на одном сайте
+					  				</strong>
+					  			</h3>
+					  			<h5 class="subtitle is-4 text-warning">Вам не нужно помнить адреса, телефоны ресторанов и скачивать тысячи приложении, все рестораны заведения собраны на нашем сайте</h5>
 					  		</div>
 					  		<div class="column is-5 is-offset-1">
-					  			<figure class="image intro_image">
-					  				<img src="/app/intro/fast-food-logos.jpg" alt="">
+					  			<figure class="image intro_image is-16by9">
+					  				<img src="/app/intro/choose.jpg" alt="">
 					  			</figure>
 					  		</div>
 					  	</div>

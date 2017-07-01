@@ -12,6 +12,7 @@ $JAPANESE_INDIGO:#274060;
 $DAZZLED_BLUE:#335C81;
 $ORIOLES_ORANGE:#EF4F1A;
 
+
 $info:$DAZZLED_BLUE;
 $primary:$YANKEES_BLUE;
 $danger:$ORIOLES_ORANGE;
@@ -24,7 +25,6 @@ $orange:#EF7D1A;
 
 //Bulma
 @import "node_modules/bulma/bulma";
-// @import "themes/flatly";
 @import "utilities";
 @import "fonts";
 @import "intro";
@@ -50,7 +50,7 @@ body,html {
 .nav {
 	height:70px;
 	background:$success;
-	border-bottom: 1px solid lighten($success, 10%);
+	border-bottom: 1px solid lighten($success, 8%);
 }
 
 .nav .nav-right {
