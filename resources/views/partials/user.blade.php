@@ -7,7 +7,7 @@
             </p>
           </div>
          @else
-            <p class="nav-item">{{auth()->user()->name}}</p>
+            <p class="nav-item text-warning">{{auth()->user()->name}}</p>
             <div class="nav-item field">
               <p class="control">
                 <a href="{{url('/logout')}}" class="button is-warning is-outlined" >

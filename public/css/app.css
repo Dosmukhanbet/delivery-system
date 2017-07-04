@@ -7372,6 +7372,10 @@ p.footer_logo > a {
   color: #EFE185;
 }
 
+ul.benefits {
+  padding: 0 2rem;
+}
+
 ul.benefits > li {
   margin-bottom: 2rem;
 }

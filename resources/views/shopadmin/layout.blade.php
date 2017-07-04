@@ -26,7 +26,7 @@
     <body>
       <div id="app">
         <div class="columns">
-            <aside class="column is-3 aside hero is-fullheight is-hidden-mobile">
+            <aside class="column is-3 aside hero is-fullheight is-info is-hidden-mobile">
               <div>
                 <div class="main">
                   <div class="title">Main</div>

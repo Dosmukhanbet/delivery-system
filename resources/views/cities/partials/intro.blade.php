@@ -5,13 +5,15 @@
 					  <div class="item">
 					  	<div class="columns">
 					  		<div class="column is-6">
-					  			<h3 class="title is-1 is-spaced">
+					  			<h3 class="title is-2 is-spaced">
 					  				<strong>
 					  					<span class="text-warning">Сайт №1 в {{ $city->name }}</span><br>
 					  			 		по доставке еды
 					  			 	</strong>
 					  			 </h3>
-					  			<h5 class="subtitle is-4"></h5>
+					  			<h5 class="subtitle is-4">
+					  				
+					  			</h5>
 					  		</div>
 					  		<div class="column is-5 is-offset-1">
 					  			<figure class="image intro_image">

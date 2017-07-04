@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Mail;
 Route::post('verifynumber', 'VerificationController@verify');
 
 Route::get('/', function () {
+	// dd(request()->ip());
     return redirect('cities/aktobe');
 });
 Route::get('/home', 'HomeController@index')->name('home');

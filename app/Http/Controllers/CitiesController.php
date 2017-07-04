@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use App\City;
 use App\Group;
-use Illuminate\Http\Request;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\Cache;
 
 class CitiesController extends Controller
 {
@@ -12,8 +13,14 @@ class CitiesController extends Controller
     
     public function show(City $city)
     {
-    	$groups = Group::with('shopCategories')->get();
+    	$month = Carbon::now()->addMonth();
 
-    	return view('cities.main', compact('city', 'groups'));
+    	if ( ! cache('groups') ) 
+    	{
+    	  cache(['groups' => Group::with('shopCategories')->get()], $month);
+    	}
+
+    	return view('cities.main', compact('city'))->with('groups', cache('groups'));
+
     } 
 }

@@ -41,16 +41,16 @@ class ShopAdminController extends Controller
     
      public function saveProduct()
      {
+        
+        
         $this->validate(request(), [
             'name' => 'required',
-            'price' => 'required',
+            'price' => 'required|numeric',
             'unit' => 'required', 
             'photo' => 'required|image',
             'category' =>'required'           
         ]);
      	
-        // $this->savePhotos(request('photo'));
-        // dd(auth()->user()->shops[0]->id);
         Product::create([
             'name' => request('name'),
             'description' => request('description'),
@@ -62,7 +62,15 @@ class ShopAdminController extends Controller
             'is_active' => true
             ]);
 
+        $this->clearCache();
+
         return back()->with('flash', 'Продукт сохранен');
+     } 
+
+     public function clearCache ()
+     {
+        $key = auth()->user()->shops[0]->city->slug . '.' . auth()->user()->shops[0]->slug;
+        cache()->forget($key);
      } 
 
 
@@ -77,6 +85,8 @@ class ShopAdminController extends Controller
                 'price'=>request('price'),
                 'unit_id'=>request('unit_id'),
             ]);
+        
+        $this->clearCache();
 
          if (request()->expectsJson()) {
             return response(['status' => 'Продукт успешно отредактирован!']);
@@ -99,6 +109,7 @@ class ShopAdminController extends Controller
      public function activateProduct(Product $product)
      {
          $product->update(['is_active' => true]);
+         $this->clearCache();
          if (request()->expectsJson()) {
             return response(['status' => 'Продукт успешно активирован!']);
         }
@@ -107,6 +118,7 @@ class ShopAdminController extends Controller
      public function deactivateProduct(Product $product)
      {
          $product->update(['is_active' => false]);
+         $this->clearCache();
          if (request()->expectsJson()) {
             return response(['status' => 'Продукт деактивирован!']);
         }

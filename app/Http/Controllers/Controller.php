@@ -16,6 +16,6 @@ class Controller extends BaseController
 
     public function __construct()
     {
-    	$this->admin = User::where('type', 'admin')->first();         
+    	// $this->admin = User::where('type', 'admin')->first();         
     }
 }

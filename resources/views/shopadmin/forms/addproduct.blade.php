@@ -1,4 +1,4 @@
-<h3 class="title is-4">Форма добавления продукта</h3>
+<h3 class="title is-4">Форма добавления блюда, продукта, товара</h3>
 				<form action="/products" enctype="multipart/form-data" method="POST">
 					{{csrf_field()}}
 					<div class="field">		

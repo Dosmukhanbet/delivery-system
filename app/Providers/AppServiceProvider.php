@@ -6,6 +6,7 @@ use App\City;
 use App\Unit;
 use App\Group;
 use App\District;
+use Carbon\Carbon;
 use App\ShopCategory;
 use App\ProductCategory;
 use Illuminate\Support\Facades\View;
@@ -22,6 +23,11 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Schema::defaultStringLength(191);
+
+        $hour = Carbon::now()->addHour();
+        $day = Carbon::now()->addDay();
+        $week = Carbon::now()->addWeek();
+        $month = Carbon::now()->addMonth();
 
         view()->composer(['shopadmin.products', 'shopadmin.forms.createproduct'], function($view){
             $view->with('units', Unit::all())

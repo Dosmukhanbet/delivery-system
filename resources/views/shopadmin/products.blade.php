@@ -3,10 +3,10 @@
 
 @section('content')
 	@if($products->isNotEmpty())
-			@foreach($products->chunk(4) as $chunk)
+			@foreach($products->chunk(6) as $chunk)
 					<div class="columns">
 						@foreach($chunk as $product)
-							<div class="column is-3">
+							<div class="column is-2">
 								<div class="card">
 									<div class="card-image">
 										<figure class="image is-1by1">

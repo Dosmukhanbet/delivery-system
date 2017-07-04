@@ -67,9 +67,8 @@ class AdminController extends Controller
             'city_id' => request('city_id'),
             'photo_path' => $this->savePhotos(request('logo'), 'logos')
             ]);
-        $shop->shopcategories()->toggle(request('shopcategories'));
 
-
+          $shop->shopcategories()->toggle(request('shopcategories'));
         
     } 
 
