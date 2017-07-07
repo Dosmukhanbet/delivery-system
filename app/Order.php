@@ -4,6 +4,7 @@ namespace App;
 
 use App\Shop;
 use App\User;
+use App\Feedback;
 use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
@@ -15,8 +16,10 @@ class Order extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
-    } 
+    }
 
+    
+    
     
     public function shop()
     {
@@ -26,6 +29,11 @@ class Order extends Model
     public function products ()
     {
     	return $this->belongsToMany(Product::class, 'order_products')->withPivot('quantity');
-    } 
+    }
+
+    public function feedbacks()
+    {
+        return $this->hasMany(Feedback::class);
+    }  
     
 }

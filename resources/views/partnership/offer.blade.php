@@ -1,13 +1,30 @@
 @extends('layouts.app')
 
 @section('content')
- 		<section class="hero is-primary">
+ 		<section class="hero is-success">
 		  <div class="hero-body">
-		    <div class="container has-text-centered">
-			      <h1 class="title">
+		    <div class="container">
+		    <div class="level">
+		    	<div class="level-item">
+		    		 <figure class="image is-96x96">
+		    		<img src="/app/buildings-png/002-restaurant-2.png" alt="">
+		    	  </figure>
+		    	  <h1 class="title ml-2 has-text-centered">
+		    	  	
+		    	  	<span class="text-orange">
+		    	  	<strong>
+			         	Информация для ресторанов <br> и заведении
+			         	 </strong> 
+			        </span> 	
+			       
+			      </h1>
+		    	</div>
+		    {{-- 	<div class="level-item has-text-centered">
+		    		<h1 class="title">
 			         Информация для ресторанов и заведении
 			      </h1>
-			      
+		    	</div> --}}
+		    </div>
 		    </div>
 		  </div>
 		</section>
@@ -18,7 +35,7 @@
 					        Почему содрудничать с нами выгодно?
 					      </h2>
 					</div>
-				</div>
+			</div>
 			<div class="columns">
 				<div class="column is-6 mt-2">
 					<ul class="benefits">
@@ -35,7 +52,7 @@
 							  <img src="/app/partnership/checked.png">
 							</figure>
 							<h3 class="title is-4">
-								Удобная система управления заказами
+								Готовая и Удобная система <br> для управления заказами
 							</h3>
 						</li>
 						<li class="is-flex">
@@ -57,7 +74,7 @@
 							  <img src="/app/partnership/checked2.png">
 							</figure>
 							<h3 class="title is-4">
-								Вам не нужно тратить деньги на рекламу 
+								Отсутствие затрат на рекламу 
 							</h3>
 						</li>
 						<li class="is-flex">
@@ -65,7 +82,7 @@
 							  <img src="/app/partnership/checked2.png">
 							</figure>
 							<h3 class="title is-4">
-								Вы сэкономите на разработке сайта и приложения
+								Вы сэкономите на разработке <br> сайта и приложения
 							</h3>
 						</li>
 						<li class="is-flex">
@@ -79,6 +96,14 @@
 					</ul>
 					
 				</div>
+			</div>
+			<div class="level">
+					<div class="level-item has-text-centered">
+						 <h2 class="title">
+					        Чтобы подключить к системе свое заведение <br>
+					         просто позвоните по номеру +7 (707) 883-59-53
+					      </h2>
+					</div>
 			</div>
 		</div>
 @endsection

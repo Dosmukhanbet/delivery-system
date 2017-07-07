@@ -6,6 +6,7 @@ use App\City;
 use App\User;
 use App\Order;
 use App\Product;
+use App\Feedback;
 use Illuminate\Database\Eloquent\Model;
 
 class Shop extends Model
@@ -51,6 +52,11 @@ class Shop extends Model
      {
         return $this->hasMany(Order::class);
      }  
+
+    public function feedbacks()
+    {
+        return $this->hasMany(Feedback::class);
+    } 
  
 
     public function getRouteKeyName()

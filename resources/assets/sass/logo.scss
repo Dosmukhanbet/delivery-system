@@ -14,9 +14,26 @@ $logo : $warning;
     // }
 }
 
+a.navbar-item > .logo {
+    border: 2px solid $logo;
+    border-radius: 70px;
+    margin-top:17px;
+    padding: 0px 12px 0px 12px;
+    font-family: 'Marmelad', sans-serif;
+    text-transform: uppercase;
+    color: $logo;
+    // &:hover {
+    //  background:$primary;
+    //  color: rgb(131, 185, 63);
+    // }
+}
+
+a.navbar-item:hover {
+    background:$success;
+}
 
 
-a.logo > span {
+a.navbar-item > .logo > span {
    color: $orange;
    font-weight:bold;
 }

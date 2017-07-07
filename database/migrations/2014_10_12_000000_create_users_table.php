@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->enum('type', ['admin', 'customer', 'shop', 'manager']);
             $table->string('mobile_number')->unique();
             $table->string('password');
+            $table->char('api_token', 60)->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

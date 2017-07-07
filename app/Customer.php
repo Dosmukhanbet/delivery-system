@@ -4,6 +4,7 @@ namespace App;
 
 use App\City;
 use App\User;
+use App\Feedback;
 use Illuminate\Database\Eloquent\Model;
 
 class Customer extends Model
@@ -15,9 +16,15 @@ class Customer extends Model
     	return $this->belongsTo(City::class);
     } 
 
-     public function user()
+    public function user()
     {
     	return $this->belongsTo(User::class);
+    }
+
+    
+    public function feedbacks()
+    {
+    	return $this->hasMany(Feedback::class);
     } 
     
     

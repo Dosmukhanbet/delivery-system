@@ -26,7 +26,7 @@
 		    :city="city"
 		    :shop="shop"
 		    v-show="showOrder" 
-		    @close="showOrder = false">
+		    @close="showOrder = false && clearData">
 		</order>
 	</div>
 </template>
@@ -57,6 +57,10 @@
 					summ += item.amount*item.price;
 				});
 				return summ;
+			},
+
+			clearData() {
+				this.items = [];
 			}
 		},
 		

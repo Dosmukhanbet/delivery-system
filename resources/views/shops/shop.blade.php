@@ -4,9 +4,20 @@
 	</a>
 </figure>
 <div class="shop_info">
-    <a href="{{ route('shop', [$city->slug, $shop->slug] )}} ">
-    	<p class="title is-5"><strong>{{$shop->brand_name}}</strong></p>
-	</a>
+	<div class="level">
+		<div class="level-left">
+			<a href="{{ route('shop', [$city->slug, $shop->slug] )}} ">
+		    	<p class="title is-5"><strong>{{$shop->brand_name}}</strong></p>
+			</a>
+		</div>
+
+		{{-- Feedbacks --}}
+		<div class="level-right">
+				<a href="" class="button is-light">Отзывы</a>
+		</div>
+		
+
+	</div>
 	<hr>
     <div class="is-flex shop_terms">
 		<p>

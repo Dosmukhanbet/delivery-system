@@ -14,16 +14,19 @@
     text-align:center;
     top: 30%;
     width: 100%;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
  }
 
  .cat_block_icon {
-    left: 45%;
+    left: 43%;
     position:absolute;
     text-align:center;
     top: 50%;
     width: 100%;
  }
- $round_image:4px;
+
+ $round_image:8px;
+
  .category_image{
  	width:100%;
     border-radius:$round_image;
@@ -32,9 +35,9 @@
  .gradient {
     border-radius:$round_image;
  	position:absolute;
- 	background: -webkit-linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.65));
- 	background: -o-linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.65));
- 	background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.65));
+ 	background: -webkit-linear-gradient(rgba(0, 0,0 ,0.15), rgba(0, 0,0, 0.35));
+ 	background: -o-linear-gradient(rgba(0, 0,0 ,0.15), rgba(0, 0,0, 0.35));
+ 	background: linear-gradient(rgba(0, 0,0 ,0.15), rgba(0, 0,0, 0.35));
  	-webkit-transition: background 1s ease-out;  
     -moz-transition: background 1s ease-out;  
     -o-transition: background 1s ease-out;  

@@ -8,7 +8,11 @@
 			@if($orders->isNotEmpty())
 				<ul>
 					@foreach($orders as $order)
-						<li>ID заявки {{$order->id}}. Дата/время создания {{ $order->created_at }}. Сумма с учетом доставки {{$order->total}}тг. <a href="orders/{{$order->id}}"> Детали заявки</a></li>
+						<li>
+							<a href="orders/{{$order->id}}">
+								ID заявки {{$order->id}}. Дата/время создания {{ $order->created_at }}. Сумма с учетом доставки {{$order->total}}тг.
+							</a>
+						</li>
 					@endforeach
 				</ul>
 			@else

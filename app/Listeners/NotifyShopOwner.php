@@ -41,7 +41,7 @@ class NotifyShopOwner
    
     public function notification($event)
     {
-        return 'У вас новая заявка. Ссылка ' . url( '/shops/' . $event->order->shop->slug . '/orders/'. $event->order->id);
+        return 'У вас новая заявка. Ссылка ' . url('/orders/'. $event->order->id);
     } 
 
 

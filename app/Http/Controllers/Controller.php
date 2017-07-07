@@ -12,10 +12,10 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    public $admin;
+    // public $admin;
 
-    public function __construct()
-    {
-    	// $this->admin = User::where('type', 'admin')->first();         
-    }
+    // public function __construct()
+    // {
+    // 	// $this->admin = User::where('type', 'admin')->first();         
+    // }
 }

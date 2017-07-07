@@ -19,6 +19,7 @@ class CreateShopCategoriesTable extends Migration
             $table->string('slug');
             $table->string('photo_path')->nullable();
             $table->string('thumbnail_path')->nullable();
+            $table->text('description')->nullable();
             $table->unsignedInteger('group_id');
             $table->foreign('group_id')
                   ->references('id')->on('groups')

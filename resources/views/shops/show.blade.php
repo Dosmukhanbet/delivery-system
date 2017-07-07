@@ -9,7 +9,7 @@
              <div class="columns">
              	<div class="column is-8 is-offset-2 shop">
              		<div class="shop">
-        					@include('shops.shop')
+        					@include('shops.info', [ 'feedbacks' => null])
                     </div>
              	</div>
              </div>

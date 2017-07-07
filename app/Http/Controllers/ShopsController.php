@@ -33,7 +33,9 @@ class ShopsController extends Controller
 
         }
 
-    	return view('shops.index', compact('city'))->with('shops', cache($key));
+    	return view('shops.index', compact('city'))
+                   ->with('shops', cache($key))
+                   ->with('category', $category);
     }
 
     /**

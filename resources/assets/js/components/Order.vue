@@ -54,7 +54,7 @@
 						</div>
 							<!-- VERIFICATION -->
 								<div v-show="verification">
-									<p>На номер {{ phoneNumber }} был отправлен SMS с кодом, введите для подтвеждения номера</p>
+									<p>На номер {{ phoneNumber }} был отправлен SMS с кодом, введите код чтобы завершить заказ</p>
 									<br>
 									<div class="field">
 										 <label class="label">Введите код:</label>
@@ -95,7 +95,7 @@
 		      				<li>+</li>
 		      				<li>Доставка: <span v-text="cost"></span>тг.</li>
 		      				<hr>
-		      				<li>Итого: <span v-text="totalcost"></span>тг.</li>
+		      				<li><strong>Итого: <span v-text="totalcost"></span>тг.</strong></li>
 		      			</ul>
 		      			<div v-show="orderFinished" class="notification is-success">
  								Заказ успешно сформирован!<br>
@@ -117,7 +117,7 @@ props: ['products','rates', 'city', 'shop'],
 data() {
 			return {
 				items: this.products,
-				cost: 0,
+				cost: '',
 				verification: false,
 				enteredCode: '',
 				codeFromServer:false,
@@ -181,7 +181,7 @@ methods: {
 					  });
 					  setTimeout(() => {
 				                    this.waitSmsTooLong = true;
-				                }, 10000);
+				                }, 20000);
 				
 			},
 

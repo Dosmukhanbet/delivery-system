@@ -57,6 +57,22 @@ body,html {
 	background:$success;
 }
 
+//newnavbar temporary
+.newnav {
+	background:$success;
+}
+.navbar {
+	height:70px;
+	background:$success;
+	border-bottom: 1px solid lighten($success, 4%);
+}
+
+
+
+.navbar .navbar-menu {
+	background:$success;
+}
+
 
 
 

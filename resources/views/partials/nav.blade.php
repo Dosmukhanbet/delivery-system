@@ -10,6 +10,7 @@
         <span></span>
       </span>
 
+     
           {{-- DESKTOP SCREEN --}}
        <div class="nav-right nav-menu">
         @include('partials.user')

@@ -27,7 +27,7 @@
 
   </head>
     <body>
-       @include('partials.nav')     
+       @include('partials.new.nav')     
         <div id="app">
                 @yield('content') 
                <flash message="{{ session('flash') }}"></flash>

@@ -20,7 +20,9 @@ class CitiesController extends Controller
     	  cache(['groups' => Group::with('shopCategories')->get()], $month);
     	}
 
-    	return view('cities.main', compact('city'))->with('groups', cache('groups'));
+    	return view('cities.main')
+    			   ->with('city', $city)
+    	           ->with('groups', cache('groups'));
 
     } 
 }

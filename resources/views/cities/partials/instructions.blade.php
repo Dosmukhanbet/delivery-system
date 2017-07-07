@@ -14,7 +14,7 @@
                         </div>
                     </div>        
              	 	<h3 class="title is-4 has-text-centered">
-                        Выберите заведение с лучшими условиями в вашем городе
+                        Выберите лучший ресторан по ценам и времени доставки
                     </h3>
                 </div>
                 <div class="column is-4">
@@ -25,8 +25,8 @@
                           </figure>
                         </div>
                     </div>  
-                    <h3 class="title is-4 has-text-centered">Ознакомьтесь с меню. <br>
-                        И добавьте в корзину
+                    <h3 class="title is-4 has-text-centered">Ознакомьтесь с меню<br>
+                        Оформите заявку 
                     </h3>
                 </div>
                 <div class="column is-4">
@@ -38,7 +38,8 @@
                         </div>
                     </div>  
                     <h3 class="title is-4 has-text-centered">
-                       Укажите ваш район и адрес и вам доставять еду 
+                       Укажите ваш район и адрес <br>
+                       Ожидайте курьера
                     </h3>
                 </div>
              </div>

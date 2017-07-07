@@ -36,9 +36,7 @@ class AdminController extends Controller
         return view('admin.shops', compact('shops'));
     } 
 
-    /**
-    * Store Shop
-    */
+   
     public function storeShop()
     {
         $password = str_random(6);
@@ -69,7 +67,7 @@ class AdminController extends Controller
             ]);
 
           $shop->shopcategories()->toggle(request('shopcategories'));
-        
+
     } 
 
      public function savePhotos($file, $destination)
@@ -97,7 +95,7 @@ class AdminController extends Controller
      	$city->districts()->create([
      			'name' => request('name')
      		]);	
-
+        
      	return back();
     } 
 

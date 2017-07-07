@@ -11741,6 +11741,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 				summ += item.amount * item.price;
 			});
 			return summ;
+		},
+		clearData: function clearData() {
+			this.items = [];
 		}
 	},
 
@@ -11931,7 +11934,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 	data: function data() {
 		return {
 			items: this.products,
-			cost: 0,
+			cost: '',
 			verification: false,
 			enteredCode: '',
 			codeFromServer: false,
@@ -11987,7 +11990,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			});
 			setTimeout(function () {
 				_this.waitSmsTooLong = true;
-			}, 10000);
+			}, 20000);
 		},
 		makeOrder: function makeOrder() {
 			var _this2 = this;
@@ -12128,10 +12131,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 	computed: {
 		status: function status() {
-			return this.active ? 'Активен' : 'Не активен';
+			return this.active ? 'Виден' : 'Не виден';
 		},
 		buttonText: function buttonText() {
-			return this.active ? 'деактивировать' : 'активировать';
+			return this.active ? 'убрать' : 'показать';
 		}
 	},
 
@@ -42574,7 +42577,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     },
     on: {
       "close": function($event) {
-        _vm.showOrder = false
+        _vm.showOrder = false && _vm.clearData
       }
     }
   })], 1)
@@ -42678,7 +42681,7 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('p', [_vm._v("Статус: " + _vm._s(_vm.status) + " ")]), _vm._v(" "), _c('footer', {
+  return _c('div', [_c('p', [_vm._v("Видимость: " + _vm._s(_vm.status) + " ")]), _vm._v(" "), _c('footer', {
     staticClass: "card-footer",
     staticStyle: {
       "margin-top": "0"
@@ -43089,7 +43092,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       value: (_vm.verification),
       expression: "verification"
     }]
-  }, [_c('p', [_vm._v("На номер " + _vm._s(_vm.phoneNumber) + " был отправлен SMS с кодом, введите для подтвеждения номера")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
+  }, [_c('p', [_vm._v("На номер " + _vm._s(_vm.phoneNumber) + " был отправлен SMS с кодом, введите код чтобы завершить заказ")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
     staticClass: "field"
   }, [_c('label', {
     staticClass: "label"
@@ -43175,11 +43178,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     domProps: {
       "textContent": _vm._s(_vm.cost)
     }
-  }), _vm._v("тг.")]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('li', [_vm._v("Итого: "), _c('span', {
+  }), _vm._v("тг.")]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('li', [_c('strong', [_vm._v("Итого: "), _c('span', {
     domProps: {
       "textContent": _vm._s(_vm.totalcost)
     }
-  }), _vm._v("тг.")])], 2), _vm._v(" "), _c('div', {
+  }), _vm._v("тг.")])])], 2), _vm._v(" "), _c('div', {
     directives: [{
       name: "show",
       rawName: "v-show",

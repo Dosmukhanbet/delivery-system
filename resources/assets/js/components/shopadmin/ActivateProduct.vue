@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<p>Статус: {{status}} </p>
+		<p>Видимость: {{status}} </p>
 		<footer class="card-footer" style="margin-top:0">
 			
 			<a class="card-footer-item button" 
@@ -16,10 +16,10 @@
 
 		computed: {
 			status() {
-				return this.active ? 'Активен' : 'Не активен';
+				return this.active ? 'Виден' : 'Не виден';
 			},
 			buttonText() {
-				return this.active ? 'деактивировать' : 'активировать';
+				return this.active ? 'убрать' : 'показать';
 			}
 
 		},

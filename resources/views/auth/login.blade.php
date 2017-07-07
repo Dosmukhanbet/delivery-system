@@ -6,7 +6,6 @@
 <div class="container">
     <div class="columns is-vcentered">
         <div class="column is-4 is-offset-4">
-                {{-- <h3 class="title is-4 has-text-centered"><strong>Авторизация</strong></h3> --}}
                 <div class="login box">
                   <h3 class="title is-4 has-text-centered"><strong>Авторизация</strong></h3><hr>
                     <form role="form" method="POST" action="{{ route('login') }}">
