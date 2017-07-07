@@ -8259,6 +8259,10 @@ body, html {
   background: #F5F5F5;
 }
 
+.header-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.49), rgba(0, 0, 0, 0.89)), url("https://static.pexels.com/photos/213939/pexels-photo-213939.jpeg?dpr=1&auto=format&crop=middle&fit=crop&w=2000&h=700&q=80");
+}
+
 .nav {
   height: 70px;
   background: #297373;
