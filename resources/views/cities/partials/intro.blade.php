@@ -9,7 +9,7 @@
 					  				<strong>
 					  					<span class="text-lighter">
 					  					ZAKAZ.EXPRESS <br>
-					  					это Удобно, Быстро и Доступно!
+					  					Удобно, Быстро и Доступно!
 					  					</span>
 					  			 	</strong>
 					  			 </h3>

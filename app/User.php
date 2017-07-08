@@ -21,13 +21,16 @@ class User extends Authenticatable
         'name', 'type', 'mobile_number', 'password', 'remember_token', 'email', 'api_token'
     ];
 
+    
+    protected $with = ['customer'];
+
     /**
      * The attributes that should be hidden for arrays.
      *
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password', 'remember_token', 'email'
     ];
 
     public function customer()

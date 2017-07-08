@@ -38,7 +38,9 @@
 						  </p>
 						</div>
 						<div class="field">
-						<label class="label">Мобильный номер<small class="small-info">Пример: +77075558844</small></label>
+						 <label class="label">
+						 	Мобильный номер<small class="small-info">Пример: +77075558844</small>
+						 </label>
 						  <p class="control">
 						    <input v-model="phoneNumber" class="input" type="text" placeholder="Укажите мобильный номер" required pattern="(\+7|8)[0-9]{10}">
 						  </p>
@@ -131,9 +133,15 @@ data() {
 				waitSmsTooLong: false
 			}
 		},
-created: {
+created() {
+	if(this.signedIn) 
+	{
+		this.username = window.App.user.name;
+		this.phoneNumber = window.App.user.mobile_number;
+	}
+} ,	
 
-		},
+
 computed:{
 				total() 
 				{
@@ -148,7 +156,11 @@ computed:{
 				totalcost()
 				{
 				    return this.total+this.cost;
-				}
+				},
+				signedIn() 
+				{
+	                return window.App.signedIn;
+	            }
 		},
 watch: {
 			enteredCode() {
@@ -165,8 +177,10 @@ methods: {
 			{
 				this.sending =true;
 				let data = {
-					phoneNumber:this.phoneNumber 
+					phoneNumber:this.phoneNumber
 				}
+
+				console.log(data);
 				
 				axios.post('/verifynumber', data)
 					  .then(response => {

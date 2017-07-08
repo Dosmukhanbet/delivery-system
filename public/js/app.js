@@ -11769,13 +11769,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['message'],
-
     data: function data() {
         return {
             body: '',
+            level: 'success',
             show: false
         };
     },
@@ -11785,18 +11786,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         if (this.message) {
             this.flash(this.message);
         }
-
-        window.events.$on('flash', function (message) {
-            return _this.flash(message);
+        window.events.$on('flash', function (data) {
+            return _this.flash(data);
         });
     },
 
-
     methods: {
-        flash: function flash(message) {
-            this.body = message;
+        flash: function flash(data) {
+            this.body = data.message;
+            this.level = data.level;
             this.show = true;
-
             this.hide();
         },
         hide: function hide() {
@@ -11815,6 +11814,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
 //
 //
 //
@@ -11948,8 +11949,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			waitSmsTooLong: false
 		};
 	},
+	created: function created() {
+		if (this.signedIn) {
+			this.username = window.App.user.name;
+			this.phoneNumber = window.App.user.mobile_number;
+		}
+	},
 
-	created: {},
+
 	computed: {
 		total: function total() {
 			var summ = 0;
@@ -11960,6 +11967,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		},
 		totalcost: function totalcost() {
 			return this.total + this.cost;
+		},
+		signedIn: function signedIn() {
+			return window.App.signedIn;
 		}
 	},
 	watch: {
@@ -11978,6 +11988,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			var data = {
 				phoneNumber: this.phoneNumber
 			};
+
+			console.log(data);
 
 			axios.post('/verifynumber', data).then(function (response) {
 				_this.codeFromServer = response.data;
@@ -12277,6 +12289,13 @@ window._ = __webpack_require__(45);
 
 window.Vue = __WEBPACK_IMPORTED_MODULE_0_vue___default.a;
 
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.prototype.authorize = function (handler) {
+  // Additional admin privileges here.
+  var user = window.App.user;
+
+  return user ? handler(user) : false;
+};
+
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
  * for JavaScript based Bootstrap features such as modals and tabs. This
@@ -12297,21 +12316,16 @@ try {
 
 window.axios = __webpack_require__(14);
 
-window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-
 /**
  * Next we will register the CSRF Token as a common header with Axios so that
  * all outgoing HTTP requests automatically have it attached. This is just
  * a simple convenience so we don't have to attach every token manually.
  */
 
-var token = document.head.querySelector('meta[name="csrf-token"]');
-
-if (token) {
-  window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
-} else {
-  console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
-}
+window.axios.defaults.headers.common = {
+  'X-CSRF-TOKEN': window.App.csrfToken,
+  'X-Requested-With': 'XMLHttpRequest'
+};
 
 window.AppEvent = new (function () {
   function _class() {
@@ -12340,7 +12354,9 @@ window.AppEvent = new (function () {
 window.events = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a();
 
 window.flash = function (message) {
-  window.events.$emit('flash', message);
+  var level = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'success';
+
+  window.events.$emit('flash', { message: message, level: level });
 };
 
 /**
@@ -14760,7 +14776,7 @@ exports.push([module.i, "\n.price {\n  color: #000;\n  padding-right: calc(0.625
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)();
-exports.push([module.i, "\n.alert {\n    z-index:9999;\n    position: fixed;\n    right: 25px;\n    top: 25px;\n}\n\n", ""]);
+exports.push([module.i, "\n.alert {\n    position: fixed;\n    right: 25px;\n    top: 25px;\n}\n", ""]);
 
 /***/ }),
 /* 43 */
@@ -42901,11 +42917,12 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       value: (_vm.show),
       expression: "show"
     }],
-    staticClass: "notification is-primary alert",
-    attrs: {
-      "role": "alert"
+    staticClass: "notification alert",
+    class: 'is-' + _vm.level,
+    domProps: {
+      "textContent": _vm._s(_vm.body)
     }
-  }, [_vm._v("\n    " + _vm._s(_vm.body) + "\n")])
+  })
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -43205,7 +43222,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 },function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('label', {
     staticClass: "label"
-  }, [_vm._v("Мобильный номер"), _c('small', {
+  }, [_vm._v("\n\t\t\t\t\t\t \tМобильный номер"), _c('small', {
     staticClass: "small-info"
   }, [_vm._v("Пример: +77075558844")])])
 },function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;

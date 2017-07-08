@@ -1,38 +1,35 @@
 <template>
-    <div class="notification is-primary alert" role="alert" v-show="show">
-        {{ body }}
+    <div class="notification alert"
+         :class="'is-'+level"
+         v-show="show"
+         v-text="body">
     </div>
 </template>
-
 <script>
     export default {
         props: ['message'],
-
         data() {
             return {
                 body: '',
+                level: 'success',
                 show: false
             }
         },
-
         created() {
             if (this.message) {
                 this.flash(this.message);
             }
-
             window.events.$on(
-                'flash', message => this.flash(message)
+                'flash', data => this.flash(data)
             );
         },
-
         methods: {
-            flash(message) {
-                this.body = message;
+            flash(data) {
+                this.body = data.message;
+                this.level = data.level;
                 this.show = true;
-
                 this.hide();
             },
-
             hide() {
                 setTimeout(() => {
                     this.show = false;
@@ -44,10 +41,8 @@
 
 <style>
     .alert {
-        z-index:9999;
         position: fixed;
         right: 25px;
         top: 25px;
     }
-    
 </style>

@@ -22,7 +22,7 @@ class OrdersController extends Controller
     	$user = User::where('mobile_number', request('mobilenumber'))->first();
     	
     	
-        $this->user = $user ? Auth::loginUsingId($user->id) : $this->createCustomer();
+        $this->user = $user ? Auth::loginUsingId($user->id, true) : $this->createCustomer();
     	
     	
     	return $this->createOrder($this->user);
