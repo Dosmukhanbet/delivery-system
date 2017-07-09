@@ -16,12 +16,14 @@
                   {{auth()->user()->name}}
                 </p>
                   @if(auth()->user()->type == 'customer')
-                    <div class="navbar-dropdown">
-                      <a class="navbar-item " href="#">
+                    <div class="navbar-dropdown is-boxed">
+                      <a class="navbar-item " href="/customer/profile">
                         Профиль
                       </a>
-                      <hr class="navbar-divider">
-                      <a class="navbar-item" href="#">
+                      <a class="navbar-item" href="/customer/orders">
+                        Мои заказы
+                      </a>
+                      <a class="navbar-item" href="/customer/leftfeedbacks/">
                         Отзывы
                       </a>
                     </div>

@@ -6,6 +6,15 @@ margin-bottom: 3rem;
 	display: flex;
 }
 
+a.shop_link p {
+	color:$info;
+	text-decoration: underline;
+	&:hover {
+		color:$primary;
+		text-decoration:none;
+	}
+}
+
 .shop > div {
 	flex:1;
 }

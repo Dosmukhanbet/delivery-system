@@ -39,6 +39,8 @@ class OrdersController extends Controller
     			'password'  	=> bcrypt(request('password'))  
     		]);
 
+        Auth::loginUsingId($user->id, true);
+
     	Customer::create([
     		'user_id' => $user->id,
     		'delivery_address' => request('address'), 

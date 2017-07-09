@@ -9,7 +9,7 @@
       		  </button>
 		    </header>
 		    <section class="modal-card-body">
-		      	<div class="columns">
+		      	<div class="columns" v-show="!orderFinished">
 		      		<!-- LEFT SIDE -->
 		      		<div class="column is-6 arsenal fields">
 		      			<div v-show="!verification">
@@ -34,7 +34,7 @@
 		      			<div class="field">
 						  <p class="control">
 						  <label class="label">Имя</label>
-						    <input v-model="username" class="input" type="text" placeholder="Введите ваше имя" required>
+						    <input v-model="username" class="input" :disabled="signedIn" type="text" placeholder="Введите ваше имя" required>
 						  </p>
 						</div>
 						<div class="field">
@@ -42,7 +42,7 @@
 						 	Мобильный номер<small class="small-info">Пример: +77075558844</small>
 						 </label>
 						  <p class="control">
-						    <input v-model="phoneNumber" class="input" type="text" placeholder="Укажите мобильный номер" required pattern="(\+7|8)[0-9]{10}">
+						    <input v-model="phoneNumber" class="input" :disabled="signedIn" type="text" placeholder="Укажите мобильный номер" required pattern="(\+7|8)[0-9]{10}">
 						  </p>
 						</div>
 
@@ -105,6 +105,11 @@
 						</div>
 		      		</div>
 		      		<!-- END RIGHT SIDE -->
+		      	</div>
+		      	<div v-show="orderFinished">
+		      		<p class="title is-5 has-text-centered marmelad">
+		      		Ваш заказ сформирован, ожидайте курьера!
+		      		</p>
 		      	</div>
 		    </section>
 		    <footer class="modal-card-foot" style="margin-top:0">
@@ -180,7 +185,10 @@ methods: {
 					phoneNumber:this.phoneNumber
 				}
 
-				console.log(data);
+				if(this.signedIn) 
+				{ 
+				  this.makeOrder();
+				}
 				
 				axios.post('/verifynumber', data)
 					  .then(response => {
@@ -206,12 +214,12 @@ methods: {
 						 .then(response => {
 						  	console.log(response);
 						  	this.isLoading = false;
-						  	this.items = [];
 						  	this.orderFinished = true;
 						  	flash('Заявка успешно принята!');
 						  	setTimeout(() => {
 				                    this.$emit('close');
-				                }, 3000);
+				                    location.reload();
+				                }, 5000);
 						  })
 						 .catch(error => {
 						  	console.log(error);

@@ -14,7 +14,8 @@ class EventServiceProvider extends ServiceProvider
      */
     protected $listen = [
         'App\Events\OrderWasCreated' => [
-            'App\Listeners\NotifyShopOwner'
+            'App\Listeners\NotifyShopOwner',
+            'App\Listeners\NotifyAdmin'
         ],
     ];
 

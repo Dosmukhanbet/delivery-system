@@ -11714,6 +11714,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -11741,9 +11749,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 				summ += item.amount * item.price;
 			});
 			return summ;
-		},
-		clearData: function clearData() {
-			this.items = [];
 		}
 	},
 
@@ -11753,6 +11758,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		},
 		remove: function remove(index, item) {
 			this.items.splice(index, 1);
+		},
+		clearCart: function clearCart() {
+			this.items = [];
 		}
 	}
 });
@@ -11929,6 +11937,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
 	props: ['products', 'rates', 'city', 'shop'],
@@ -11989,7 +12002,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 				phoneNumber: this.phoneNumber
 			};
 
-			console.log(data);
+			if (this.signedIn) {
+				this.makeOrder();
+			}
 
 			axios.post('/verifynumber', data).then(function (response) {
 				_this.codeFromServer = response.data;
@@ -12011,12 +12026,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			axios.post('/orders', this.orderDatas()).then(function (response) {
 				console.log(response);
 				_this2.isLoading = false;
-				_this2.items = [];
 				_this2.orderFinished = true;
 				flash('Заявка успешно принята!');
 				setTimeout(function () {
 					_this2.$emit('close');
-				}, 3000);
+					location.reload();
+				}, 5000);
 			}).catch(function (error) {
 				console.log(error);
 				_this2.isLoading = false;
@@ -12141,30 +12156,37 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({
 	props: ['active', 'productid'],
 
+	data: function data() {
+		return {
+			isActive: this.active
+		};
+	},
+
+
 	computed: {
 		status: function status() {
-			return this.active ? 'Виден' : 'Не виден';
+			return this.isActive ? 'Виден' : 'Не виден';
 		},
 		buttonText: function buttonText() {
-			return this.active ? 'убрать' : 'показать';
+			return this.isActive ? 'убрать' : 'показать';
 		}
 	},
 
 	methods: {
 		toggle: function toggle() {
-			this.active ? this.deactivate() : this.activate();
+			this.isActive ? this.deactivate() : this.activate();
 		},
 		deactivate: function deactivate() {
 			axios.delete('/products/' + this.productid + '/deactivate').then(function (response) {
-				flash(response.data.status);
+				flash(response.data.status, 'danger');
 			});
-			this.active = false;
+			this.isActive = false;
 		},
 		activate: function activate() {
 			axios.post('/products/' + this.productid + '/activate').then(function (response) {
-				flash(response.data.status);
+				flash(response.data.status, 'warning');
 			});
-			this.active = true;
+			this.isActive = true;
 		}
 	}
 });
@@ -42555,7 +42577,22 @@ module.exports = Component.exports
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "cart"
-  }, [_vm._m(0), _vm._v(" "), _c('ul', _vm._l((_vm.items), function(item, index) {
+  }, [_c('div', {
+    staticClass: "level"
+  }, [_vm._m(0), _vm._v(" "), (_vm.items.length) ? _c('div', {
+    staticClass: "level-right"
+  }, [_c('a', {
+    staticClass: "button is-link marmelad",
+    attrs: {
+      "href": ""
+    },
+    on: {
+      "click": function($event) {
+        $event.preventDefault();
+        _vm.clearCart($event)
+      }
+    }
+  }, [_c('small', [_vm._v("очистить корзину")])])]) : _vm._e()]), _vm._v(" "), _c('ul', _vm._l((_vm.items), function(item, index) {
     return _c('li', [_c('small', {
       domProps: {
         "textContent": _vm._s(item.name)
@@ -42593,12 +42630,14 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     },
     on: {
       "close": function($event) {
-        _vm.showOrder = false && _vm.clearData
+        _vm.showOrder = false && _vm.clearCart
       }
     }
   })], 1)
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('p', {
+  return _c('div', {
+    staticClass: "level-left"
+  }, [_c('p', {
     staticClass: "title is-5"
   }, [_c('span', {
     staticClass: "icon"
@@ -42607,7 +42646,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "aria-hidden": "true"
     }
-  })]), _vm._v("\n\t    КОРЗИНА\n\t")])
+  })]), _vm._v("\n\t\t    КОРЗИНА\n\t\t")])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
@@ -42675,7 +42714,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_vm._v(_vm._s(_vm.total) + " тг.")])]), _vm._v(" "), _c('p', {
     staticClass: "has-text-centered"
   }, [_c('a', {
-    staticClass: "button is-success",
+    staticClass: "button is-danger",
     on: {
       "click": function($event) {
         $event.preventDefault();
@@ -42957,6 +42996,12 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   })]), _vm._v(" "), _c('section', {
     staticClass: "modal-card-body"
   }, [_c('div', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (!_vm.orderFinished),
+      expression: "!orderFinished"
+    }],
     staticClass: "columns"
   }, [_c('div', {
     staticClass: "column is-6 arsenal fields"
@@ -43050,6 +43095,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }],
     staticClass: "input",
     attrs: {
+      "disabled": _vm.signedIn,
       "type": "text",
       "placeholder": "Введите ваше имя",
       "required": ""
@@ -43076,6 +43122,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }],
     staticClass: "input",
     attrs: {
+      "disabled": _vm.signedIn,
       "type": "text",
       "placeholder": "Укажите мобильный номер",
       "required": "",
@@ -43207,7 +43254,16 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       expression: "orderFinished"
     }],
     staticClass: "notification is-success"
-  }, [_vm._v("\n \t\t\t\t\t\t\t\tЗаказ успешно сформирован!"), _c('br'), _vm._v("\n \t\t\t\t\t\t\t\tВ ближайшее время курьер свяжеться с Вами.\n\t\t\t\t\t\t")])])])]), _vm._v(" "), _c('footer', {
+  }, [_vm._v("\n \t\t\t\t\t\t\t\tЗаказ успешно сформирован!"), _c('br'), _vm._v("\n \t\t\t\t\t\t\t\tВ ближайшее время курьер свяжеться с Вами.\n\t\t\t\t\t\t")])])]), _vm._v(" "), _c('div', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.orderFinished),
+      expression: "orderFinished"
+    }]
+  }, [_c('p', {
+    staticClass: "title is-5 has-text-centered marmelad"
+  }, [_vm._v("\n\t\t      \t\tВаш заказ сформирован, ожидайте курьера!\n\t\t      \t\t")])])]), _vm._v(" "), _c('footer', {
     staticClass: "modal-card-foot",
     staticStyle: {
       "margin-top": "0"

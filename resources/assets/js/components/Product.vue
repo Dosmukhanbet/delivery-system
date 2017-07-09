@@ -22,7 +22,7 @@
 					  <span class="price">{{total}} тг.</span>
 				 </p>  
 		          <p class="has-text-centered">
-		            <a class="button is-success" @click.prevent="updateCart">в корзину</a>
+		            <a class="button is-danger" @click.prevent="updateCart">в корзину</a>
 		          </p>
 		      </div>
 		  </div>

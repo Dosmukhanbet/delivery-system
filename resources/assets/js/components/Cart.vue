@@ -1,9 +1,17 @@
 <template>
 	<div class="cart">
-		<p class="title is-5">
-		    <span class="icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
-		    КОРЗИНА
-		</p>
+	<div class="level">
+		<div class="level-left">
+			<p class="title is-5">
+			    <span class="icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+			    КОРЗИНА
+			</p>
+		</div>
+		<div class="level-right" v-if="items.length">
+			<a href="" class="button is-link marmelad" @click.prevent="clearCart"><small>очистить корзину</small></a>
+		</div>
+	</div>
+		
 		<ul>
 			<li v-for="(item, index) in items">
 				<small v-text="item.name"></small>
@@ -26,7 +34,7 @@
 		    :city="city"
 		    :shop="shop"
 		    v-show="showOrder" 
-		    @close="showOrder = false && clearData">
+		    @close="showOrder = false && clearCart">
 		</order>
 	</div>
 </template>
@@ -57,10 +65,6 @@
 					summ += item.amount*item.price;
 				});
 				return summ;
-			},
-
-			clearData() {
-				this.items = [];
 			}
 		},
 		
@@ -71,6 +75,10 @@
 
 			remove(index, item) {
             	this.items.splice(index, 1);
+	        },
+
+	        clearCart() {
+	        	this.items = []; 
 	        }
 
 	        

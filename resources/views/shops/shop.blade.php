@@ -6,7 +6,7 @@
 <div class="shop_info">
 	<div class="level">
 		<div class="level-left">
-			<a href="{{ route('shop', [$city->slug, $shop->slug] )}} ">
+			<a href="{{ route('shop', [$city->slug, $shop->slug] )}}" class="shop_link">
 		    	<p class="title is-5"><strong>{{$shop->brand_name}}</strong></p>
 			</a>
 		</div>

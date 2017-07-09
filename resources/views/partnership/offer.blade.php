@@ -1,17 +1,25 @@
 @extends('layouts.app')
 
 @section('content')
- 		<section class="hero is-success">
+ 		<section class="hero is-primary">
 		  <div class="hero-body">
 		    <div class="container">
 		    <div class="level">
-		    	<div class="level-item">
-		    		 <figure class="image is-96x96">
-		    		<img src="/app/buildings-png/002-restaurant-2.png" alt="">
-		    	  </figure>
+		    	<div class="level-item ">
+		    		<div class="offer_images is-hidden-mobile">
+			    	  <figure class="image is-64x64 mr-1">
+			    		<img src="/app/buildings-png/002-restaurant-2.png" alt="">
+			    	  </figure>
+			    	  <figure class="image is-64x64 mr-1">
+			    		<img src="/app/buildings-png/013-food.png" alt="">
+			    	  </figure>
+			    	  <figure class="image is-64x64 mr-1">
+			    		<img src="/app/buildings-png/009-food-4.png" alt="">
+			    	  </figure>
+			    	</div>  
 		    	  <h1 class="title ml-2 has-text-centered">
 		    	  	
-		    	  	<span class="text-orange">
+		    	  	<span class="text-warning marmelad">
 		    	  	<strong>
 			         	Информация для ресторанов <br> и заведении
 			         	 </strong> 

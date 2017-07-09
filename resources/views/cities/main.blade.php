@@ -9,10 +9,10 @@
 
 
 @section('content')
-		@include('cities.partials.intro')
-	 	@include('cities.partials.categories')
- 		@include('cities.partials.instructions')
- 		@include('cities.partials.why_us')
+		@include('cities.partials.a-intro')
+	 	@include('cities.partials.b-categories')
+ 		@include('cities.partials.c-instructions')
+ 		@include('cities.partials.d-why_us')
 @endsection
 @section('js')
 	<script  src="/js/owl.carousel.min.js"></script>

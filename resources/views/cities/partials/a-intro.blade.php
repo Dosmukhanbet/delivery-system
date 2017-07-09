@@ -1,6 +1,6 @@
-<section class="hero is-success intro is-hidden-mobile">
+<section class="hero bg-hero intro is-hidden-mobile">
 		 	<div class="hero-body">
-			    <div class="container has-text-centered">
+			    <div class="container  has-text-centered">
 			        <div id="owl-demo" class="owl-carousel owl-theme">
 					  <div class="item">
 					  	<div class="columns">
@@ -22,7 +22,7 @@
 					  			<h5 class="subtitle is-4">
 					  				<span class="text-light">
 					  				 Заказывайте вкусности не выходя из дома!
-					  				<span class="text-light">
+					  				</span>
 					  			</h5>
 
 					  		</div>

@@ -5,7 +5,7 @@
 			    <div class="columns">
 			    	<div class="column is-one-quarter">
 			    		<p class="title is-4 footer_logo">
-							<a href="/">
+							<a href="/" style="color:#fff;">
 							    zakaz.<span>express</span>
 							</a>
 						</p>

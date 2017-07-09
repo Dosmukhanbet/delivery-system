@@ -18,7 +18,7 @@ a.navbar-item > .logo {
     border: 2px solid $logo;
     border-radius: 70px;
     margin-top:17px;
-    padding: 0px 12px 0px 12px;
+    padding: 6px 12px 6px 12px;
     font-family: 'Marmelad', sans-serif;
     text-transform: uppercase;
     color: $logo;
@@ -34,15 +34,15 @@ a.navbar-item:hover {
 
 
 a.navbar-item > .logo > span {
-   color: $orange;
+   color: $danger;
    font-weight:bold;
 }
 
 p.footer_logo > a {
     font-family: 'Marmelad', sans-serif;
-    color: $logo !important;
+    color: white !important;
 }
 
 .footer_logo > a >span {
-	color: $logo;
+	color: white;
 }

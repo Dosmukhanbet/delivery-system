@@ -15,10 +15,13 @@
     <title>Admin</title>
 
     <!-- Scripts -->
-    <script>
-        window.Laravel = {!! json_encode([
+   <script>
+        window.App = {!! json_encode([
             'csrfToken' => csrf_token(),
+            'user' => Auth::user(),
+            'signedIn' => Auth::check()
         ]) !!};
+
     </script>
 
 
@@ -73,7 +76,6 @@
                   {{-- @include('shopadmin.hero') --}}
                   <section class="section">
                      @yield('content') 
-                     
                  </section>
             </div> {{-- div column is-10 --}}
         </div> {{-- div columns --}}

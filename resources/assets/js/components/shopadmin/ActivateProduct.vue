@@ -14,34 +14,40 @@
 	export default {
 		props: ['active', 'productid'],
 
+		data() {
+			return {
+				isActive : this.active
+			}
+		},
+
 		computed: {
 			status() {
-				return this.active ? 'Виден' : 'Не виден';
+				return this.isActive ? 'Виден' : 'Не виден';
 			},
 			buttonText() {
-				return this.active ? 'убрать' : 'показать';
+				return this.isActive ? 'убрать' : 'показать';
 			}
 
 		},
 
 		methods: {
 			toggle() {
-				this.active ? this.deactivate() : this.activate();
+				this.isActive ? this.deactivate() : this.activate();
 			},
 			deactivate() {
 				axios.delete('/products/' + this.productid + '/deactivate')
 					 .then(response => {
-								flash(response.data.status);
+								flash(response.data.status, 'danger');
 							});
-                this.active = false;
+                this.isActive = false;
 
 			},
 			activate() {
 				axios.post('/products/' + this.productid + '/activate')
 					 .then(response => {
-								flash(response.data.status);
+								flash(response.data.status, 'warning');
 							});
-                this.active = true;
+                this.isActive = true;
 			}
 
 		}
