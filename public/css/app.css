@@ -23,7 +23,7 @@
             transform: rotate(359deg);
   }
 }
-/*ok google*/
+
 /*! minireset.css v0.0.2 | MIT License | github.com/jgthms/minireset.css */
 html,
 body,
@@ -8313,4 +8313,12 @@ body, html {
 
 .bg-hero {
   background: #284B63;
+}
+
+.shop_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
