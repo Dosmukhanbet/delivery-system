@@ -11,7 +11,7 @@
 				    	<p class="title is-5"><strong>{{$shop->brand_name}}</strong></p>
 		</a>
 		<hr>
-		<div class="">	
+		<div class="rest_info">	
 					<p>
 						<strong><small>Мин.заказ:</small></strong>
 						<br> {{$shop->min_order}}тг.
