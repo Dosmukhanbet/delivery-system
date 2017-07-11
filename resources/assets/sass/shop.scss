@@ -31,8 +31,12 @@ a.shop_link p {
 	font-size: 0.9em;
 }
 
-.delivery_rates {
-	background: #FFF1D0;
-
-	padding:0.5rem;
+.shop_info {
+	display:flex;
+	flex-wrap: wrap;
 }
+
+// .delivery_rates {
+// 	background: #CAEBF2
+// 	padding:0.5rem;
+// }

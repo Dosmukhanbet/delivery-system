@@ -11,29 +11,21 @@
 				    	<p class="title is-5"><strong>{{$shop->brand_name}}</strong></p>
 		</a>
 		<hr>
-
-		<div class="level is-mobile">
-			<div class="level-left">
-				<div class="level-item">
+		<div class="shop_info">	
 					<p>
 						<strong><small>Мин.заказ:</small></strong>
 						<br> {{$shop->min_order}}тг.
 					</p>
-				</div>
-				<div class="level-item">
 					<p>	
 						<strong><small>Время доставки</small></strong>
 						<br> До {{$shop->delivery_time}} мин.
 					</p>
-				</div>
-				<div class="level-item">
 					<p>
 						<strong><small>Время приема заказов</small></strong>
 						<br> c {{$shop->open_time}} до {{ $shop->close_time }}
 					</p>
-				</div>
-			</div>
-		</div>
+		</div>	
+			
 
 	</div>
 	<div class="media-right">
