@@ -10816,7 +10816,7 @@ Vue.component('product', __webpack_require__(50));
 Vue.component('flash', __webpack_require__(48));
 Vue.component('update-product', __webpack_require__(52));
 Vue.component('activate-product', __webpack_require__(51));
-// Vue.component('partnership-request', require('./components/PartnershipRequest.vue'));
+Vue.component('partnership-request', __webpack_require__(72));
 
 var app = new Vue({
   el: '#app'
@@ -43511,6 +43511,290 @@ module.exports = function(module) {
 __webpack_require__(12);
 module.exports = __webpack_require__(13);
 
+
+/***/ }),
+/* 66 */,
+/* 67 */,
+/* 68 */,
+/* 69 */,
+/* 70 */,
+/* 71 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+	data: function data() {
+		return {
+			showForm: false,
+			sending: false,
+			name: '',
+			companyName: '',
+			mobilenumber: ''
+		};
+	},
+
+	methods: {
+		sendInfo: function sendInfo() {
+			var _this = this;
+
+			this.sending = true;
+			var data = {
+				name: this.name,
+				companyName: this.companyName,
+				mobilenumber: this.mobilenumber
+			};
+			axios.post('bepartner', data).then(function (response) {
+				_this.sending = false;
+				_this.showForm = false;
+				flash(response.data);
+				console.log(response.data);
+			});
+		}
+	}
+});
+
+/***/ }),
+/* 72 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Component = __webpack_require__(1)(
+  /* script */
+  __webpack_require__(71),
+  /* template */
+  __webpack_require__(73),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "/Users/admin/Desktop/Code/zakaz/resources/assets/js/components/PartnershipRequest.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] PartnershipRequest.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-cec485a0", Component.options)
+  } else {
+    hotAPI.reload("data-v-cec485a0", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 73 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_c('button', {
+    staticClass: "button is-danger is-medium",
+    on: {
+      "click": function($event) {
+        $event.preventDefault();
+        _vm.showForm = true
+      }
+    }
+  }, [_vm._v("Подключится к системе")]), _vm._v(" "), _c('div', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.showForm),
+      expression: "showForm"
+    }],
+    staticClass: "form-be-partner"
+  }, [_c('div', {
+    staticClass: "modal is-active"
+  }, [_c('div', {
+    staticClass: "modal-background"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "modal-card"
+  }, [_c('header', {
+    staticClass: "modal-card-head"
+  }, [_c('p', {
+    staticClass: "modal-card-title arsenal has-text-centered"
+  }, [_vm._v("Форма отправки запроса")]), _vm._v(" "), _c('button', {
+    staticClass: "delete",
+    on: {
+      "click": function($event) {
+        $event.preventDefault();
+        _vm.showForm = false
+      }
+    }
+  })]), _vm._v(" "), _c('section', {
+    staticClass: "modal-card-body"
+  }, [_c('form', {
+    on: {
+      "submit": function($event) {
+        $event.preventDefault();
+        _vm.sendInfo($event)
+      }
+    }
+  }, [_c('div', {
+    staticClass: "field"
+  }, [_c('label', {
+    staticClass: "label"
+  }, [_vm._v("Имя")]), _vm._v(" "), _c('p', {
+    staticClass: "control"
+  }, [_c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.name),
+      expression: "name"
+    }],
+    staticClass: "input",
+    attrs: {
+      "type": "text",
+      "required": "",
+      "placeholder": "Ваше имя"
+    },
+    domProps: {
+      "value": (_vm.name)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.name = $event.target.value
+      }
+    }
+  })])]), _vm._v(" "), _c('div', {
+    staticClass: "field"
+  }, [_c('label', {
+    staticClass: "label"
+  }, [_vm._v("Название вашего заведения")]), _vm._v(" "), _c('p', {
+    staticClass: "control"
+  }, [_c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.companyName),
+      expression: "companyName"
+    }],
+    staticClass: "input",
+    attrs: {
+      "type": "text",
+      "required": "",
+      "placeholder": "Например: Ресторан Астория"
+    },
+    domProps: {
+      "value": (_vm.companyName)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.companyName = $event.target.value
+      }
+    }
+  })])]), _vm._v(" "), _c('div', {
+    staticClass: "field"
+  }, [_c('label', {
+    staticClass: "label"
+  }, [_vm._v("Мобильный номер")]), _vm._v(" "), _c('p', {
+    staticClass: "control"
+  }, [_c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.mobilenumber),
+      expression: "mobilenumber"
+    }],
+    staticClass: "input",
+    attrs: {
+      "required": "",
+      "type": "text"
+    },
+    domProps: {
+      "value": (_vm.mobilenumber)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.mobilenumber = $event.target.value
+      }
+    }
+  })])]), _vm._v(" "), _c('div', {
+    staticClass: "field"
+  }, [_c('p', {
+    staticClass: "control"
+  }, [_c('button', {
+    staticClass: "button is-danger",
+    class: {
+      'is-loading': _vm.sending
+    },
+    attrs: {
+      "type": "submit"
+    }
+  }, [_vm._v("Отправить данные")])])])])]), _vm._v(" "), _c('footer', {
+    staticClass: "modal-card-foot",
+    staticStyle: {
+      "margin-top": "0"
+    }
+  })])])])])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-cec485a0", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);
