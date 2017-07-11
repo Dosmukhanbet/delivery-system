@@ -38,6 +38,7 @@ Route::delete('products/{product}/deactivate','ShopAdminController@deactivatePro
 
 //Partnership
 Route::get('partnership', 'PartnershipController@offer');
+Route::post('bepartner', 'PartnershipController@store');
 
  // deactivate() {
 	// 			axios.delete('/products/' + this.productid + '/deactivate');

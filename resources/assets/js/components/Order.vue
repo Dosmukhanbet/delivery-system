@@ -55,6 +55,11 @@
 						</form>
 						</div>
 							<!-- VERIFICATION -->
+							<transition
+									    name="custom-classes-transition"
+									    enter-active-class="animated flipInY"
+									    leave-active-class="animated flipOutY"
+									  >
 								<div v-show="verification">
 									<p>На номер {{ phoneNumber }} был отправлен SMS с кодом, введите код чтобы завершить заказ</p>
 									<br>
@@ -65,9 +70,15 @@
 										  </p>
 									</div>
 									<br>
-									<p v-show="waitSmsTooLong">
-										Не присло смс? <a class="button is-small" @click.prevent="verification = false">Попробуйте заново</a>
-									</p>
+									<transition
+									    name="custom-classes-transition"
+									    enter-active-class="animated flipInX"
+									    leave-active-class="animated flipOutX"
+									  >	
+										<p v-show="waitSmsTooLong">
+											Не присло смс? <a class="button is-small" @click.prevent="verification = false">Попробуйте заново</a>
+										</p>
+									</transition>
 									<div v-show="isLoading">
 										<p>
 											Ваш номер подтвержден, подождите минутку мы формируем заказ
@@ -77,6 +88,7 @@
 									</div>
 								 
 								</div>
+							</transition>	
 						    <!-- END VERIFICATION -->
 		      		</div>
 					<!-- END LEFT SIDE -->
@@ -219,7 +231,7 @@ methods: {
 						  	setTimeout(() => {
 				                    this.$emit('close');
 				                    location.reload();
-				                }, 5000);
+				                }, 3500);
 						  })
 						 .catch(error => {
 						  	console.log(error);

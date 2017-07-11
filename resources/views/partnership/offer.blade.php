@@ -82,7 +82,7 @@
 							  <img src="/app/partnership/checked2.png">
 							</figure>
 							<h3 class="title is-4">
-								Отсутствие затрат на рекламу 
+								Вы сэкономите на рекламе 
 							</h3>
 						</li>
 						<li class="is-flex">
@@ -106,11 +106,12 @@
 				</div>
 			</div>
 			<div class="level">
-					<div class="level-item has-text-centered">
-						 <h2 class="title">
+					<div class="level-item">
+						<partnership-request></partnership-request>
+						{{--  <h2 class="title">
 					        Чтобы подключить к системе свое заведение <br>
 					         просто позвоните по номеру +7 (707) 883-59-53
-					      </h2>
+					      </h2> --}}
 					</div>
 			</div>
 		</div>

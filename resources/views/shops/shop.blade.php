@@ -12,9 +12,9 @@
 		</div>
 
 		{{-- Feedbacks --}}
-		<div class="level-right">
+		{{-- <div class="level-right">
 				<a href="" class="button is-light">Отзывы</a>
-		</div>
+		</div> --}}
 		
 
 	</div>

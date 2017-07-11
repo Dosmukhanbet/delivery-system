@@ -22,20 +22,33 @@
 		</ul>
 		<hr>
 		<p><strong>Итого: {{ total }} тг.</strong></p>
-		<p class="has-text-centered mt-2" v-if="total >= minorder">
-			<a class="button is-warning" 
-			   @click.prevent="showOrder = true">
-				Оформить заказ
-			</a>
-		</p>
-		<order 
-		    :products="items"
-		    :rates="shop.rates"
-		    :city="city"
-		    :shop="shop"
-		    v-show="showOrder" 
-		    @close="showOrder = false && clearCart">
-		</order>
+			 <transition
+			    name="custom-classes-transition"
+			    enter-active-class="animated bounceIn"
+			    leave-active-class="animated bounceOut"
+			  >
+				<p class="has-text-centered mt-2" v-if="total >= minorder">
+					<a class="button is-warning" 
+					   @click.prevent="showOrder = true">
+						Оформить заказ
+					</a>
+				</p>
+			</transition>
+
+		<transition
+			    name="custom-classes-transition"
+			    enter-active-class="animated slideInDown"
+			    leave-active-class="animated fadeOut"
+			  >	
+				<order 
+				    :products="items"
+				    :rates="shop.rates"
+				    :city="city"
+				    :shop="shop"
+				    v-show="showOrder" 
+				    @close="showOrder = false && clearCart">
+				</order>
+		</transition>
 	</div>
 </template>
 
