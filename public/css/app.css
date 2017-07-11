@@ -8314,11 +8314,3 @@ body, html {
 .bg-hero {
   background: #284B63;
 }
-
-.shop_info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
