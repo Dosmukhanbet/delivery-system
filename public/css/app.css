@@ -8210,6 +8210,11 @@ a.shop_link p:hover {
   font-size: 0.9em;
 }
 
+.delivery_rates {
+  background: #FFF1D0;
+  padding: 0.5rem;
+}
+
 .login {
   background: whitesmoke;
 }
@@ -8281,12 +8286,12 @@ body, html {
 
 .nav {
   height: 70px;
-  background: #8AA06D;
-  border-bottom: 1px solid #9eb086;
+  background: #284B63;
+  border-bottom: 1px solid #346180;
 }
 
 .nav .nav-right {
-  background: #8AA06D;
+  background: #284B63;
 }
 
 .newnav {

@@ -29,7 +29,7 @@
     <body>
       <div id="app">
         <div class="columns">
-            <aside class="column is-3 aside hero is-fullheight is-success is-hidden-mobile">
+            <aside class="column is-3 aside hero is-fullheight is-primary is-hidden-mobile">
               <div>
                 <div class="main">
                   <div class="title">Main</div>
@@ -44,7 +44,7 @@
             <div class="column is-9 admin-panel">
                   <nav class="nav has-shadow" id="top">
                     <div class="nav-left">
-                       @include('partials.logo')
+                       @include('partials.new.logo')
                     </div>
                     <span class="nav-toggle">
                       <span></span>
@@ -52,7 +52,7 @@
                       <span></span>
                     </span>
                     {{-- Tablet an Mobile SCREEN --}}
-                    <div class="nav-right nav-menu is-hidden-tablet">
+                    <div class="nav-rightnav-menu is-hidden-tablet">
                         <a href="{{url('/orders')}}"  class="nav-item is-active">
                           Заявки
                         </a>
@@ -66,11 +66,11 @@
                           Тарифы
                         </a>
                         <div class="nav-item">
-                               @include('partials.user')
+                               @include('partials.new.user')
                         </div>
                     </div>
                     <div class="nav-item is-hidden-mobile">
-                             @include('partials.user')
+                             @include('partials.new.user')
                     </div>
                   </nav>
                   {{-- @include('shopadmin.hero') --}}

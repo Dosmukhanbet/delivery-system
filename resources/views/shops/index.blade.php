@@ -15,15 +15,15 @@
 		</section>
  		<div class="container">
  			<div class="columns">
- 				<div class="column is-8 mt-2 shops">
+ 				<div class="column is-7 mt-2 shops">
 		 			@foreach($shops as $shop)
 								<div class="box shop">
-											@include('shops.shop')
+											@include('shops.newshop')
 								</div>
 		 			@endforeach
 		 			{{ $shops->links()}}
 		 		</div>
-		 		{{-- div class="column mt-2 is-4">
+		 		 {{-- div class="column mt-2 is-4">
 		 			<h3 class="title is-5">
 		 				Отзывы
 		 			</h3>
