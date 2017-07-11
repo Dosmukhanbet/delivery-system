@@ -6,7 +6,7 @@
 					 <div class="modal-background"></div>
 					  <div class="modal-card">
 					    <header class="modal-card-head">
-					      <p class="modal-card-title arsenal has-text-centered" >Форма отправки запроса </p>
+					      <p class="modal-card-title arsenal has-text-centered" >Форма отправки запроса</p>
 					      <button class="delete" @click.prevent="showForm = false">
 			      		  </button>
 					    </header>

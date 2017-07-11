@@ -43675,7 +43675,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "modal-card-head"
   }, [_c('p', {
     staticClass: "modal-card-title arsenal has-text-centered"
-  }, [_vm._v("Форма отправки запроса ")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("Форма отправки запроса")]), _vm._v(" "), _c('button', {
     staticClass: "delete",
     on: {
       "click": function($event) {
