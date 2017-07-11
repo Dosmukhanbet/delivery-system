@@ -10811,12 +10811,6 @@ __webpack_require__(38);
 
 window.Vue = __webpack_require__(10);
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
-
 Vue.component('cart', __webpack_require__(47));
 Vue.component('product', __webpack_require__(50));
 Vue.component('flash', __webpack_require__(48));
