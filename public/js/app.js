@@ -14819,7 +14819,7 @@ exports.push([module.i, "\n.price {\n  color: #000;\n  padding-right: calc(0.625
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)();
-exports.push([module.i, "\n.alert {\n    position: fixed;\n    right: 25px;\n    top: 25px;\n}\n", ""]);
+exports.push([module.i, "\n.alert {\n    position: fixed;\n    right: 25px;\n    top: 25px;\n    z-index: 9999;\n}\n", ""]);
 
 /***/ }),
 /* 43 */
