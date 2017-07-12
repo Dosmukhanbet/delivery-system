@@ -7,8 +7,8 @@
 		<section class="hero is-primary is-hidden-mobile">
 		  <div class="hero-body">
 		    <div class="container">
-		    	<h2 class="subtitle">
-				     г. {{ $city->name }} /	{{ $category->name }}	        
+		    	<h2 class="title is-4 marmelad">
+				     <strong>{{ $city->name }} /	{{ $category->name }}</strong>        
 				</h2>
 		    </div>
 		  </div>
