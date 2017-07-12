@@ -27,7 +27,7 @@
 								</div>
 
 								<div class="field">		
-									<label class="label">Мобильный номер</label>
+									<label class="label">Мобильный номер<small class="small-info">Пример: +77075558844</small></label>
 									<p class="control">
 										<input v-model="mobilenumber" class="input" required type="text">
 									</p>
