@@ -21,7 +21,7 @@
 		    	  	
 		    	  	<span class="text-warning marmelad">
 		    	  	<strong>
-			         	Информация для ресторанов <br> и заведении
+			         	Информация для ресторанов <br> и фаст-фуд заведении
 			         	 </strong> 
 			        </span> 	
 			       
