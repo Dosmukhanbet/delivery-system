@@ -39,8 +39,11 @@ class AdminController extends Controller
    
     public function storeShop()
     {
+            
+
+       
         $password = str_random(6);
-        // dd(request()->all());
+        
         $user = User::create(
             [ 
               'name' => request('username'), 
@@ -66,8 +69,24 @@ class AdminController extends Controller
             'photo_path' => $this->savePhotos(request('logo'), 'logos')
             ]);
 
+
+
           $shop->shopcategories()->toggle(request('shopcategories'));
 
+          $this->clearCache(request('shopcategories'));  
+        } 
+
+    
+    public function clearCache($cats)
+    {
+         $city = City::find(request('city_id'))->first();
+         
+         foreach($cats as $shop) 
+         {
+            $cat = ShopCategory::find($shop);
+            $key = $city->slug . '.' .$cat->slug;
+            cache()->forget($key);
+          }
     } 
 
      public function savePhotos($file, $destination)
@@ -95,7 +114,7 @@ class AdminController extends Controller
      	$city->districts()->create([
      			'name' => request('name')
      		]);	
-        
+
      	return back();
     } 
 
