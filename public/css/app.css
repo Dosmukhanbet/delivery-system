@@ -8277,6 +8277,12 @@ ul.benefits > li {
   display: flex;
 }
 
+.partnership_request_header, .partnership_request_footer {
+  background: #fff !important;
+  border-bottom: none !important;
+  border-top: none !important;
+}
+
 body, html {
   height: 100%;
   margin: 0;

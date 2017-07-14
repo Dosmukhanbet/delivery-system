@@ -5,7 +5,7 @@
 				<div class="modal is-active">
 					 <div class="modal-background"></div>
 					  <div class="modal-card">
-					    <header class="modal-card-head">
+					    <header class="modal-card-head partnership_request_header">
 					      <p class="modal-card-title arsenal has-text-centered" >Запрос на сотрудничество</p>
 					      <button class="delete is-medium" @click.prevent="showForm = false">
 			      		  </button>
@@ -49,7 +49,7 @@
 					    	</div>
 					    	
 					    </section>
-					    <footer class="modal-card-foot" style="margin-top:0">
+					    <footer class="modal-card-foot partnership_request_footer" style="margin-top:0">
 					    </footer>
 					  </div>
 				</div>
