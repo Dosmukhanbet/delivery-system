@@ -29,7 +29,7 @@
 
 	</div>
 	<div class="media-right">
-		<p class="delivery_rates">
+		<p class="delivery_rates is">
 					<strong><small>Доставка</small></strong>
 					<br>
 					<span class="rates_list">
@@ -47,7 +47,3 @@
 		</p>
 	</div>
 </article>
-
-
-
-

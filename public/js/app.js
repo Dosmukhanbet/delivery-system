@@ -43572,6 +43572,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
 	data: function data() {
@@ -43669,8 +43678,8 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "modal-card-head"
   }, [_c('p', {
     staticClass: "modal-card-title arsenal has-text-centered"
-  }, [_vm._v("Форма отправки запроса")]), _vm._v(" "), _c('button', {
-    staticClass: "delete",
+  }, [_vm._v("Запрос на сотрудничество")]), _vm._v(" "), _c('button', {
+    staticClass: "delete is-medium",
     on: {
       "click": function($event) {
         $event.preventDefault();
@@ -43679,6 +43688,10 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   })]), _vm._v(" "), _c('section', {
     staticClass: "modal-card-body"
+  }, [_c('div', {
+    staticClass: "columns"
+  }, [_c('div', {
+    staticClass: "column is-8 is-offset-2"
   }, [_c('form', {
     on: {
       "submit": function($event) {
@@ -43688,9 +43701,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_c('div', {
     staticClass: "field"
-  }, [_c('label', {
-    staticClass: "label"
-  }, [_vm._v("Имя")]), _vm._v(" "), _c('p', {
+  }, [_c('p', {
     staticClass: "control"
   }, [_c('input', {
     directives: [{
@@ -43699,7 +43710,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       value: (_vm.name),
       expression: "name"
     }],
-    staticClass: "input",
+    staticClass: "input is-medium",
     attrs: {
       "type": "text",
       "required": "",
@@ -43714,11 +43725,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.name = $event.target.value
       }
     }
-  })])]), _vm._v(" "), _c('div', {
+  })]), _vm._v(" "), _c('br')]), _vm._v(" "), _c('div', {
     staticClass: "field"
-  }, [_c('label', {
-    staticClass: "label"
-  }, [_vm._v("Название вашего заведения")]), _vm._v(" "), _c('p', {
+  }, [_c('p', {
     staticClass: "control"
   }, [_c('input', {
     directives: [{
@@ -43727,11 +43736,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       value: (_vm.companyName),
       expression: "companyName"
     }],
-    staticClass: "input",
+    staticClass: "input is-medium",
     attrs: {
       "type": "text",
       "required": "",
-      "placeholder": "Например: Ресторан Астория"
+      "placeholder": "Название вашего заведения"
     },
     domProps: {
       "value": (_vm.companyName)
@@ -43742,9 +43751,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.companyName = $event.target.value
       }
     }
-  })])]), _vm._v(" "), _c('div', {
+  })]), _vm._v(" "), _c('br')]), _vm._v(" "), _c('div', {
     staticClass: "field"
-  }, [_vm._m(0), _vm._v(" "), _c('p', {
+  }, [_c('p', {
     staticClass: "control"
   }, [_c('input', {
     directives: [{
@@ -43753,10 +43762,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       value: (_vm.mobilenumber),
       expression: "mobilenumber"
     }],
-    staticClass: "input",
+    staticClass: "input is-medium",
     attrs: {
       "required": "",
-      "type": "text"
+      "type": "text",
+      "placeholder": "Мобильный номер"
     },
     domProps: {
       "value": (_vm.mobilenumber)
@@ -43767,31 +43777,25 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.mobilenumber = $event.target.value
       }
     }
-  })])]), _vm._v(" "), _c('div', {
+  })]), _vm._v(" "), _c('br')]), _vm._v(" "), _c('div', {
     staticClass: "field"
   }, [_c('p', {
     staticClass: "control"
   }, [_c('button', {
-    staticClass: "button is-danger",
+    staticClass: "button is-danger is-medium is-fullwidth",
     class: {
       'is-loading': _vm.sending
     },
     attrs: {
       "type": "submit"
     }
-  }, [_vm._v("Отправить данные")])])])])]), _vm._v(" "), _c('footer', {
+  }, [_vm._v("Отправить данные")])])])])])])]), _vm._v(" "), _c('footer', {
     staticClass: "modal-card-foot",
     staticStyle: {
       "margin-top": "0"
     }
   })])])])])
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('label', {
-    staticClass: "label"
-  }, [_vm._v("Мобильный номер"), _c('small', {
-    staticClass: "small-info"
-  }, [_vm._v("Пример: +77075558844")])])
-}]}
+},staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()

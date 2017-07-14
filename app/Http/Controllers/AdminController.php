@@ -39,9 +39,6 @@ class AdminController extends Controller
    
     public function storeShop()
     {
-            
-
-       
         $password = str_random(6);
         
         $user = User::create(
@@ -69,11 +66,11 @@ class AdminController extends Controller
             'photo_path' => $this->savePhotos(request('logo'), 'logos')
             ]);
 
-
-
           $shop->shopcategories()->toggle(request('shopcategories'));
 
-          $this->clearCache(request('shopcategories'));  
+          $this->clearCache(request('shopcategories')); 
+
+          return back()->with('flash', 'Новое заведение успешно добавлено!');
         } 
 
     

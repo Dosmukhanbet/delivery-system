@@ -6,39 +6,48 @@
 					 <div class="modal-background"></div>
 					  <div class="modal-card">
 					    <header class="modal-card-head">
-					      <p class="modal-card-title arsenal has-text-centered" >Форма отправки запроса</p>
-					      <button class="delete" @click.prevent="showForm = false">
+					      <p class="modal-card-title arsenal has-text-centered" >Запрос на сотрудничество</p>
+					      <button class="delete is-medium" @click.prevent="showForm = false">
 			      		  </button>
 					    </header>
 					    <section class="modal-card-body">
-					    	<form @submit.prevent="sendInfo">
+					    	<div class="columns">
+					    		<div class="column is-8 is-offset-2">
+					    			<form @submit.prevent="sendInfo">
 								<div class="field">		
-									<label class="label">Имя</label>
+									<!-- <label class="label">Имя</label> -->
 									<p class="control">
-										<input v-model="name" class="input" type="text" required placeholder="Ваше имя">
+										<input v-model="name" class="input is-medium" type="text" required placeholder="Ваше имя">
 									</p>
+									<br>
 								</div>
 									
 								<div class="field">		
-									<label class="label">Название вашего заведения</label>
+									<!-- <label class="label">Название вашего заведения</label> -->
 									<p class="control">
-										<input v-model="companyName" class="input" type="text" required placeholder="Например: Ресторан Астория">
+										<input v-model="companyName" class="input is-medium" type="text" required placeholder="Название вашего заведения">
 									</p>
+									<br>
 								</div>
 
 								<div class="field">		
-									<label class="label">Мобильный номер<small class="small-info">Пример: +77075558844</small></label>
+									<!-- <label class="label">Мобильный номер<small class="small-info">Пример: +77075558844</small></label> -->
 									<p class="control">
-										<input v-model="mobilenumber" class="input" required type="text">
+										<input v-model="mobilenumber" class="input is-medium" required type="text" placeholder="Мобильный номер">
 									</p>
+									<br>
 								</div>
 
 								<div class="field">
 									<p class="control">
-										<button type="submit" class="button is-danger" :class="{ 'is-loading':sending }" >Отправить данные</button> 
+										<button type="submit" class="button is-danger is-medium is-fullwidth" :class="{ 'is-loading':sending }" >Отправить данные</button> 
 									</p>
 								</div>
 							</form>	
+					    			
+					    		</div>
+					    	</div>
+					    	
 					    </section>
 					    <footer class="modal-card-foot" style="margin-top:0">
 					    </footer>

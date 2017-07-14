@@ -33,13 +33,18 @@ class Product extends Model
     public function productCategory()
     {
     	return $this->belongsTo(ProductCategory::class,'product_categories_id');
-    } 
+    }
 
-    
+
     public function unit()
     {
     	return $this->belongsTo(Unit::class);
     } 
 
+    
+    // public function getPriceAttribute($value)
+    // {
+    //     return $value + ((5 / 100) * $value);
+    // } 
     
 }

@@ -32,7 +32,10 @@
                         </div>
 
                         <div class="field">
-                            <label for="password" class="label">Пароль</label>
+                            <label for="password" class="label">
+                                Пароль
+                                <small class="small-info">sms код отправленный при регистрации</small>
+                            </label>
 
                             <p class="control">
                                 <input id="password" 
