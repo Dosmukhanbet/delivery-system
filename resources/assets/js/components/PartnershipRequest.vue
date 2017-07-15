@@ -6,7 +6,7 @@
 					 <div class="modal-background"></div>
 					  <div class="modal-card">
 					    <header class="modal-card-head partnership_request_header">
-					      <p class="modal-card-title arsenal has-text-centered" >Запрос на сотрудничество</p>
+					      <p class="modal-card-title arsenal has-text-centered" >Заявка на сотрудничество</p>
 					      <button class="delete is-medium" @click.prevent="showForm = false">
 			      		  </button>
 					    </header>
@@ -40,7 +40,7 @@
 
 								<div class="field">
 									<p class="control">
-										<button type="submit" class="button is-danger is-medium is-fullwidth" :class="{ 'is-loading':sending }" >Отправить данные</button> 
+										<button    type="submit" class="button is-danger is-medium is-fullwidth" :class="{ 'is-loading':sending }" >Отправить данные</button> 
 									</p>
 								</div>
 							</form>	

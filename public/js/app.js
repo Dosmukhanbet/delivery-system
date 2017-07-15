@@ -43678,7 +43678,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "modal-card-head partnership_request_header"
   }, [_c('p', {
     staticClass: "modal-card-title arsenal has-text-centered"
-  }, [_vm._v("Запрос на сотрудничество")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("Заявка на сотрудничество")]), _vm._v(" "), _c('button', {
     staticClass: "delete is-medium",
     on: {
       "click": function($event) {
