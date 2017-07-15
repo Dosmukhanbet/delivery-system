@@ -30,6 +30,7 @@
 
   </head>
     <body>
+    @include('analitics.google')
        @include('partials.new.nav')     
         <div id="app">
                 @yield('content') 
