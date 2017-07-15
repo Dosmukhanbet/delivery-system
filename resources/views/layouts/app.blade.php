@@ -11,7 +11,9 @@
     <link rel="stylesheet" href="/css/animate.css" >
     <link rel="stylesheet" href="/css/admin.css" >
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    @include('analitics.yandex')
+    @if(env('APP_ENV') == 'production')
+      @include('analitics.yandex')
+    @endif
     {{-- Logo font --}}
     @yield('styles')
 <meta name="csrf-token" content="{{ csrf_token() }}">
