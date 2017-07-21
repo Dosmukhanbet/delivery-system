@@ -1,6 +1,6 @@
 <template>
 	<div>
-	   <button class="button is-info" @click.prevent="showForm = true">Редактировать</button>
+	   <button class="button is-info is-small" @click.prevent="showForm = true">Редактировать</button>
 	   
 	   	<div class="modal is-active" v-show="showForm">
 		 <div class="modal-background"></div>

@@ -1,5 +1,7 @@
 @extends('layouts.app')
-
+@section('title')
+	Сотрудничество с ZAKAZ.EXPRESS
+@endsection
 @section('content')
  		<section class="hero is-primary">
 		  <div class="hero-body">

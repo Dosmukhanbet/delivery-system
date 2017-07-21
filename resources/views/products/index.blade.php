@@ -1,6 +1,10 @@
 <div class="column is-3">
 		<ul>
-		<cart :minorder="{{$shop->min_order}}" :city="{{$city}}" :shop="{{$shop}}"></cart>
+		<cart 
+				:minorder="{{$shop->min_order}}" 
+				:city="{{$city}}" 
+				:shop="{{$shop}}">
+		</cart>
 			{{-- @foreach($groupedproducts as $product)
 					<li><p class="title is-5">{{ $product[0]->productCategory->name}}</p></li>
 
@@ -8,6 +12,7 @@
 		</ul>
 </div>
 <div class="column is-9">
+	{{-- {{ dd($products) }} --}}
 	@foreach($products->where('is_active', 1)->chunk(4) as $chunked)
 		<div class="columns">
 			@foreach($chunked as $product)

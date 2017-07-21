@@ -17,11 +17,14 @@
 				<small v-text="item.name"></small>
 				<small>{{item.price}}тг.  x</small> 
 				<small>{{ item.amount }}{{item.unit}}</small>
-					<a class="remove" @click="remove(index, item)"><small>&#10006</small></a>
+					<a class="remove delete is-small" @click="remove(index, item)"></a>
 			</li>
 		</ul>
 		<hr>
 		<p><strong>Итого: {{ total }} тг.</strong></p>
+			<p v-if="total < minorder && total > 0" class="notEnough">
+			    Не хватает <span v-text="notEnough"></span>тг. до минимальной суммы заказа
+			</p>
 			 <transition
 			    name="custom-classes-transition"
 			    enter-active-class="animated bounceIn"
@@ -78,7 +81,10 @@
 					summ += item.amount*item.price;
 				});
 				return summ;
-			}
+			},
+			notEnough() {
+				return this.minorder - this.total;
+			} 
 		},
 		
 		methods: {
@@ -103,12 +109,19 @@
 
 <style lang="scss">
 	.cart {
-		font-family: 'Kelly Slab', cursive;
+		font-family: 'Marmelad', cursive;
 		padding: 1rem;
 		background:#fff;
 		border: 2px solid #DBDBDB;
 	}
 	.remove {
 		color:red;
+	}
+	.notEnough{
+		background:#F6F7F9;
+		padding: 0.5rem;
+		margin-top: 1rem;
+		font-size: 0.9rem;
+		color:lighten(#333, 30%);
 	}
 </style>
