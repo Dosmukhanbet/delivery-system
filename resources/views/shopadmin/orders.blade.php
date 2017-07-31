@@ -2,23 +2,38 @@
 
 
 @section('content')
+	<div class="columns">
+		<div class="column is-6">
 		<h3 class="title is-3">Все заявки</h3>
-		<div class="orders">
-
+		<div class="orders  has-text-centered">
 			@if($orders->isNotEmpty())
-				<ul>
+				<table class="table is-striped">
+					 <thead>
+					    <tr>
+					      <th>ID заявки </th>
+					      <th>Дата/время создания </th>
+					      <th>Сумма с учетом доставки </th>
+					      <th></th>
+					    </tr>
+					  </thead>
 					@foreach($orders as $order)
-						<li>
-							<a href="orders/{{$order->id}}">
-								ID заявки {{$order->id}}. Дата/время создания {{ $order->created_at }}. Сумма с учетом доставки {{$order->total}}тг.
-							</a>
-						</li>
+						<tr>
+							<td>{{$order->id}}</td>
+							<td>{{ $order->created_at }}</td>
+							<td>{{$order->total}}тг.</td>
+							<td>
+								<a href="orders/{{$order->id}}">
+									Посмотреть...
+								</a>
+							</td>
+						</tr>
 					@endforeach
-				</ul>
+				</table>
 			@else
 				<p class="title is-5">У вас нет заявки</p>
 			@endif
 		</div>
-		
+		</div>
+	</div>
 
 @endsection

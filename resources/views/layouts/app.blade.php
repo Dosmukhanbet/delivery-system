@@ -29,8 +29,8 @@
         ]) !!};
 
     </script>
-
-
+   @yield('map')
+   
   </head>
     <body>
     @include('analitics.tag')

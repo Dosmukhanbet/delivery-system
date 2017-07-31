@@ -11969,6 +11969,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
 	props: ['products', 'rates', 'city', 'shop'],
@@ -12006,7 +12007,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			return summ;
 		},
 		totalcost: function totalcost() {
-			return this.total + this.cost;
+			if (!this.cost) {
+				return '';
+			}
+			return this.total + this.cost.cost;
 		},
 		signedIn: function signedIn() {
 			return window.App.signedIn;
@@ -12017,6 +12021,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			if (this.enteredCode == this.codeFromServer) {
 				this.makeOrder();
 			}
+		},
+		cost: function cost() {
+			// this.makeMap();
 		}
 	},
 
@@ -12070,7 +12077,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 				mobilenumber: this.phoneNumber,
 				address: this.address,
 				total: this.total,
-				deliveryCost: this.cost,
+				deliveryCost: this.cost.cost,
 				totalWithDelivery: this.totalcost,
 				cityId: this.city.id,
 				shopId: this.shop.id,
@@ -12079,6 +12086,39 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			};
 
 			return data;
+		},
+		makeMap: function makeMap() {
+
+			ymaps.ready(init);
+			var myMap;
+
+			var coordiantes = this.cost.district.map_coordinates;
+
+			console.log(coordiantes);
+
+			function init() {
+				myMap = new ymaps.Map("map", {
+					center: [55.73, 37.75],
+					zoom: 10
+				});
+
+				console.log(coordiantes);
+
+				var myPolygon = new ymaps.Polygon(coordiantes, {
+					// Описываем свойства геообъекта.
+					// Содержимое балуна.
+					hintContent: "Многоугольник"
+				}, {
+					// Задаем опции геообъекта.
+					// Цвет заливки.
+					fillColor: '#00FF0088',
+					// Ширина обводки.
+					strokeWidth: 2
+				});
+
+				// Добавляем многоугольник на карту.
+				myMap.geoObjects.add(myPolygon);
+			}
 		}
 	}
 });
@@ -43226,7 +43266,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, _vm._l((_vm.rates), function(rate) {
     return _c('option', {
       domProps: {
-        "value": rate.cost
+        "value": rate
       }
     }, [_vm._v(_vm._s(rate.district.name))])
   }))])])]), _vm._v(" "), _c('div', {
@@ -43431,9 +43471,16 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }), _vm._v("тг.")]), _vm._v(" "), _c('li', [_vm._v("+")]), _vm._v(" "), _c('li', [_vm._v("Доставка: "), _c('span', {
     domProps: {
-      "textContent": _vm._s(_vm.cost)
+      "textContent": _vm._s(_vm.cost.cost)
     }
-  }), _vm._v("тг.")]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('li', [_c('strong', [_vm._v("Итого: "), _c('span', {
+  }), _vm._v("тг.")]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('li', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.cost),
+      expression: "cost"
+    }]
+  }, [_c('strong', [_vm._v("Итого: "), _c('span', {
     domProps: {
       "textContent": _vm._s(_vm.totalcost)
     }

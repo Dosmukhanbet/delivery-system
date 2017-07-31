@@ -12,8 +12,7 @@ class ShopAdminController extends Controller
 {
      public function orders()
     {
-        $orders = auth()->user()->shopOrders ;
-        
+        $orders = auth()->user()->shopOrders->reverse('created_at');
         return view('shopadmin.orders', compact('orders'));
     } 
 
@@ -21,6 +20,7 @@ class ShopAdminController extends Controller
     public function order(Order $order)
     {
         $this->authorize('view', $order);
+        
         return view('shopadmin.order', compact('order')); 
     } 
 
@@ -85,7 +85,7 @@ class ShopAdminController extends Controller
                 'price'=>request('price'),
                 'unit_id'=>request('unit_id'),
             ]);
-        
+
         $this->clearCache();
 
          if (request()->expectsJson()) {

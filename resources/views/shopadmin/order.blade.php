@@ -22,7 +22,12 @@
 							  </thead>
 							  @foreach($order->products as $product)
 							    	<tr>
-							    		<td>{{$product->name}}</td>
+
+							    		<td class="is-flex"><span class="mr-2">{{$product->name}}</span>
+							    		<figure class="image is-48x48">
+											<img src="/app/{{$product->photo_path}}" alt="">
+										</figure>
+										</td>
 							    		<td>{{$product->price}}тг.</td>
 							    		<td>{{$product->pivot->quantity}}</td>
 							    		<td>{{$product->unit->name}}</td>

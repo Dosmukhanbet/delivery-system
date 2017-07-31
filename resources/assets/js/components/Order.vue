@@ -19,7 +19,7 @@
 		      					<label class="label">Выберите район доставки</label>
 		      					<span class="select is-small">
 		      						<select v-model="cost" required>
-		      							<option v-for="rate in rates" :value="rate.cost">{{rate.district.name}}</option>
+		      							<option v-for="rate in rates" :value="rate">{{rate.district.name}}</option>
 		      						</select>
 		      					</span>
 		      				</p>
@@ -107,10 +107,11 @@
 		      				<hr>
 		      				<li>Сумма: <span v-text="total"></span>тг.</li>
 		      				<li>+</li>
-		      				<li>Доставка: <span v-text="cost"></span>тг.</li>
+		      				<li>Доставка: <span v-text="cost.cost"></span>тг.</li>
 		      				<hr>
-		      				<li><strong>Итого: <span v-text="totalcost"></span>тг.</strong></li>
+		      				<li v-show="cost"><strong>Итого: <span v-text="totalcost"></span>тг.</strong></li>
 		      			</ul>
+		      			 <!-- <div id="map" style="width: 300px; height: 400px"></div> -->
 		      			<div v-show="orderFinished" class="notification is-success">
  								Заказ успешно сформирован!<br>
  								В ближайшее время курьер свяжеться с Вами.
@@ -156,8 +157,7 @@ created() {
 		this.username = window.App.user.name;
 		this.phoneNumber = window.App.user.mobile_number;
 	}
-} ,	
-
+},	
 
 computed:{
 				total() 
@@ -172,7 +172,11 @@ computed:{
 
 				totalcost()
 				{
-				    return this.total+this.cost;
+					if( !this.cost)
+					{
+						return '';
+					}
+				    return this.total+this.cost.cost;
 				},
 				signedIn() 
 				{
@@ -186,10 +190,16 @@ watch: {
 					this.makeOrder();
 				}
 
+			},
+			cost(){
+				// this.makeMap();
 			}
+
 },		
 
 methods: {
+
+
 			verifyNumber() 
 			{
 				this.sending =true;
@@ -245,7 +255,7 @@ methods: {
 					mobilenumber : this.phoneNumber,
 					address: this.address,
 					total: this.total,
-					deliveryCost: this.cost,
+					deliveryCost: this.cost.cost,
 					totalWithDelivery:this.totalcost,
 					cityId: this.city.id,
 					shopId: this.shop.id,
@@ -254,6 +264,41 @@ methods: {
 				}
 
 				return data;
+			},
+			makeMap() 
+			{
+				
+				ymaps.ready(init);
+				var myMap;
+
+				let coordiantes = this.cost.district.map_coordinates;
+
+				console.log(coordiantes);
+
+				function init()
+				{     
+					myMap = new ymaps.Map("map", {
+							center: [55.73, 37.75],
+				            zoom: 10
+					});
+						    
+					console.log(coordiantes);		
+
+					var myPolygon = new ymaps.Polygon(coordiantes, {
+				        // Описываем свойства геообъекта.
+				        // Содержимое балуна.
+				        hintContent: "Многоугольник"
+				    }, {
+				        // Задаем опции геообъекта.
+				        // Цвет заливки.
+				        fillColor: '#00FF0088',
+				        // Ширина обводки.
+				        strokeWidth: 2
+				    });
+
+			    	// Добавляем многоугольник на карту.
+			   		myMap.geoObjects.add(myPolygon);
+			 }
 			}
 		
 		

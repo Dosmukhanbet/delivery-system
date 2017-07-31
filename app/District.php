@@ -9,6 +9,8 @@ class District extends Model
 {
     protected $fillable = ['name', 'map_coordinates', 'city_id'];
 
+    protected $casts = ['map_coordinates' => 'array'];
+
     public $timestamps = false;
 
     

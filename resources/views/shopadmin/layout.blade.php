@@ -32,7 +32,7 @@
             <aside class="column is-3 aside hero is-fullheight is-primary is-hidden-mobile">
               <div>
                 <div class="main">
-                  <div class="title">Main</div>
+                  <div class="title">Меню</div>
                     <a href="{{url('/orders')}}"  class="item active"><span class="name">Заявки</span></a>
                     <a href="{{url('/products')}}" class="item"><span class="name">Продукты/товары/меню</span>
                     <a href="{{url('/products/create')}}" class="item"><span class="name">Добавить продукт, товар</span>
