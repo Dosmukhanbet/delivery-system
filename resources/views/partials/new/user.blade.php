@@ -23,9 +23,28 @@
                       <a class="navbar-item" href="/customer/orders">
                         Мои заказы
                       </a>
-                      <a class="navbar-item" href="/customer/leftfeedbacks/">
+                     {{--  <a class="navbar-item" href="/customer/feedbacks/">
                         Отзывы
-                      </a>
+                      </a> --}}
+                    </div>
+                  @endif
+                  @if(auth()->user()->type == 'shop')
+                    <div class="navbar-dropdown is-boxed">
+                      <a href="{{url('/shop/profile')}}" class="navbar-item ">
+                          Профиль
+                        </a>
+                        <a href="{{url('/orders')}}" class="navbar-item">
+                          Заявки
+                        </a>
+                        <a href="{{url('/products')}}" class="navbar-item">
+                          Меню
+                        </a>
+                        <a href="{{url('/products/create')}}" class="navbar-item">
+                          Добавить продукт, товар
+                        </a>
+                        <a href="{{url('/rates')}}" class="navbar-item">
+                          Тарифы
+                        </a>
                     </div>
                   @endif
             </div>

@@ -10817,6 +10817,7 @@ Vue.component('flash', __webpack_require__(49));
 Vue.component('update-product', __webpack_require__(54));
 Vue.component('activate-product', __webpack_require__(53));
 Vue.component('partnership-request', __webpack_require__(51));
+Vue.component('leave-feedback', __webpack_require__(72));
 
 var app = new Vue({
   el: '#app'
@@ -12037,7 +12038,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			};
 
 			if (this.signedIn) {
-				this.makeOrder();
+				return this.makeOrder();
 			}
 
 			axios.post('/verifynumber', data).then(function (response) {
@@ -12331,7 +12332,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			return this.isActive ? 'Виден' : 'Не виден';
 		},
 		buttonText: function buttonText() {
-			return this.isActive ? 'убрать' : 'показать';
+			return this.isActive ? 'не показывать' : 'показать';
 		}
 	},
 
@@ -43857,6 +43858,228 @@ module.exports = function(module) {
 __webpack_require__(12);
 module.exports = __webpack_require__(13);
 
+
+/***/ }),
+/* 69 */,
+/* 70 */,
+/* 71 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      showForm: false,
+      sending: false,
+      body: ''
+    };
+  },
+
+  props: ['order', 'shop', 'customer'],
+  methods: {
+    sendFeedback: function sendFeedback() {
+      var _this = this;
+
+      this.sending = true;
+      var data = {
+        body: this.body,
+        order: this.order,
+        shop: this.shop,
+        customer: this.customer
+      };
+      axios.post('/customer/leavefeedback', data).then(function (response) {
+        _this.sending = false;
+        _this.showForm = false;
+        flash(response.data);
+        console.log(response.data);
+      });
+    }
+  }
+});
+
+/***/ }),
+/* 72 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Component = __webpack_require__(1)(
+  /* script */
+  __webpack_require__(71),
+  /* template */
+  __webpack_require__(73),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "/Users/admin/Desktop/Code/zakaz/resources/assets/js/components/LeaveFeedback.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] LeaveFeedback.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-4f8cb2b2", Component.options)
+  } else {
+    hotAPI.reload("data-v-4f8cb2b2", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 73 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_c('button', {
+    staticClass: "button is-info",
+    on: {
+      "click": function($event) {
+        $event.preventDefault();
+        _vm.showForm = true
+      }
+    }
+  }, [_vm._v("Оставить отзыв")]), _vm._v(" "), _c('div', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.showForm),
+      expression: "showForm"
+    }],
+    staticClass: "form-be-partner"
+  }, [_c('div', {
+    staticClass: "modal is-active"
+  }, [_c('div', {
+    staticClass: "modal-background"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "modal-card"
+  }, [_c('header', {
+    staticClass: "modal-card-head partnership_request_header"
+  }, [_c('p', {
+    staticClass: "modal-card-title arsenal has-text-centered"
+  }, [_vm._v("Оставить отзыв")]), _vm._v(" "), _c('button', {
+    staticClass: "delete is-medium",
+    on: {
+      "click": function($event) {
+        $event.preventDefault();
+        _vm.showForm = false
+      }
+    }
+  })]), _vm._v(" "), _c('section', {
+    staticClass: "modal-card-body"
+  }, [_c('div', {
+    staticClass: "columns"
+  }, [_c('div', {
+    staticClass: "column is-8 is-offset-2"
+  }, [_c('form', {
+    on: {
+      "submit": function($event) {
+        $event.preventDefault();
+        _vm.sendFeedback($event)
+      }
+    }
+  }, [_c('div', {
+    staticClass: "field"
+  }, [_c('p', {
+    staticClass: "control"
+  }, [_c('textarea', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.body),
+      expression: "body"
+    }],
+    staticClass: "textarea",
+    attrs: {
+      "placeholder": "напишите ваш отзыв здесь",
+      "required": ""
+    },
+    domProps: {
+      "value": (_vm.body)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.body = $event.target.value
+      }
+    }
+  })])]), _vm._v(" "), _c('div', {
+    staticClass: "field"
+  }, [_c('p', {
+    staticClass: "control"
+  }, [_c('button', {
+    staticClass: "button is-info is-fullwidth",
+    class: {
+      'is-loading': _vm.sending
+    },
+    attrs: {
+      "type": "submit"
+    }
+  }, [_vm._v("Отправить")])])])])])])]), _vm._v(" "), _c('footer', {
+    staticClass: "modal-card-foot partnership_request_footer",
+    staticStyle: {
+      "margin-top": "0"
+    }
+  })])])])])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-4f8cb2b2", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

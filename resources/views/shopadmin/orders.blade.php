@@ -1,9 +1,9 @@
-@extends('shopadmin.layout')
+@extends('layouts.app')
 
 
 @section('content')
-	<div class="columns">
-		<div class="column is-6">
+	<div class="columns mt-2">
+		<div class="column is-6 is-offset-3">
 		<h3 class="title is-3">Все заявки</h3>
 		<div class="orders  has-text-centered">
 			@if($orders->isNotEmpty())

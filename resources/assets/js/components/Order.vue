@@ -209,7 +209,7 @@ methods: {
 
 				if(this.signedIn) 
 				{ 
-				  this.makeOrder();
+				  return this.makeOrder();
 				}
 				
 				axios.post('/verifynumber', data)

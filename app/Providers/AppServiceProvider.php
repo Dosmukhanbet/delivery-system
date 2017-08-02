@@ -27,12 +27,21 @@ class AppServiceProvider extends ServiceProvider
         $hour = Carbon::now()->addHour();
         $day = Carbon::now()->addDay();
         $week = Carbon::now()->addWeek();
-        $month = Carbon::now()->addMonth();
+        
 
         view()->composer(['shopadmin.products', 'shopadmin.forms.createproduct'], function($view){
-            $view->with('units', Unit::all())
+            if( ! cache('units') )
+            {
+                $month = Carbon::now()->addMonth();
+                cache(['units' => Unit::all()], $month);
+            }    
+
+            // cache('units') ? cache('units') : cache(['units' => Unit::all()]);
+
+            $view->with('units', cache('units'))
                  ->with('categories', ProductCategory::all());
         });
+
 
         view()->composer('admin.manage', function($view){
             $view->with('units', Unit::all())

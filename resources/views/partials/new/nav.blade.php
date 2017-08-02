@@ -11,7 +11,18 @@
         </div>
       </div>
 
-
+      
+        @if(auth()->check() && auth()->user()->type == 'admin')
+          <div class="navbar-menu">
+              <div class="navbar-start">
+                  <div class="navbar-item">
+                    <a href="#" class="button is-warning">
+                      {{ request()->ip() }}
+                    </a>  
+                  </div>
+              </div>
+          </div>
+        @endif
      
           {{-- DESKTOP SCREEN --}}
        <div  class="navbar-menu">

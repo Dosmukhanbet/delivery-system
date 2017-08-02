@@ -33,7 +33,8 @@
               <div>
                 <div class="main">
                   <div class="title">Меню</div>
-                    <a href="{{url('/orders')}}"  class="item active"><span class="name">Заявки</span></a>
+                    <a href="{{url('/shop/profile')}}"  class="item"><span class="name">Профиль</span></a>
+                    <a href="{{url('/orders')}}"  class="item"><span class="name">Заявки</span></a>
                     <a href="{{url('/products')}}" class="item"><span class="name">Продукты/товары/меню</span>
                     <a href="{{url('/products/create')}}" class="item"><span class="name">Добавить продукт, товар</span>
                     <a href="{{url('/rates')}}" class="item"><span class="name">Тарифы на доставку</span></a>
@@ -53,18 +54,6 @@
                     </span>
                     {{-- Tablet an Mobile SCREEN --}}
                     <div class="nav-rightnav-menu is-hidden-tablet">
-                        <a href="{{url('/orders')}}"  class="nav-item is-active">
-                          Заявки
-                        </a>
-                        <a href="{{url('/products')}}" class="nav-item">
-                          Продукты/товары/меню
-                        </a>
-                        <a href="{{url('/products/create')}}" class="nav-item">
-                          Добавить продукт, товар
-                        </a>
-                        <a href="{{url('/rates')}}" class="nav-item">
-                          Тарифы
-                        </a>
                         <div class="nav-item">
                                @include('partials.new.user')
                         </div>

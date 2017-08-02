@@ -10,6 +10,31 @@ use Illuminate\Http\Request;
 
 class ShopAdminController extends Controller
 {
+    
+    public function profile ()
+    {
+        $user = auth()->user();
+        // dd($user);
+        return view('shopadmin.profile', compact('user')); 
+    }
+
+    
+     public function updatepassword ()
+     {
+        
+         $this->validate(request(), [
+            'newpassword' => 'required|min:6',
+
+        ]);
+
+        $user = auth()->user();
+        $user->password = bcrypt(request('newpassword'));
+        $user->update();
+
+       return back()->with('flash', 'Пароль обновлен!');         
+
+     }  
+
      public function orders()
     {
         $orders = auth()->user()->shopOrders->reverse('created_at');

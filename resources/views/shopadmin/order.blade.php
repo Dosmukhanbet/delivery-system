@@ -1,8 +1,9 @@
-@extends('shopadmin.layout')
+@extends('layouts.app')
 
 
 @section('content')
-		
+		<div class="columns mt-2">
+			<div class="column is-6 is-offset-3">
 					<h3 class="title is-3">ID заявки - #{{ $order->id }}</h3>
 					<p class="subtitle is-5">Дата/время создания: {{ $order->created_at }}</p>
 					<p class="subtitle is-5">Данные создателя заявки: <br>
@@ -41,6 +42,9 @@
 							    </tr>
 						</table>
 					</div>
+
+					</div>
+		</div>
 				
 
 @endsection

@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Mail;
 Route::post('verifynumber', 'VerificationController@verify');
 
 Route::get('/', function () {
-	// dd(request()->ip());
+	// dd(\Request::ip());
     return redirect('cities/aktobe');
 });
 Route::get('/home', 'HomeController@index')->name('home');
@@ -34,6 +34,9 @@ Route::get('rates', 'ShopAdminController@rates')->middleware('auth', 'shop');
 Route::post('rates', 'ShopAdminController@saveRate')->middleware('auth', 'shop');
 Route::post('products/{product}/activate','ShopAdminController@activateProduct')->middleware('auth', 'shop');
 Route::delete('products/{product}/deactivate','ShopAdminController@deactivateProduct')->middleware('auth', 'shop');
+Route::get('shop/profile', 'ShopAdminController@profile')->middleware('auth', 'shop');
+Route::post('shop/updatepassword', 'ShopAdminController@updatepassword')->middleware('auth', 'shop');
+
 
 
 //Partnership
@@ -73,6 +76,13 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth','admin']], function()
 
 });
 
+Route::group(['prefix' => 'customer', 'middleware' => ['auth','customer']], function(){
+		Route::get('orders','CustomerController@orders');
+		Route::get('profile','CustomerController@profile');
+		Route::get('feedbacks','CustomerController@feedbacks');
+		Route::post('leavefeedback','CustomerController@saveFeedback');
+});
+
 Route::get('emailtest', function(){
 	$admin = User::where('type', 'admin')->first();
 
@@ -82,7 +92,7 @@ Route::get('emailtest', function(){
 });
 
 Route::get('updatepass', function(){
-	$user = User::where('mobile_number', +77079000058)->first();
+	$user = User::where('mobile_number', +77026253253)->first();
 	$user->update(['password' => bcrypt(654321)]);
 
 });

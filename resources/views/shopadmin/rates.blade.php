@@ -1,10 +1,10 @@
-@extends('shopadmin.layout')
+@extends('layouts.app')
 
 @section('content')
 	
 	
-	<div class="columns">
-		<div class="column is-3">
+	<div class="columns mt-2">
+		<div class="column is-3 is-offset-3">
 			<p class="title is-4">Установите цену на доставку по районам</p>
 			@include('shopadmin.forms.addrate')
 		</div>

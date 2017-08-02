@@ -25,7 +25,7 @@
 				return this.isActive ? 'Виден' : 'Не виден';
 			},
 			buttonText() {
-				return this.isActive ? 'убрать' : 'показать';
+				return this.isActive ? 'не показывать' : 'показать';
 			}
 
 		},

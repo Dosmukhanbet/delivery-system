@@ -58,5 +58,6 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'shop' => \App\Http\Middleware\OnlyShopUser::class,
         'admin' => \App\Http\Middleware\OnlyAdmin::class,
+        'customer' => \App\Http\Middleware\OnlyCustomer::class,
     ];
 }
