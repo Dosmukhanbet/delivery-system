@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-	Экспресс доставка. По городу бесплатно.
+	Экспресс доставка еды. По городу бесплатно.
 @endsection
 @section('styles')
 	<link rel="stylesheet" href="/css/owl.carousel.min.css" >

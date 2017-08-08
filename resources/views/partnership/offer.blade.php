@@ -3,7 +3,7 @@
 	Сотрудничество с ZAKAZ.EXPRESS
 @endsection
 @section('content')
- 		<section class="hero is-primary">
+ 		<section class="hero is-info">
 		  <div class="hero-body">
 		    <div class="container">
 		    <div class="level">
