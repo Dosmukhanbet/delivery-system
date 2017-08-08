@@ -60,7 +60,7 @@ body,html {
 
 
 
-$nav-color:$info;
+$nav-color:#4481AA;
 .newnav {
 	background:$nav-color;
 }
@@ -69,9 +69,6 @@ $nav-color:$info;
 	background:$nav-color;
 	border-bottom: 1px solid lighten($nav-color, 4%);
 }
-
-
-
 .navbar .navbar-menu {
 	background:$nav-color;
 }
