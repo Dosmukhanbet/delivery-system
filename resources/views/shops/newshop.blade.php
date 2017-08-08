@@ -12,6 +12,7 @@
 		</a>
 		<hr>
 		<div class="rest_information">	
+					@include('shops.partials.delivery_costs')
 					<p>
 						<strong><small>Мин.заказ:</small></strong>
 						<br> {{$shop->min_order}}тг.
@@ -24,26 +25,17 @@
 						<strong><small>Время приема заказов</small></strong>
 						<br> c {{$shop->open_time}} до {{ $shop->close_time }}
 					</p>
+					
+					
 		</div>	
 			
 
 	</div>
-	<div class="media-right">
-		<p class="delivery_rates is">
-					<strong><small>Доставка</small></strong>
+	<div class="media-right is-hidden-mobile">
+		<p class="delivery_rates">
+					<strong><small>Цены на доставку</small></strong>
 					<br>
-					<span class="rates_list">
-						@foreach($shop->rates->sortBy('cost') as $rate)
-						 	<small>{{$rate->district->name}} - 
-								@if($rate->cost) 
-									{{$rate->cost}}тг.
-								@else
-									<strong>БЕСПЛАТНО</strong>
-								@endif
-							</small>	
-								<br>
-						@endforeach
-					</span>	
+					@include('shops.partials.costs')	
 		</p>
 	</div>
 </article>

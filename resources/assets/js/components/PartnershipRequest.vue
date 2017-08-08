@@ -57,16 +57,18 @@
 	</div>
 </template>
 <script>
-	export default {
+export default {
 		data() {
 			return {
 				showForm: false,
 				sending:false,
 				name: '',
 				companyName: '',
-				mobilenumber: ''
+				mobilenumber: '',
+				now: ''
 			}
 		},
+		
 		methods: {
 			sendInfo() {
 				this.sending = true;

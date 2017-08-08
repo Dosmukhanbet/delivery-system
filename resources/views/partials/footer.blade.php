@@ -4,7 +4,7 @@
 			    <div class="container">
 			    <div class="columns">
 			    	<div class="column is-one-quarter">
-			    		<p class="title is-4 footer_logo">
+			    		<p class="subtitle is-4 footer_logo">
 							<a href="/" style="color:#fff;">
 							    zakaz.<span>express</span>
 							</a>
@@ -14,7 +14,7 @@
 					    </h2>
 			    	</div>
 			    	<div class="column is-one-quarter">
-			    		<p class="title is-5">
+			    		<p class="subtitle is-5">
 			    			<a href="/partnership">
 			    				Как стать нашим партнером?
 			    			</a>

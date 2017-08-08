@@ -46,7 +46,8 @@ class AdminController extends Controller
               'name' => request('username'), 
               'mobile_number' => request('mobile_number'),
               'password' => bcrypt($password),
-              'type' => 'shop'
+              'type' => 'shop',
+              'api_token'     => str_random(60)
             ]);
 
         $this->smsAPI->send(request('mobile_number'), 'Ваш пароль - ' .$password);

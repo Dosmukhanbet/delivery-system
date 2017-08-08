@@ -13,12 +13,12 @@ $DAZZLED_BLUE:#335C81;
 $ORIOLES_ORANGE:#EF4F1A;
 
 
-$primary:#313131;
+$primary:#274060;
 $warning:#F2C71D;
 $info:#4481AA;
 $dark:#012A36;
 $danger:#F44E3F;
-$success:$MYRTLE_GREEN;
+
 
 // // Bootstrap
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
@@ -35,6 +35,7 @@ $success:$MYRTLE_GREEN;
 @import "why_us";
 @import "logo";
 @import "partnership";
+@import "tooltip";
 
 
 body,html { 
@@ -54,12 +55,12 @@ body,html {
 }
 
 .nav .nav-right {
-	background:$primary;;
+	background:$primary;
 }
 
 
 //newnavbar temporary
-$nav-color:$primary;
+$nav-color:$info;
 .newnav {
 	background:$nav-color;
 }

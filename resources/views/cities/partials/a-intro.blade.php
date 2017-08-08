@@ -5,7 +5,7 @@
 					  <div class="item">
 					  	<div class="columns">
 					  		<div class="column is-6">
-					  			<h3 class="title is-2 is-spaced">
+					  			<h3 class="subtitle is-2 is-spaced">
 					  				<strong>
 					  					<span class="text-lighter">
 					  					ZAKAZ.EXPRESS <br>
@@ -36,7 +36,7 @@
 					  <div class="item">
 					  	<div class="columns">
 					  		<div class="column is-6 is-vcentered">
-					  			<h3 class="title is-2 is-spaced">
+					  			<h3 class="subtitle is-2 is-spaced">
 					  				<strong>
 					  					<span class="text-lighter">
 					  					Самый лучший сервис по доставке еды теперь в {{ $city->name }}!
@@ -61,7 +61,7 @@
 					  <div class="item">
 					  	<div class="columns">
 					  		<div class="column is-6 is-vcentered">
-					  			<h3 class="title is-2 is-spaced">
+					  			<h3 class="subtitle is-2 is-spaced">
 					  				<strong>
 					  					<span class="text-lighter">
 					  						Живете загородом?<br>

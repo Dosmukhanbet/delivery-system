@@ -44,6 +44,8 @@ class ShopsController extends Controller
      public function show($cityslug, $shopslug)
      {
         $key = $cityslug. '.' . $shopslug;
+        // $shop = Shop::whereSlug($shopslug)->first();
+        // dd($shop->products->where('is_active', 1)->groupBy('product_categories_id'));
 
 
         if( ! cache($key) ) 

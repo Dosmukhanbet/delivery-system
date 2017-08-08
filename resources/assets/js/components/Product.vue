@@ -2,15 +2,17 @@
 	<div class="card">
 		    <div class="card-image">
 		        <figure class="image is-1by1">
-		           <img :src="photo_path">
+			        	<img :src="photo_path">
 		        </figure>
 		    </div>
 		  <div class="card-content">
 		      <div class="content">
 		          <p class="subtitle is-6 has-text-centered">
-		                  {{ name }}
-		            <!-- <small>{{ price }}тг.</small> -->
+		                  <span class="tooltip" :data-tooltip="description">
+		                  		{{ name }}
+		                  </span>
 		          </p>
+		         
 				  <p class="has-text-centered">
 					  <span class="icon">
 					  	<i class="fa fa-minus-square-o" aria-hidden="true" @click.prevent="cart.amount--"></i>
@@ -29,7 +31,6 @@
 	</div>
 </template>
 <script>
-	
 	export default {
 		props: ['product'],
 
@@ -37,6 +38,7 @@
 			return {
 				name : this.product.name,
 				price : this.product.price,
+				description: this.product.description,
 				cart: {
 					productId : this.product.id,
 					name : this.product.name,
@@ -78,5 +80,13 @@
 	    padding-right: calc(0.625em - 1px);
 	    padding-top: 0.5rem;
 	}
+
+	.description {
+		position: relative;
+		top:0;
+		left:0;
+	}
+
+
 	
 </style>

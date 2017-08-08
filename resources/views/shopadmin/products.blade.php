@@ -1,12 +1,13 @@
 @extends('layouts.app')
 @section('content')
+<div class="container mb-2">
 <div class="columns mt-2">
-	<div class="column is-9 is-offset-1">
+	<div class="column is-9">
 			@if($products->isNotEmpty())
-					@foreach($products->chunk(6) as $chunk)
+					@foreach($products->chunk(4) as $chunk)
 							<div class="columns">
 								@foreach($chunk as $product)
-									<div class="column is-2">
+									<div class="column is-3">
 										<div class="card" style="padding-bottom:1rem;">
 											<div class="card-image">
 												<figure class="image is-1by1">
@@ -37,5 +38,6 @@
 				<p>У вас нет ни одного продукта</p>
 			@endif
 	</div>
+</div>
 </div>
 @endsection

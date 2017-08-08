@@ -36,7 +36,8 @@ class OrdersController extends Controller
     			'name'     		=> request('username'),
     			'mobile_number' => request('mobilenumber'),
     			'type' 			=> 'customer', 
-    			'password'  	=> bcrypt(request('password'))  
+    			'password'  	=> bcrypt(request('password')),
+                'api_token'     => str_random(60)
     		]);
 
         Auth::loginUsingId($user->id, true);

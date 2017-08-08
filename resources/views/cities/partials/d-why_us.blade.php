@@ -3,7 +3,7 @@
         <div class="container">
         	
           <div class="level">
-        		<h3 class="level-item title is-2 has-text-centered">
+        		<h3 class="level-item subtitle is-2 has-text-centered">
                Почему заказывать через наш сервис удобно?
             </h3>
         	</div>
@@ -17,7 +17,7 @@
                       </figure>
                     </div>
                   </div>
-                  <h3 class="title is-4 has-text-centered">
+                  <h3 class="subtitle is-4 has-text-centered">
                     Все рестораны и заведения города на одном сайте
                   </h3>
               </div>
@@ -29,7 +29,7 @@
                       </figure>
                     </div>
                   </div>
-                  <h3 class="title is-4 has-text-centered">
+                  <h3 class="subtitle is-4 has-text-centered">
                     Вам не нужно звонить и диктовать адрес курьеру
                   </h3>
               </div>
@@ -41,7 +41,7 @@
                       </figure>
                     </div>
                   </div>
-                   <h3 class="title is-4 has-text-centered">
+                   <h3 class="subtitle is-4 has-text-centered">
                       Акции, Скидки, Бонусы <br>
                       и много других вкусностей!
                    </h3>

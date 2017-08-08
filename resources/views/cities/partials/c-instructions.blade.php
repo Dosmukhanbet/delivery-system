@@ -2,7 +2,7 @@
           <div class="hero-body">
             <div class="container">
              <div class="level">
-             		<h3 class="level-item title is-2 has-text-centered">Как сделать заказ?</h3>
+             		<h3 class="level-item subtitle is-2 has-text-centered">Как сделать заказ?</h3>
              </div>
              <div class="columns mt-4"> 
              	 <div class="column is-4">
@@ -13,7 +13,7 @@
                           </figure>
                         </div>
                     </div>        
-             	 	<h3 class="title is-4 has-text-centered">
+             	 	<h3 class="subtitle is-4 has-text-centered">
                         Выберите лучший ресторан по ценам и времени доставки
                     </h3>
                 </div>
@@ -25,7 +25,7 @@
                           </figure>
                         </div>
                     </div>  
-                    <h3 class="title is-4 has-text-centered">Ознакомьтесь с меню<br>
+                    <h3 class="subtitle is-4 has-text-centered">Ознакомьтесь с меню<br>
                         Оформите заявку 
                     </h3>
                 </div>
@@ -37,7 +37,7 @@
                           </figure>
                         </div>
                     </div>  
-                    <h3 class="title is-4 has-text-centered">
+                    <h3 class="subtitle is-4 has-text-centered">
                        Укажите ваш район и адрес <br>
                        Ожидайте курьера
                     </h3>

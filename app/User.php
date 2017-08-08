@@ -50,9 +50,6 @@ class User extends Authenticatable
         return $this->hasMany(Order::class);
     } 
 
-    /**
-    * 
-    */
     public function shopOrders()
     {
         return $this->hasManyThrough(Order::class, Shop::class);

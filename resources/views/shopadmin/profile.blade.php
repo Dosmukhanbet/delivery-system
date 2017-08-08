@@ -1,7 +1,8 @@
 @extends('layouts.app')
 @section('content')
+<div class="container  mb-2">
  	<div class="columns mt-2">
-		<div class="column is-6 is-offset-3">
+		<div class="column is-6">
 			<h3 class="title is-5">Имя: {{ $user->name }}</h3>
 			<h3 class="title is-5">Мобильный номер: {{ $user->mobile_number}}</h3>
 			<h3 class="title is-5">Название заведения: {{ $user->shops[0]->name}}</h3>
@@ -9,6 +10,15 @@
 			<h3 class="title is-5">Город: {{ $user->shops[0]->city->name}}</h3>
 			<h3 class="title is-5">Адрес: {{ $user->shops[0]->address}}</h3>
 			<h3 class="title is-5">О заведении: {{ $user->shops[0]->description}}</h3>
+			
+
+			</h3>
+			<ul>
+				<h3 class="title is-5">Категории: </h3>
+				@foreach($user->shops[0]->shopcategories as $cat)
+					<li>{{$cat->name}}</li>
+				@endforeach
+			</ul>
 			<hr>
 			<div>
 				<h3 class="title is-4">Обновить пароль</h3>
@@ -47,5 +57,5 @@
 			</div>
 		</div>
 	</div>	
-
+</div>
 @endsection

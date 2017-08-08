@@ -132,7 +132,8 @@
 	</div>
 </template>
 <script>
-	export default {
+import moment from 'moment';
+export default {
 props: ['products','rates', 'city', 'shop'],
 data() {
 			return {
@@ -157,6 +158,13 @@ created() {
 		this.username = window.App.user.name;
 		this.phoneNumber = window.App.user.mobile_number;
 	}
+	// let now = moment().format('HH:mm');
+	// if(now < this.shop.close_time && now > this.shop.open_time)
+	// {
+	// 	alert(this.shop.open_time);
+	// }
+	
+
 },	
 
 computed:{

@@ -4,7 +4,7 @@
 @endsection
 
 @section('content')
-		<section class="hero is-primary is-hidden-mobile">
+		<section class="hero is-info is-hidden-mobile">
 		  <div class="hero-body">
 		    <div class="container">
 		    	<h2 class="title is-4 marmelad">

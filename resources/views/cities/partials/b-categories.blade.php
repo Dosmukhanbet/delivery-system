@@ -1,7 +1,7 @@
 <div class="container mt-2">
 	@foreach($groups as $group)
 		<div class="groupnames  has-text-centered">
-			<p class="title is-4 marmelad">
+			<p class="subtitle is-4 marmelad">
 				Выберите категорию
 			</p>
 		</div>
@@ -14,7 +14,7 @@
 									<div class="cat_block">
 										<div class="gradient"></div>
 										<img class="category_image" src="/app/{{$category->photo_path}}" alt="{{ $category->name }}">
-										<p class="cat_block_text title is-3">
+										<p class="cat_block_text subtitle is-3">
 											{{ $category->name }}
 										</p>
 										<figure class="cat_block_icon image is-64x64">
