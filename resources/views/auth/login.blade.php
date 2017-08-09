@@ -38,7 +38,7 @@
                         <div class="field">
                             <label for="password" class="label">
                                 Пароль
-                                <small class="small-info">sms код отправленный при регистрации</small>
+                                <small class="small-info">sms код отправленный на мобильный</small>
                             </label>
 
                             <p class="control">

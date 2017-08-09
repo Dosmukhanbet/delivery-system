@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Customer extends Model
 {
-    protected $fillable = ['name', 'user_id', 'city_id', 'email', 'ip_address', 'delivery_address'];
+    protected $fillable = ['name', 'user_id', 'city_id', 'email', 'ip_address', 'delivery_address', 'photo_path'];
 
     public function city ()
     {
