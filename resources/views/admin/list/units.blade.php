@@ -1,5 +1,5 @@
-<ul>
+<div class="tags notification is-warning mt-1">
 	@foreach($units as $unit)
-		<li>{{$unit->name}}</li>	
+		<span class="tag is-dark">{{$unit->name}}</span>	
 	@endforeach
-</ul>
+</div>

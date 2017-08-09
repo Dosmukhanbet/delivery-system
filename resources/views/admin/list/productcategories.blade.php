@@ -1,5 +1,5 @@
-<ul>
+<div class="tags notification is-warning mt-1">
 	@foreach($productcategories as $category)
-		<li>{{$category->name}}</li>	
+		<span class="tag is-dark">{{$category->name}}</span>
 	@endforeach
-</ul>
+</div>

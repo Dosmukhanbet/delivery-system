@@ -44,7 +44,7 @@
                   <nav class="nav has-shadow" id="top">
                     <div class="container">
                       <div class="nav-left">
-                            @include('partials.logo')
+                            @include('partials.new.logo')
                       </div>
 
 
