@@ -1,8 +1,8 @@
  <footer class="marmelad">
-	       	<section class="hero is-primary">
+	       	<section class="hero is-info">
 			  <div class="hero-body">
-			    <div class="container">
-			    <div class="columns">
+			    <div class="container is-footer">
+			    <div class="columns mt-1">
 			    	<div class="column is-one-quarter">
 			    		<p class="subtitle is-4 footer_logo">
 							<a href="/" style="color:#fff;">

@@ -1,6 +1,6 @@
  <div class="newnav">
    <div class="container">
-       <nav class="navbar is-transparent" >
+       <nav class="navbar" >
             <div class="navbar-brand">
                @include('partials.new.logo')
                 <div class="navbar-burger burger" data-target="navMenuExample">

@@ -22,10 +22,12 @@ class ShopsController extends Controller
 
         if ( !cache($key)) 
         {
+
             $shops = $category->shops()
                           ->where('city_id', $city->id)
                           ->orderBy('rating', 'desc')
                           ->paginate(15);
+             // dd($shops);             
 
             $week = Carbon::now()->addWeek(); 
 

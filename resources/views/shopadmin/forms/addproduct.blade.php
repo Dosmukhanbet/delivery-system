@@ -15,7 +15,7 @@
 					<div class="field">		
 						<label class="label">Описание</label>
 						<p class="control">
-							<input class="input {{ $errors->has('description') ? ' is-danger' : '' }}" name="description" type="text">
+							<input class="input {{ $errors->has('description') ? ' is-danger' : '' }}" name="description" type="text" placeholder="Ингридиенты">
 						</p>
 						@if ($errors->has('description'))
                              <p class="help is-danger">

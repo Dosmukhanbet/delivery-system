@@ -1,13 +1,17 @@
 @extends('layouts.app')
+@section('title', 'Авторизация')
 
 @section('content')
-<section class="hero is-fullheight">
+<section class="hero is-fullheight is-info">
 <div class="hero-body">
 <div class="container">
     <div class="columns is-vcentered">
         <div class="column is-4 is-offset-4">
                 <div class="login box">
-                  <h3 class="title is-4 has-text-centered"><strong>Авторизация</strong></h3><hr>
+                  <h3 class="title is-4 has-text-centered">
+                    <strong>Авторизация</strong>
+                  </h3>
+                  <hr>
                     <form role="form" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
 

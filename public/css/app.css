@@ -9419,6 +9419,14 @@ label.panel-block:hover {
   border: 3px solid #f2eaea;
 }
 
+.Avatar--edge {
+  border-radius: 50%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
 .bb-1 {
   border-bottom: 1px solid #ccc;
 }
@@ -9629,6 +9637,11 @@ a.shop_link p:hover {
 
 .login {
   background: whitesmoke;
+  font-family: Marmelad;
+}
+
+.login > h3.title {
+  color: #000 !important;
 }
 
 .why_us {
@@ -9792,7 +9805,6 @@ body, html {
 }
 
 .navbar {
-  height: 70px;
   background: #4481AA;
   border-bottom: 1px solid #4b8cb7;
 }
@@ -9803,4 +9815,8 @@ body, html {
 
 .bg-hero {
   background: #4481AA;
+}
+
+.is-footer {
+  border-top: 1px solid #4b8cb7;
 }

@@ -29,6 +29,9 @@
                     </div>
                   @endif
                   @if(auth()->user()->type == 'shop')
+                    <figure class="navbar-item image is-48x48 Avatar--edge">
+                      <img src="/app/{{ auth()->user()->shops[0]->photo_path }}" alt="">
+                    </figure>
                     <div class="navbar-dropdown is-boxed">
                       <a href="{{url('/shop/profile')}}" class="navbar-item ">
                           Профиль

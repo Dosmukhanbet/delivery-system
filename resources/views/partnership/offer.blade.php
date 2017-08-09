@@ -19,11 +19,11 @@
 			    		<img src="/app/buildings-png/009-food-4.png" alt="">
 			    	  </figure>
 			    	</div>   --}}
-		    	  <h1 class="title ml-2 has-text-centered">
+		    	  <h1 class="subtitle is-4 ml-2 has-text-centered">
 		    	  	
 		    	  	<span class="text-warning marmelad">
 		    	  	<strong>
-			         	Информация для ресторанов <br> и фаст-фуд заведении
+			         	Информация для ресторанов  и фаст-фуд заведении
 			         	 </strong> 
 			        </span> 	
 			       
@@ -41,7 +41,7 @@
 		<div class="container marmelad mt-2 mb-6">
 			<div class="level">
 					<div class="level-item has-text-centered">
-						 <h2 class="title">
+						 <h2 class="subtitle is-3">
 					        Почему содрудничать с нами выгодно?
 					      </h2>
 					</div>
@@ -53,7 +53,7 @@
 							<figure class="image is-32x32 mr-2">
 							  <img src="/app/partnership/checked.png">
 							</figure>
-							<h3 class="title is-4">
+							<h3 class="subtitle is-4">
 								Вы получите новых клиентов
 							</h3>
 						</li>
@@ -61,7 +61,7 @@
 							<figure class="image is-32x32 mr-2">
 							  <img src="/app/partnership/checked.png">
 							</figure>
-							<h3 class="title is-4">
+							<h3 class="subtitle is-4">
 								Готовая и Удобная система <br> для управления заказами
 							</h3>
 						</li>
@@ -69,7 +69,7 @@
 							<figure class="image is-32x32 mr-2">
 							  <img src="/app/partnership/checked.png">
 							</figure>
-							<h3 class="title is-4">
+							<h3 class="subtitle is-4">
 								Вы можете указать цены на доставку<br>
 								в отдаленные районы города
 							</h3>
@@ -83,7 +83,7 @@
 							<figure class="image is-32x32 mr-2">
 							  <img src="/app/partnership/checked2.png">
 							</figure>
-							<h3 class="title is-4">
+							<h3 class="subtitle is-4">
 								Вы сэкономите на рекламе 
 							</h3>
 						</li>
@@ -91,7 +91,7 @@
 							<figure class="image is-32x32 mr-2">
 							  <img src="/app/partnership/checked2.png">
 							</figure>
-							<h3 class="title is-4">
+							<h3 class="subtitle is-4">
 								Вы сэкономите на разработке <br> сайта и приложения
 							</h3>
 						</li>
@@ -99,7 +99,7 @@
 							<figure class="image is-32x32 mr-2">
 							  <img src="/app/partnership/checked2.png">
 							</figure>
-							<h3 class="title is-4">
+							<h3 class="subtitle is-4">
 								Вам не нужно уведомлять клиентов <br> о новых акциях,скидках
 							</h3>
 						</li>
@@ -110,7 +110,7 @@
 			<div class="level">
 					<div class="level-item">
 						<partnership-request></partnership-request>
-						{{--  <h2 class="title">
+						{{--  <h2 class="subtitle">
 					        Чтобы подключить к системе свое заведение <br>
 					         просто позвоните по номеру +7 (707) 883-59-53
 					      </h2> --}}

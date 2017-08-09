@@ -23,6 +23,14 @@
 	border:3px solid #f2eaea;
 }
 
+.Avatar--edge {
+    border-radius: 50%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+
 .bb-1 { 
 	border-bottom :1px solid #ccc;
 }

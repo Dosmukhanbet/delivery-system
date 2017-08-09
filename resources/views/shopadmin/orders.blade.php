@@ -2,10 +2,10 @@
 
 
 @section('content')
-<div class="container  mb-2">
+<div class="container mb-2">
 	<div class="columns mt-2">
 		<div class="column is-6">
-		<h3 class="title is-3">Все заявки</h3>
+		<h3 class="title is-3">Все заказы</h3>
 		<div class="orders  has-text-centered">
 			@if($orders->isNotEmpty())
 				<table class="table is-striped">

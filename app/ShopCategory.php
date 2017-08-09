@@ -15,7 +15,7 @@ class ShopCategory extends Model
     /**
     * 
     */
-    public function shops ()
+    public function shops()
     {
     	return $this->belongsToMany(Shop::class);
     } 
