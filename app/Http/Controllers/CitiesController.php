@@ -17,10 +17,8 @@ class CitiesController extends Controller
     	$month = Carbon::now()->addMonth();
 
         $key = str_replace(".", '-' ,request()->ip());
-        if( ! session()->exists($key) )
-        {
-            session([$key => $city->slug]);
-        }
+       
+        session([$key => $city->slug]);
         
         // session()->flush();
 

@@ -8,6 +8,7 @@
                 <span></span>
                 <span></span>
               </div>
+
             </div>
 
             
@@ -24,6 +25,7 @@
               @endif
            
                 {{-- DESKTOP SCREEN --}}
+            
              <div  class="navbar-menu">
               @include('partials.new.user')
             </div>
