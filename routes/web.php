@@ -7,10 +7,7 @@ use App\Mail\OrderCreated;
 use Illuminate\Support\Facades\Mail;
 Route::post('verifynumber', 'VerificationController@verify');
 
-Route::get('/', function () {
-	// dd(\Request::ip());
-    return redirect('cities/aktobe');
-});
+Route::get('/', 'HomeController@index')->name('home');
 Route::get('/home', 'HomeController@index')->name('home');
 
 

@@ -10818,6 +10818,7 @@ Vue.component('update-product', __webpack_require__(56));
 Vue.component('activate-product', __webpack_require__(55));
 Vue.component('partnership-request', __webpack_require__(53));
 Vue.component('leave-feedback', __webpack_require__(51));
+Vue.component('city', __webpack_require__(258));
 
 var app = new Vue({
   el: '#app'
@@ -59961,6 +59962,130 @@ webpackContext.keys = function webpackContextKeys() {
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
 webpackContext.id = 257;
+
+/***/ }),
+/* 258 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Component = __webpack_require__(1)(
+  /* script */
+  __webpack_require__(259),
+  /* template */
+  __webpack_require__(260),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "/Users/admin/Desktop/Code/zakaz/resources/assets/js/components/City.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] City.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-5ba7a320", Component.options)
+  } else {
+    hotAPI.reload("data-v-5ba7a320", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 259 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+	props: ['cities'],
+	methods: {
+		url: function url(slug) {
+			return '/cities/' + slug;
+		}
+	},
+	data: function data() {
+		return {};
+	}
+});
+
+/***/ }),
+/* 260 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "modal is-active"
+  }, [_c('div', {
+    staticClass: "modal-background"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "modal-card"
+  }, [_vm._m(0), _vm._v(" "), _c('section', {
+    staticClass: "modal-card-body"
+  }, [_c('div', {
+    staticClass: "columns"
+  }, [_c('div', {
+    staticClass: "column"
+  }, [_c('ul', _vm._l((_vm.cities), function(city) {
+    return _c('li', {
+      staticClass: "has-text-centered"
+    }, [_c('a', {
+      attrs: {
+        "href": _vm.url(city.slug)
+      }
+    }, [_vm._v(_vm._s(city.name))])])
+  }))])])]), _vm._v(" "), _c('footer', {
+    staticClass: "modal-card-foot partnership_request_footer",
+    staticStyle: {
+      "margin-top": "0"
+    }
+  })])])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('header', {
+    staticClass: "modal-card-head partnership_request_header"
+  }, [_c('p', {
+    staticClass: "modal-card-title arsenal has-text-centered"
+  }, [_vm._v("Выберите Ваш город")])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-5ba7a320", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

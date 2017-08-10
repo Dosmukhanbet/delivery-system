@@ -5772,11 +5772,11 @@ a.dropdown-item.is-active {
 }
 
 .nav-toggle:hover {
-  background-color: whitesmoke;
+  background-color: #3d7398;
 }
 
 .nav-toggle.is-active span {
-  background-color: #274060;
+  background-color: #F2C71D;
 }
 
 .nav-toggle.is-active span:nth-child(1) {
@@ -6078,11 +6078,11 @@ a.nav-item:not(.button).is-tab.is-active {
 }
 
 .navbar-burger:hover {
-  background-color: whitesmoke;
+  background-color: #3d7398;
 }
 
 .navbar-burger.is-active span {
-  background-color: #274060;
+  background-color: #F2C71D;
 }
 
 .navbar-burger.is-active span:nth-child(1) {

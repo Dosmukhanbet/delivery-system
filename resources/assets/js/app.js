@@ -16,6 +16,7 @@ Vue.component('update-product', require('./components/shopadmin/UpdateProduct.vu
 Vue.component('activate-product', require('./components/shopadmin/ActivateProduct.vue'));
 Vue.component('partnership-request', require('./components/PartnershipRequest.vue'));
 Vue.component('leave-feedback', require('./components/LeaveFeedback.vue'));
+Vue.component('city', require('./components/City.vue'));
 
 const app = new Vue({
     el: '#app'

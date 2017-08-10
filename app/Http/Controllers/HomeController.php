@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\City;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,7 +14,6 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
     }
 
     /**
@@ -23,6 +23,16 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $key = str_replace(".", '-' ,request()->ip());
+        if( ! session()->exists($key))
+        {
+            $cities = City::all();
+            
+            return view('home',compact('cities'));
+        }
+        else 
+        {
+            return redirect('cities/' . session($key));
+        }   
     }
 }
