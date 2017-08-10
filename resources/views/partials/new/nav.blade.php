@@ -25,6 +25,9 @@
               @endif
            
                 {{-- DESKTOP SCREEN --}}
+             {{-- <div  class="navbar-menu">
+              @include('partials.new.select_city')
+            </div>    --}}
             
              <div  class="navbar-menu">
               @include('partials.new.user')

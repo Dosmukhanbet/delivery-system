@@ -59967,6 +59967,10 @@ webpackContext.id = 257;
 /* 258 */
 /***/ (function(module, exports, __webpack_require__) {
 
+
+/* styles */
+__webpack_require__(262)
+
 var Component = __webpack_require__(1)(
   /* script */
   __webpack_require__(259),
@@ -60047,7 +60051,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "modal is-active"
+    staticClass: "modal is-active modal-width"
   }, [_c('div', {
     staticClass: "modal-background"
   }), _vm._v(" "), _c('div', {
@@ -60060,7 +60064,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "column"
   }, [_c('ul', _vm._l((_vm.cities), function(city) {
     return _c('li', {
-      staticClass: "has-text-centered"
+      staticClass: "has-text-centered is-size-6 List--city"
     }, [_c('a', {
       attrs: {
         "href": _vm.url(city.slug)
@@ -60076,7 +60080,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   return _c('header', {
     staticClass: "modal-card-head partnership_request_header"
   }, [_c('p', {
-    staticClass: "modal-card-title arsenal has-text-centered"
+    staticClass: "modal-card-title has-text-centered is-size-5"
   }, [_vm._v("Выберите Ваш город")])])
 }]}
 module.exports.render._withStripped = true
@@ -60085,6 +60089,39 @@ if (false) {
   if (module.hot.data) {
      require("vue-hot-reload-api").rerender("data-v-5ba7a320", module.exports)
   }
+}
+
+/***/ }),
+/* 261 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)();
+exports.push([module.i, "\n.List--city {\n  padding: 0.5rem;\n  border-bottom: 1px solid #f5f5f5;\n}\n.List--city > a:hover {\n  color: #4481AA;\n}\n", ""]);
+
+/***/ }),
+/* 262 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(261);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(3)("25d1481b", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-5ba7a320\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./City.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-5ba7a320\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./City.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
 }
 
 /***/ })

@@ -1,16 +1,16 @@
 <template>
-	<div class="modal is-active">
+	<div class="modal is-active modal-width">
 					 <div class="modal-background"></div>
 					  <div class="modal-card">
 						    <header class="modal-card-head partnership_request_header">
-						      <p class="modal-card-title arsenal has-text-centered" >Выберите Ваш город</p>
+						      <p class="modal-card-title has-text-centered is-size-5" >Выберите Ваш город</p>
 						    </header>
 
 						    <section class="modal-card-body">
 						    	<div class="columns">
 						    		<div class="column">
 						    			<ul>
-						    				<li v-for="city in cities" class="has-text-centered">
+						    				<li v-for="city in cities" class="has-text-centered is-size-6 List--city">
 						    					<a :href="url(city.slug)">{{ city.name }}</a>
 						    				</li>
 						    			</ul>
@@ -38,3 +38,14 @@
 		}
 	}
 </script>
+<style lang="scss">
+	.List--city
+	{
+		padding: 0.5rem;
+		border-bottom: 1px solid #f5f5f5;
+	}
+
+	.List--city > a:hover {
+		color: #4481AA;
+	}
+</style>
