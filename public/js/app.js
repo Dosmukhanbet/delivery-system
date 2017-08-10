@@ -60071,14 +60071,14 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       }
     }, [_vm._v(_vm._s(city.name))])])
   }))])])]), _vm._v(" "), _c('footer', {
-    staticClass: "modal-card-foot partnership_request_footer",
+    staticClass: "modal-card-foot City--modal--food",
     staticStyle: {
       "margin-top": "0"
     }
   })])])
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('header', {
-    staticClass: "modal-card-head partnership_request_header"
+    staticClass: "modal-card-head City--modal--head"
   }, [_c('p', {
     staticClass: "modal-card-title has-text-centered is-size-5"
   }, [_vm._v("Выберите Ваш город")])])
@@ -60096,7 +60096,7 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)();
-exports.push([module.i, "\n.List--city {\n  padding: 0.5rem;\n  border-bottom: 1px solid #f5f5f5;\n}\n.List--city > a:hover {\n  color: #4481AA;\n}\n", ""]);
+exports.push([module.i, "\n.List--city {\n  padding: 0.5rem;\n  border-bottom: 1px solid #f5f5f5;\n}\n.List--city > a:hover {\n  color: #4481AA;\n}\n.City--modal--food, .City--modal--head {\n  background: #fff !important;\n  border-bottom: none !important;\n  border-top: none !important;\n}\n", ""]);
 
 /***/ }),
 /* 262 */

@@ -2,7 +2,7 @@
 	<div class="modal is-active modal-width">
 					 <div class="modal-background"></div>
 					  <div class="modal-card">
-						    <header class="modal-card-head partnership_request_header">
+						    <header class="modal-card-head City--modal--head">
 						      <p class="modal-card-title has-text-centered is-size-5" >Выберите Ваш город</p>
 						    </header>
 
@@ -18,7 +18,7 @@
 						    		</div>
 						    	</div>
 						    </section>
-						    <footer class="modal-card-foot partnership_request_footer" style="margin-top:0">
+						    <footer class="modal-card-foot City--modal--food" style="margin-top:0">
 						    </footer>
 					  </div>
 				</div>
@@ -48,4 +48,10 @@
 	.List--city > a:hover {
 		color: #4481AA;
 	}
+
+	.City--modal--food, .City--modal--head {
+		background:#fff !important;
+		border-bottom: none !important;
+		border-top: none !important;
+	} 
 </style>
