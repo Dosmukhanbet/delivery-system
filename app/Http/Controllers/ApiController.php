@@ -18,14 +18,20 @@ class ApiController extends Controller
 
 	public function categories()
     {
-    	return ShopCategory::all();
+    	return ShopCategory::all(['id' ,'name', 'slug', 'photo_path', 'thumbnail_path']);
     }  
 
     public function shops(City $city)
     {
-    	
-    	return $shops = Shop::where('city_id', $city->id)
+    	return Shop::where('city_id', $city->id)
     				 ->get(['name', 'slug' , 'city_id']);
+    }
 
+    public function cities()
+    {
+        return City::all(['id', 'name' , 'slug']);
     } 
+
+    
+    
 }

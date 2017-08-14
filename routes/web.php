@@ -5,6 +5,7 @@ use App\Order;
 use App\Country;
 use App\Mail\OrderCreated;
 use Illuminate\Support\Facades\Mail;
+
 Route::post('verifynumber', 'VerificationController@verify');
 
 Route::get('/', 'HomeController@index')->name('home');
