@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\City;
 use App\Shop;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ApiController extends Controller
 {
@@ -12,10 +13,16 @@ class ApiController extends Controller
 	public function __construct()
 	{
 	             
-	}
+	}    
 
     public function shops(City $city)
     {
-    	return Shop::where('city_id', $city->id)->get(['name', 'slug', 'city_id', 'photo_path']);
+    	$shops =  DB::table('shops')
+            ->join('rates', 'shop_id', '=', 'rates.shop_id')
+            ->get();
+    	// $shops = Shop::where('city_id', $city->id)
+    	// 			->pluck('name', 'city_id');
+
+    	dd($shops);		
     } 
 }
