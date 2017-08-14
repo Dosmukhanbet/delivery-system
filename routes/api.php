@@ -18,6 +18,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::group(['prefix' => 'v1'], function(){
+	// Verify Number api/v1/verifynumber
+	Route::post('verifynumber', 'VerificationController@verify');
+
+	Route::get('categories', 'ApiController@categories');
 	Route::get('shops/{city}', 'ApiController@shops');
 	Route::get('shops/{shop}/products', 'ApiController@products');
 });
