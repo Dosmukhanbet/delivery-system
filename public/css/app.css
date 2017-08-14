@@ -1,5 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@import url(https://fonts.googleapis.com/css?family=Baloo+Bhaina);@import url(https://fonts.googleapis.com/css?family=Marmelad);@import url(https://fonts.googleapis.com/css?family=Kelly+Slab);
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@import url(https://fonts.googleapis.com/css?family=Baloo+Bhaina);@import url(https://fonts.googleapis.com/css?family=Marmelad);@import url(https://fonts.googleapis.com/css?family=Kelly+Slab);@import url(https://fonts.googleapis.com/css?family=Sriracha);
 /*! bulma.io v0.5.1 | MIT License | github.com/jgthms/bulma */
+
 
 
 
@@ -4788,7 +4789,7 @@ a.tag:hover {
 }
 
 .breadcrumb li + li::before {
-  color: #4a4a4a;
+  color: #4481AA;
   content: "\0002f";
 }
 
@@ -9658,12 +9659,8 @@ a.shop_link p:hover {
 }
 
 a.navbar-item > .logo {
-  border-top: 1px solid #F2C71D;
-  border-bottom: 1px solid #F2C71D;
-  border-radius: 14px;
-  padding: 6px 12px 6px 12px;
-  font-family: 'Marmelad', sans-serif;
-  text-transform: uppercase;
+  font-family: 'Sriracha', cursive;
+  font-weight: 500;
   color: #F2C71D;
 }
 
@@ -9672,8 +9669,7 @@ a.navbar-item:hover {
 }
 
 a.navbar-item > .logo > span {
-  color: #F44E3F;
-  font-weight: bold;
+  color: #fff;
 }
 
 p.footer_logo > a {

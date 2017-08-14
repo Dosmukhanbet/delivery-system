@@ -1,5 +1,5 @@
 <template>
-	<div class="cart">
+	<div class="cart" id="cart">
 	<div class="level">
 		<div class="level-left">
 			<p class="title is-5">
@@ -90,6 +90,8 @@
 		methods: {
 			addToCart(data){
 				this.items.push(data);
+				this.scrolToCart();
+				
 			},
 
 			remove(index, item) {
@@ -98,6 +100,11 @@
 
 	        clearCart() {
 	        	this.items = []; 
+	        },
+	        scrolToCart(){
+	        	$('html, body').animate({
+			        scrollTop: $("#cart").offset().top
+			    }, 750);
 	        }
 
 	        

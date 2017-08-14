@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css?family=Sriracha');
 $logo : $warning;
 
 .nav .nav-item a.logo {
@@ -15,13 +15,15 @@ $logo : $warning;
 }
 
 a.navbar-item > .logo {
-    border-top: 1px solid $logo;
-    border-bottom: 1px solid $logo;
-    border-radius: 14px;
+    // border-top: 1px solid $logo;
+    // border-bottom: 1px solid $logo;
+    // border-radius: 14px;
     // margin-top:17px;
-    padding: 6px 12px 6px 12px;
-    font-family: 'Marmelad', sans-serif;
-    text-transform: uppercase;
+    // padding: 6px 12px 6px 12px;
+    // font-family: 'Marmelad', sans-serif;
+    font-family: 'Sriracha', cursive;
+    // text-transform: uppercase;
+    font-weight:500;
     color: $logo;
     // &:hover {
     //  background:$primary;
@@ -35,8 +37,8 @@ a.navbar-item:hover {
 
 
 a.navbar-item > .logo > span {
-   color: $danger;
-   font-weight:bold;
+   color: #fff;
+   // font-weight:700;
 }
 
 p.footer_logo > a {

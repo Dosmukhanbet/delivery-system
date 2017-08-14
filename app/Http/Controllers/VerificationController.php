@@ -15,17 +15,14 @@ class VerificationController extends Controller
 	}
 
     /**
-    * VERIFY 
+    * VERIFY NUMBER
     */
     public function verify()
     {
-
     	$code = rand(10000, 99999);
-    	
     	
 	    $this->smsAPI->send(request('phoneNumber'), $code);
 	    	
-    	
     }
 
 

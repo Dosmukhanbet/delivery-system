@@ -1,10 +1,10 @@
 <div class="column is-3">
 		<ul>
-		<cart 
-				:minorder="{{$shop->min_order}}" 
-				:city="{{$city}}" 
-				:shop="{{$shop}}">
-		</cart>
+			<cart 
+					:minorder="{{$shop->min_order}}" 
+					:city="{{$city}}" 
+					:shop="{{$shop}}">
+			</cart>
 			{{-- @foreach($groupedproducts as $product)
 					<li><p class="title is-5">{{ $product[0]->productCategory->name}}</p></li>
 
@@ -23,6 +23,7 @@
 		</div>
 	@endforeach
 </div>
+
 @section('map')
 	  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
     </script>

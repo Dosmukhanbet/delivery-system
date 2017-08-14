@@ -8,13 +8,14 @@
 		  <div class="card-content">
 		      <div class="content">
 		          <p class="subtitle is-6 has-text-centered">
-		                  <span class="tooltip" :data-tooltip="description">
-		                  		{{ name }}
+		          			{{ name }}
+		                  <span class="icon is-small tooltip" :data-tooltip="description">
+		                  		<i class="fa fa-bars" aria-hidden="true"></i>
 		                  </span>
 		          </p>
 		         
 				  <p class="has-text-centered">
-					  <span class="icon">
+					  <span class="icon" v-show="cart.amount > 1">
 					  	<i class="fa fa-minus-square-o" aria-hidden="true" @click.prevent="cart.amount--"></i>
 					  </span>
 					  <span v-text="quantity"></span>
@@ -56,6 +57,7 @@
 					return '/app/' + this.product.photo_path;
 			},
 			total() {
+				if(this.quantity < 0 ) return 0;
 				return this.product.price*this.quantity;
 			},
 			quantity(){

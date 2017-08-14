@@ -17,7 +17,6 @@ class ShopsController extends Controller
     */
     public function index(City $city, ShopCategory $category)
     {
-
         $key = $city->slug. '.' . $category->slug;
 
         if ( !cache($key)) 
@@ -50,7 +49,7 @@ class ShopsController extends Controller
         // dd($shop->products->where('is_active', 1)->groupBy('product_categories_id'));
 
 
-        if( ! cache($key) ) 
+        if( ! cache($key) || ! cache('all_categories')) 
         {
             $shop = Shop::whereSlug($shopslug)->first();
 
@@ -61,7 +60,7 @@ class ShopsController extends Controller
             cache([ $shopslug.'products' => $shop->products->where('is_active', 1)], $month);
             cache([ $key => $shop ], $month);
             cache(['city' => $city ], $month);
-
+            cache(['all_categories' => ShopCategory::all()], $month);
             $shopslug = $shop->slug;
         }
 
@@ -71,7 +70,8 @@ class ShopsController extends Controller
 		     		[ 
 		     		   'products' => cache($shopslug . 'products'),
 		     		   'shop'	  => cache($key) ,
-		     		   'city' 	  => cache('city')
+		     		   'city' 	  => cache('city'),
+                       'categories' => cache('all_categories')
 		     		   // 'groupedproducts' => $shop->products->groupBy('product_categories_id')
 		     		]);
      }  

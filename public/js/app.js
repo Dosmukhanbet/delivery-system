@@ -11772,12 +11772,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 	methods: {
 		addToCart: function addToCart(data) {
 			this.items.push(data);
+			this.scrolToCart();
 		},
 		remove: function remove(index, item) {
 			this.items.splice(index, 1);
 		},
 		clearCart: function clearCart() {
 			this.items = [];
+		},
+		scrolToCart: function scrolToCart() {
+			$('html, body').animate({
+				scrollTop: $("#cart").offset().top
+			}, 750);
 		}
 	}
 });
@@ -12346,6 +12352,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
 	props: ['product'],
@@ -12372,6 +12379,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			return '/app/' + this.product.photo_path;
 		},
 		total: function total() {
+			if (this.quantity < 0) return 0;
 			return this.product.price * this.quantity;
 		},
 		quantity: function quantity() {
@@ -42898,7 +42906,10 @@ module.exports = Component.exports
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "cart"
+    staticClass: "cart",
+    attrs: {
+      "id": "cart"
+    }
   }, [_c('div', {
     staticClass: "level"
   }, [_vm._m(0), _vm._v(" "), (_vm.items.length) ? _c('div', {
@@ -43017,14 +43028,25 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "content"
   }, [_c('p', {
     staticClass: "subtitle is-6 has-text-centered"
-  }, [_c('span', {
-    staticClass: "tooltip",
+  }, [_vm._v("\n\t          \t\t\t" + _vm._s(_vm.name) + "\n\t                  "), _c('span', {
+    staticClass: "icon is-small tooltip",
     attrs: {
       "data-tooltip": _vm.description
     }
-  }, [_vm._v("\n\t                  \t\t" + _vm._s(_vm.name) + "\n\t                  ")])]), _vm._v(" "), _c('p', {
+  }, [_c('i', {
+    staticClass: "fa fa-bars",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })])]), _vm._v(" "), _c('p', {
     staticClass: "has-text-centered"
   }, [_c('span', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.cart.amount > 1),
+      expression: "cart.amount > 1"
+    }],
     staticClass: "icon"
   }, [_c('i', {
     staticClass: "fa fa-minus-square-o",

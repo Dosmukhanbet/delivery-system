@@ -19,8 +19,13 @@
           </div>
         </section>
         <div class="container mt-2 cart_products">
+            <div class="columns">
+                <div class="column">
+                    @include('shops.partials.breadcrumb')
+                </div>
+            </div>
         	<div class="columns">
-        					@include('products.index')
+        			@include('products.index')
              </div>
         </div>
 
