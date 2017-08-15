@@ -1,32 +1,23 @@
-@import url('https://fonts.googleapis.com/css?family=Sriracha');
+@import url('https://fonts.googleapis.com/css?family=Baloo+Paaji');
+
 $logo : $warning;
 
-.nav .nav-item a.logo {
-	border-bottom: 2px solid $logo;
-	border-radius: 70px;
-	padding: 0px 12px 0px 12px;
-	font-family: 'Marmelad', sans-serif;
-    text-transform: uppercase;
-    color: $logo;
-    // &:hover {
-    // 	background:$primary;
-    // 	color: rgb(131, 185, 63);
-    // }
-}
 
 a.navbar-item > .logo {
-    font-family: 'Sriracha', cursive;
-    font-weight:500;
-    color: $logo;
+    font-family: 'Baloo Paaji', cursive;
+    text-transform: uppercase;
+    // font-weight:600;
+    letter-spacing: 2px;
+    color: #fff;
 }
 
 a.navbar-item:hover {
-    background:$info;
+    background:#4D545D;
 }
 
 
 a.navbar-item > .logo > span {
-   color: #fff;
+   color: #01AFB2;
    // font-weight:700;
 }
 

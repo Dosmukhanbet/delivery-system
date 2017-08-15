@@ -4,10 +4,10 @@
 @endsection
 
 @section('content')
-		<section class="hero is-info">
+		<section class="hero is-info is-blue">
 		  <div class="hero-body">
 		    <div class="container">
-		    	<h2 class="title is-4 marmelad">
+		    	<h2 class="title is-4 marmelad ">
 				     <strong>{{ $city->name }} /	{{ $category->name }}</strong>        
 				</h2>
 		    </div>

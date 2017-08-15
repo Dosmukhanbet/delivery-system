@@ -86,6 +86,9 @@
 .card > .card-content {
 	padding-left:0;
 }
+.text-white {
+	color:#fff !important;
+}
 .text-lighter {
 	color:$light;
 }
@@ -106,4 +109,8 @@
 }
 .text-info {
 	color:$info;
+}
+
+.text-success {
+	color:$success;
 }

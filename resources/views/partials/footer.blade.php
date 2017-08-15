@@ -1,5 +1,5 @@
  <footer class="marmelad">
-	       	<section class="hero is-info">
+	       	<section class="hero is-info ">
 			  <div class="hero-body">
 			    <div class="container is-footer">
 			    <div class="columns mt-1">

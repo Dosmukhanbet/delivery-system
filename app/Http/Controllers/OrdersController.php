@@ -58,7 +58,7 @@ class OrdersController extends Controller
     	$order = Order::create([
     		'total'=> request('totalWithDelivery'),
     		'delivery_status' => 0,
-    		'delivery_address'=> request('address'),
+    		'delivery_address'=> request('district') . ' - ' . request('address'),
     		'delivery_cost'=> request('deliveryCost'),
     		'user_id'=> $user->id,
     		'shop_id'=> request('shopId'),

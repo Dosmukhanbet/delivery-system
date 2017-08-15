@@ -42,14 +42,14 @@
 						 	Мобильный номер<small class="small-info">Пример: +77075558844</small>
 						 </label>
 						  <p class="control">
-						    <input v-model="phoneNumber" class="input" :disabled="signedIn" type="text" placeholder="Укажите мобильный номер" required pattern="(\+7|8)[0-9]{10}">
+						    <input v-model="phoneNumber" class="input" :disabled="signedIn" type="text" placeholder="Укажите мобильный номер" required pattern="(\+7)[0-9]{10}">
 						  </p>
 						</div>
 
 						
 						<div class="field">
 							<p class="control">
-								<button type="submit" class="button is-primary" :class="{ 'is-loading':sending }">Отправить</button> 
+								<button type="submit" class="button is-info" :class="{ 'is-loading':sending }">Отправить</button> 
 							</p>
 						</div>
 						</form>
@@ -256,6 +256,7 @@ methods: {
 					mobilenumber : this.phoneNumber,
 					address: this.address,
 					total: this.total,
+					district: this.cost.district.name,
 					deliveryCost: this.cost.cost,
 					totalWithDelivery:this.totalcost,
 					cityId: this.city.id,

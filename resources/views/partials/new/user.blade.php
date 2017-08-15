@@ -2,7 +2,7 @@
   <div class="navbar-end">
           <div class="navbar-item field is-grouped">
               <p class="control">
-                <a href="/login" class="button is-warning is-outlined" >
+                <a href="/login" class="button is-success is-outlined" >
                   <span>Войти</span>
                 </a>
               </p>
@@ -12,7 +12,7 @@
 @else
   <div class="navbar-end navbar-loggedin">
             <div class="navbar-item has-dropdown is-hoverable">
-                <p class="navbar-item text-warning" >
+                <p class="navbar-item text-success" >
                   {{auth()->user()->name}}
                 </p>
                   @if(auth()->user()->type == 'customer')
@@ -34,10 +34,10 @@
                     </figure>
                     <div class="navbar-dropdown is-boxed">
                       <a href="{{url('/shop/profile')}}" class="navbar-item ">
-                          Профиль
+                          Мой профиль
                         </a>
                         <a href="{{url('/orders')}}" class="navbar-item">
-                          Заявки
+                          Мои заказы
                         </a>
                         <a href="{{url('/products')}}" class="navbar-item">
                           Меню
@@ -54,7 +54,7 @@
             
             <div class="nav-item field">
               <p class="control">
-                <a href="{{url('/logout')}}" class="button is-warning is-outlined" >
+                <a href="{{url('/logout')}}" class="button is-success is-outlined" >
                   <span>Выйти</span>
                 </a>
               </p>

@@ -1,4 +1,4 @@
-<section class="hero bg-hero intro is-hidden-mobile">
+<section class="hero intro is-hidden-mobile is-blue">
 		 	<div class="hero-body">
 			    <div class="container  has-text-centered">
 			        <div id="owl-demo" class="owl-carousel owl-theme">
@@ -8,7 +8,6 @@
 					  			<h3 class="subtitle is-2 is-spaced">
 					  				<strong>
 					  					<span class="text-lighter">
-					  					ZAKAZ.EXPRESS <br>
 					  					Удобно, Быстро и Доступно!
 					  					</span>
 					  			 	</strong>
@@ -43,7 +42,7 @@
 					  					</span>
 					  				</strong>
 					  			</h3>
-					  			<h5 class="subtitle is-3">
+					  			<h5 class="subtitle is-4">
 					  				<span class="text-light">
 					  				Только на нашем сайте Вы получите <br>
 					  				 самые выгодные предложения <br>

@@ -5,10 +5,10 @@
 			<div class="column is-6">
 					<h3 class="title is-3">ID заявки - #{{ $order->id }}</h3>
 					<p class="subtitle is-5">Дата/время создания: {{ $order->created_at }}</p>
-					<p class="subtitle is-5">Данные создателя заявки: <br>
-											Имя {{ $order->user->name }} <br> 
-											Мобильный номер {{ $order->user->mobile_number }} <br>
-											Адрес доставки {{$order->delivery_address}}
+					<p class="subtitle is-6">Заказчик<br>
+											<strong>Имя</strong> {{ $order->user->name }} <br> 
+											<strong>Мобильный номер</strong> {{ $order->user->mobile_number }} <br>
+											<strong>Адрес доставки</strong> {{$order->delivery_address}}
 					</p>
 					<div class="order">
 						<table class="table is-bordered">

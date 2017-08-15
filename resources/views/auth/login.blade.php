@@ -2,7 +2,7 @@
 @section('title', 'Авторизация')
 
 @section('content')
-<section class="hero is-fullheight is-info">
+<section class="hero is-fullheight is-blue">
 <div class="hero-body">
 <div class="container">
     <div class="columns is-vcentered">
@@ -68,7 +68,7 @@
 
                         <div class="field">
                             <p class="control">
-                                <button type="submit" class="button is-primary">
+                                <button type="submit" class="button is-success">
                                     Войти
                                 </button>
                             </p>

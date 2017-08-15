@@ -11,7 +11,7 @@
 	<div class="level">
 		<div class="level-left">
 			<a href="{{ route('shop', [$city->slug, $shop->slug] )}} ">
-		    	<p class="title is-5"><strong>{{$shop->brand_name}}</strong></p>
+		    	<p class="title is-5 text-white"><strong>{{$shop->brand_name}}</strong></p>
 			</a>
 		</div>
 

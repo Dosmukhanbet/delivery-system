@@ -12170,6 +12170,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 				mobilenumber: this.phoneNumber,
 				address: this.address,
 				total: this.total,
+				district: this.cost.district.name,
 				deliveryCost: this.cost.cost,
 				totalWithDelivery: this.totalcost,
 				cityId: this.city.id,
@@ -43597,7 +43598,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "type": "text",
       "placeholder": "Укажите мобильный номер",
       "required": "",
-      "pattern": "(\\+7|8)[0-9]{10}"
+      "pattern": "(\\+7)[0-9]{10}"
     },
     domProps: {
       "value": (_vm.phoneNumber)
@@ -43613,7 +43614,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('p', {
     staticClass: "control"
   }, [_c('button', {
-    staticClass: "button is-primary",
+    staticClass: "button is-info",
     class: {
       'is-loading': _vm.sending
     },
