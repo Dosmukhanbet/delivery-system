@@ -19,7 +19,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::group(['prefix' => 'v1'], function(){
 	// Verify Number api/v1/verifynumber
-	Route::post('verifynumber', 'VerificationController@verify');
+	Route::post('verifynumber', 'VerificationController@verifyForApi');
+
+	Route::post('customer', 'ApiController@customer');
 
 	Route::get('categories', 'ApiController@categories');
 	Route::get('cities', 'ApiController@cities');

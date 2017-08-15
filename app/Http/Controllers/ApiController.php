@@ -4,9 +4,12 @@ namespace App\Http\Controllers;
 
 use App\City;
 use App\Shop;
+use App\User;
+use App\Customer;
 use App\ShopCategory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Response;
 
 class ApiController extends Controller
 {
@@ -31,6 +34,56 @@ class ApiController extends Controller
     {
         return City::all(['id', 'name' , 'slug']);
     } 
+
+    public function customer ()
+    {
+        $user = User::where('mobile_number', request('mobilenumber'))->first();
+       
+        if ( ! $user ) 
+        {
+            return $this->newCustomer();
+        } 
+        
+        return $this->userAPI($user);
+
+    }
+
+    
+    public function newCustomer()
+    {
+         $newUser = User::create([
+                'name'          => request('username'),
+                'mobile_number' => request('mobilenumber'),
+                'type'          => 'customer', 
+                'password'      => bcrypt(request('password')),
+                'api_token'     => str_random(60)
+            ]);
+
+        $customer = Customer::create([
+            'user_id' => $newUser->id,
+            'delivery_address' => null, 
+            'city_id' => request('cityId'),
+            'email'  => request('email') ?: null,
+            'ip_address' => request()->ip(),
+            'photo_path' => request('photoPath') ?: null
+            ]);
+
+
+        return $this->userAPI($newUser);
+    }
+
+    
+     public function userAPI(User $user)
+     {
+         return Response::json([
+                 'name' => $user->name,
+                 'mobile_number'=> $user->mobile_number,
+                 'api_token' => $user->api_token,
+                 'city_id'  => $user->customer->city_id,
+                 'photo_path' => $user->customer->photo_path,
+                 'citySlug' => $user->customer->city->slug,
+         ], 200);
+     }  
 
     
     
