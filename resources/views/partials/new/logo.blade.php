@@ -1,7 +1,5 @@
     <a href="/" class="navbar-item">
-    	<p class="subtitle is-3 logo">
-    	zakaz.<span>express</span>
-    	</p>
+    		<img src="/app/lll2532.svg" alt="" width="260" height="26">
     </a>
  
 

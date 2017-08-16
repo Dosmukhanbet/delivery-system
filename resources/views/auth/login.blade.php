@@ -17,7 +17,7 @@
 
                         <div class="field">
                             <label for="mobile_number" class="label">Мобильный номер
-                                 <small class="small-info">Формат: +77075558844</small>
+                                  <small class="small-info">Формат: +77075558844</small>
                             </label>
                             <p class="control">
                                 <input id="mobile_number" 

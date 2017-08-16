@@ -5773,7 +5773,7 @@ a.dropdown-item.is-active {
 }
 
 .nav-toggle:hover {
-  background-color: #41474f;
+  background-color: #e8e8e8;
 }
 
 .nav-toggle.is-active span {
@@ -6079,7 +6079,7 @@ a.nav-item:not(.button).is-tab.is-active {
 }
 
 .navbar-burger:hover {
-  background-color: #41474f;
+  background-color: #e8e8e8;
 }
 
 .navbar-burger.is-active span {
@@ -9650,7 +9650,7 @@ a.shop_link p:hover {
 }
 
 .login > h3.title {
-  color: #000 !important;
+  color: #4D545D !important;
 }
 
 .why_us {
@@ -9661,11 +9661,11 @@ a.navbar-item > .logo {
   font-family: 'Baloo Paaji', cursive;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #fff;
+  color: #01AFB2;
 }
 
 a.navbar-item:hover {
-  background: #4D545D;
+  background: #f5f5f5;
 }
 
 a.navbar-item > .logo > span {
@@ -9674,11 +9674,10 @@ a.navbar-item > .logo > span {
 
 p.footer_logo > a {
   font-family: 'Marmelad', sans-serif;
-  color: white !important;
 }
 
-.footer_logo > a > span {
-  color: white;
+.logo--img {
+  padding-top: 8px;
 }
 
 ul.benefits {
@@ -9801,17 +9800,17 @@ body, html {
 }
 
 .newnav {
-  background: #4D545D;
+  background: #f5f5f5;
 }
 
 .navbar {
-  background: #4D545D;
+  background: #f5f5f5;
 }
 
 .navbar .navbar-menu {
-  background: #4D545D;
+  background: #f5f5f5;
 }
 
 .bg-hero {
-  background: #4D545D;
+  background: #f5f5f5;
 }
