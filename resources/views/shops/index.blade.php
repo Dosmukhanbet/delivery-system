@@ -8,7 +8,7 @@
 		  <div class="hero-body">
 		    <div class="container">
 		    	<h2 class="title is-4 marmelad ">
-				     <strong>{{ $city->name }} /	{{ $category->name }}</strong>        
+				     <strong>@include('shops.partials.breadcrumb')</strong>        
 				</h2>
 		    </div>
 		  </div>

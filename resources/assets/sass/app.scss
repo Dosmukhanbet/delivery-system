@@ -16,7 +16,7 @@ $ORIOLES_ORANGE:#EF4F1A;
 $primary:#274060;
 $warning:#F2C71D;
 $info:#0E839E;
-$dark:#012A36;
+$dark:#4D545D;
 $danger:#F44E3F;
 $success:#01AFB2;
 
@@ -62,7 +62,7 @@ body,html {
     background-color: initi
 }
 
-$nav-color:#4D545D;
+$nav-color:$dark;
 .newnav {
 	background:$nav-color;
 }

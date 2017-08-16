@@ -53,10 +53,16 @@ class AppServiceProvider extends ServiceProvider
         });
         
          $cities = City::all();
-         view()->composer('admin.shops', function($view) use($cities) 
+         $categories = ShopCategory::all();
+         view()->composer('admin.shops', function($view) use($cities, $categories) 
          {
             $view->with('cities', $cities)
-                 ->with('shopcategories', ShopCategory::all());
+                 ->with('shopcategories', $categories);
+         });
+
+         view()->composer('shops.partials.breadcrumb', function($view) use($categories) 
+         {
+            $view->with('categories', $categories);
          });
 
          view()->composer('partials.new.select_city', function($view) use($cities)
