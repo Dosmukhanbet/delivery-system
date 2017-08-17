@@ -1,4 +1,4 @@
- <div class="newnav">
+ <div class="newnav newnav-shadow">
    <div class="container">
        <nav class="navbar" >
             <div class="navbar-brand">
