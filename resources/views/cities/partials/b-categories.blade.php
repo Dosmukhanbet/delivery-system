@@ -17,7 +17,7 @@
 										<p class="cat_block_text subtitle is-3">
 											{{ $category->name }}
 										</p>
-										<figure class="cat_block_icon image is-64x64">
+										<figure class="cat_block_icon image is-48x48">
 											<img src="/app/{{$category->thumbnail_path}}" alt="">
 										</figure>
 									</div>	   	
