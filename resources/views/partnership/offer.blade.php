@@ -39,6 +39,10 @@
 		  </div>
 		</section>
 		<div class="container marmelad mt-2 mb-6">
+			{{-- <div class="switch is-rounded is-success">
+			  <input id="yes-no" type="checkbox" name="exampleSwitch">
+			  <label for="yes-no">Доставлено / НЕ доставлено</label>
+			</div> --}}
 			<div class="level">
 					<div class="level-item has-text-centered">
 						 <h2 class="subtitle is-3">

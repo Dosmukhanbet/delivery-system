@@ -11,6 +11,9 @@
 			<a href="" class="button is-link marmelad" @click.prevent="clearCart"><small>очистить корзину</small></a>
 		</div>
 	</div>
+	<div>
+		{{ time }}
+	</div>
 		
 		<ul>
 			<li v-for="(item, index) in items">
@@ -48,8 +51,10 @@
 				    :rates="shop.rates"
 				    :city="city"
 				    :shop="shop"
-				    v-show="showOrder" 
-				    @close="showOrder = false && clearCart">
+				     v-show="showOrder" 
+				    @close="showOrder = false"
+					@orderFinished ="clearCart"			
+				    >
 				</order>
 		</transition>
 	</div>
@@ -57,13 +62,14 @@
 
 <script>
 	import Order from './Order.vue';
+	import moment from 'moment';
 
 	export default {
 		data() {
 			return {
 				showOrder:false,
 				items: [],
-				summa : 0
+				summa : 0,
 			}
 		},
 		props: ['minorder', 'city', 'shop'],
@@ -84,6 +90,9 @@
 			},
 			notEnough() {
 				return this.minorder - this.total;
+			},
+			time () {
+				return moment.duration().asHours(150)
 			} 
 		},
 		

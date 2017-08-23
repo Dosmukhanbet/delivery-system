@@ -9397,6 +9397,435 @@ label.panel-block:hover {
   padding: 3rem 1.5rem 6rem;
 }
 
+.switch {
+  position: relative;
+  outline: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  display: inline-block;
+}
+
+.switch input {
+  position: absolute;
+  margin-bottom: 0;
+  opacity: 0;
+  left: 0;
+}
+
+.switch.has-label-bottom label {
+  text-indent: -50%;
+  padding-top: 2rem;
+}
+
+.switch label {
+  position: relative;
+  display: block;
+  width: 4rem;
+  height: 2rem;
+  border: 0.1rem solid transparent;
+  border-radius: 3px;
+  background: #b5b5b5;
+  transition: all 0.25s ease-out;
+  line-height: 2rem;
+  text-indent: 4.5rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+input + .switch label {
+  margin: 0;
+}
+
+.switch label::before {
+  position: absolute;
+  top: calc(50% - (1.5rem  / 2));
+  left: 0.25rem;
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  border-radius: 3px;
+  background: white;
+  transition: all 0.25s ease-out;
+  content: '';
+}
+
+.switch input:checked ~ label {
+  background: #274060;
+}
+
+.switch input:checked ~ label::before {
+  left: 2.125rem;
+}
+
+.switch.is-outlined input ~ label {
+  background-color: transparent;
+  border-color: #b5b5b5;
+}
+
+.switch.is-outlined input ~ label::before {
+  background: #b5b5b5;
+}
+
+.switch.is-outlined input:checked ~ label {
+  background-color: transparent;
+  border-color: #274060;
+}
+
+.switch.is-outlined input:checked ~ label::before {
+  background: #274060;
+}
+
+.switch.is-rounded input ~ label {
+  border-radius: 20px;
+}
+
+.switch.is-rounded input ~ label::before {
+  border-radius: 50%;
+}
+
+.switch.is-small.has-label-bottom label {
+  text-indent: -50%;
+  padding-top: 1.5rem;
+}
+
+.switch.is-small label {
+  position: relative;
+  display: block;
+  width: 3rem;
+  height: 1.5rem;
+  border: 0.1rem solid transparent;
+  border-radius: 3px;
+  background: #b5b5b5;
+  transition: all 0.25s ease-out;
+  line-height: 1.5rem;
+  text-indent: 3.375rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+input + .switch.is-small label {
+  margin: 0;
+}
+
+.switch.is-small label::before {
+  position: absolute;
+  top: calc(50% - (1rem  / 2));
+  left: 0.25rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  border-radius: 3px;
+  background: white;
+  transition: all 0.25s ease-out;
+  content: '';
+}
+
+.switch.is-small input:checked ~ label {
+  background: #274060;
+}
+
+.switch.is-small input:checked ~ label::before {
+  left: 1.625rem;
+}
+
+.switch.is-small.is-outlined input ~ label {
+  background-color: transparent;
+  border-color: #b5b5b5;
+}
+
+.switch.is-small.is-outlined input ~ label::before {
+  background: #b5b5b5;
+}
+
+.switch.is-small.is-outlined input:checked ~ label {
+  background-color: transparent;
+  border-color: #274060;
+}
+
+.switch.is-small.is-outlined input:checked ~ label::before {
+  background: #274060;
+}
+
+.switch.is-small.is-rounded input ~ label {
+  border-radius: 20px;
+}
+
+.switch.is-small.is-rounded input ~ label::before {
+  border-radius: 50%;
+}
+
+.switch.is-medium.has-label-bottom label {
+  text-indent: -50%;
+  padding-top: 2.5rem;
+}
+
+.switch.is-medium label {
+  position: relative;
+  display: block;
+  width: 5rem;
+  height: 2.5rem;
+  border: 0.1rem solid transparent;
+  border-radius: 3px;
+  background: #b5b5b5;
+  transition: all 0.25s ease-out;
+  line-height: 2.5rem;
+  text-indent: 5.625rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+input + .switch.is-medium label {
+  margin: 0;
+}
+
+.switch.is-medium label::before {
+  position: absolute;
+  top: calc(50% - (2rem  / 2));
+  left: 0.25rem;
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  border-radius: 3px;
+  background: white;
+  transition: all 0.25s ease-out;
+  content: '';
+}
+
+.switch.is-medium input:checked ~ label {
+  background: #274060;
+}
+
+.switch.is-medium input:checked ~ label::before {
+  left: 2.625rem;
+}
+
+.switch.is-medium.is-outlined input ~ label {
+  background-color: transparent;
+  border-color: #b5b5b5;
+}
+
+.switch.is-medium.is-outlined input ~ label::before {
+  background: #b5b5b5;
+}
+
+.switch.is-medium.is-outlined input:checked ~ label {
+  background-color: transparent;
+  border-color: #274060;
+}
+
+.switch.is-medium.is-outlined input:checked ~ label::before {
+  background: #274060;
+}
+
+.switch.is-medium.is-rounded input ~ label {
+  border-radius: 20px;
+}
+
+.switch.is-medium.is-rounded input ~ label::before {
+  border-radius: 50%;
+}
+
+.switch.is-large.has-label-bottom label {
+  text-indent: -50%;
+  padding-top: 3rem;
+}
+
+.switch.is-large label {
+  position: relative;
+  display: block;
+  width: 6rem;
+  height: 3rem;
+  border: 0.1rem solid transparent;
+  border-radius: 3px;
+  background: #b5b5b5;
+  transition: all 0.25s ease-out;
+  line-height: 3rem;
+  text-indent: 6.75rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+input + .switch.is-large label {
+  margin: 0;
+}
+
+.switch.is-large label::before {
+  position: absolute;
+  top: calc(50% - (2.5rem  / 2));
+  left: 0.25rem;
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  border-radius: 3px;
+  background: white;
+  transition: all 0.25s ease-out;
+  content: '';
+}
+
+.switch.is-large input:checked ~ label {
+  background: #274060;
+}
+
+.switch.is-large input:checked ~ label::before {
+  left: 3.125rem;
+}
+
+.switch.is-large.is-outlined input ~ label {
+  background-color: transparent;
+  border-color: #b5b5b5;
+}
+
+.switch.is-large.is-outlined input ~ label::before {
+  background: #b5b5b5;
+}
+
+.switch.is-large.is-outlined input:checked ~ label {
+  background-color: transparent;
+  border-color: #274060;
+}
+
+.switch.is-large.is-outlined input:checked ~ label::before {
+  background: #274060;
+}
+
+.switch.is-large.is-rounded input ~ label {
+  border-radius: 20px;
+}
+
+.switch.is-large.is-rounded input ~ label::before {
+  border-radius: 50%;
+}
+
+.switch.is-white input:checked ~ label {
+  background: white;
+}
+
+.switch.is-white.is-outlined input:checked ~ label {
+  background-color: transparent;
+  border-color: white !important;
+}
+
+.switch.is-white.is-outlined input:checked ~ label::before {
+  background: white;
+}
+
+.switch.is-black input:checked ~ label {
+  background: #0a0a0a;
+}
+
+.switch.is-black.is-outlined input:checked ~ label {
+  background-color: transparent;
+  border-color: #0a0a0a !important;
+}
+
+.switch.is-black.is-outlined input:checked ~ label::before {
+  background: #0a0a0a;
+}
+
+.switch.is-light input:checked ~ label {
+  background: whitesmoke;
+}
+
+.switch.is-light.is-outlined input:checked ~ label {
+  background-color: transparent;
+  border-color: whitesmoke !important;
+}
+
+.switch.is-light.is-outlined input:checked ~ label::before {
+  background: whitesmoke;
+}
+
+.switch.is-dark input:checked ~ label {
+  background: #4D545D;
+}
+
+.switch.is-dark.is-outlined input:checked ~ label {
+  background-color: transparent;
+  border-color: #4D545D !important;
+}
+
+.switch.is-dark.is-outlined input:checked ~ label::before {
+  background: #4D545D;
+}
+
+.switch.is-primary input:checked ~ label {
+  background: #274060;
+}
+
+.switch.is-primary.is-outlined input:checked ~ label {
+  background-color: transparent;
+  border-color: #274060 !important;
+}
+
+.switch.is-primary.is-outlined input:checked ~ label::before {
+  background: #274060;
+}
+
+.switch.is-info input:checked ~ label {
+  background: #0E839E;
+}
+
+.switch.is-info.is-outlined input:checked ~ label {
+  background-color: transparent;
+  border-color: #0E839E !important;
+}
+
+.switch.is-info.is-outlined input:checked ~ label::before {
+  background: #0E839E;
+}
+
+.switch.is-success input:checked ~ label {
+  background: #01AFB2;
+}
+
+.switch.is-success.is-outlined input:checked ~ label {
+  background-color: transparent;
+  border-color: #01AFB2 !important;
+}
+
+.switch.is-success.is-outlined input:checked ~ label::before {
+  background: #01AFB2;
+}
+
+.switch.is-warning input:checked ~ label {
+  background: #F2C71D;
+}
+
+.switch.is-warning.is-outlined input:checked ~ label {
+  background-color: transparent;
+  border-color: #F2C71D !important;
+}
+
+.switch.is-warning.is-outlined input:checked ~ label::before {
+  background: #F2C71D;
+}
+
+.switch.is-danger input:checked ~ label {
+  background: #F44E3F;
+}
+
+.switch.is-danger.is-outlined input:checked ~ label {
+  background-color: transparent;
+  border-color: #F44E3F !important;
+}
+
+.switch.is-danger.is-outlined input:checked ~ label::before {
+  background: #F44E3F;
+}
+
 .hero_bg {
   background: url("./images/hero_bg.jpg");
   background-repeat: no-repeat;
@@ -9801,7 +10230,7 @@ body, html {
 
 .newnav {
   background: #f5f5f5;
-  padding: 0.75rem;
+  padding: 0.75rem 0;
 }
 
 div.newnav-shadow {

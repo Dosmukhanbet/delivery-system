@@ -79,6 +79,7 @@ Route::group(['prefix' => 'customer', 'middleware' => ['auth','customer']], func
 		Route::get('profile','CustomerController@profile');
 		Route::get('feedbacks','CustomerController@feedbacks');
 		Route::post('leavefeedback','CustomerController@saveFeedback');
+		Route::post('delivery_status/update','CustomerController@updateOrderDeliveryStatus');
 });
 
 Route::get('emailtest', function(){

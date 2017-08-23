@@ -14,6 +14,8 @@
 					      <th>Детали заказа</th>
 					      <th>Продавец <br> Бренд</th>
 					      <th>Отзывы</th>
+					      <th>Статус доставки
+					      </th>
 					    </tr>
 					  </thead>
 					@foreach($orders as $order)
@@ -46,6 +48,10 @@
 								@endif
 
 								
+							</td>
+							<td>
+								<delivery-status :order="{{$order}}">
+								</delivery-status>							
 							</td>
 						</tr>
 					@endforeach

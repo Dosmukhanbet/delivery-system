@@ -37,7 +37,6 @@ $success:#01AFB2;
 @import "partnership";
 @import "tooltip";
 
-
 body,html { 
     height: 100%;
     margin: 0;
@@ -65,7 +64,7 @@ body,html {
 $nav-color:#f5f5f5;
 .newnav {
 	background:$nav-color;
-    padding: 0.75rem;
+    padding: 0.75rem 0;
 }
 
 div.newnav-shadow{

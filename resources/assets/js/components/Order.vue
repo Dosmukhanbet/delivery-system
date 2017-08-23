@@ -3,7 +3,7 @@
 		 <div class="modal-background"></div>
 		  <div class="modal-card">
 		    <header class="modal-card-head">
-		      <p class="modal-card-title arsenal has-text-centered" >Оформление Заказа</p>
+		      <p class="modal-card-title arsenal has-text-centered">Оформление Заказа</p>
 		      <button class="delete" 
 		      		  @click="$emit('close')">
       		  </button>
@@ -75,7 +75,7 @@
 									    enter-active-class="animated flipInX"
 									    leave-active-class="animated flipOutX"
 									  >	
-										<p v-show="waitSmsTooLong">
+										<p v-show="waitSmsTooLong && isLoading == false">
 											Не присло смс? <a class="button is-small" @click.prevent="verification = false">Попробуйте заново</a>
 										</p>
 									</transition>
@@ -111,17 +111,15 @@
 		      				<hr>
 		      				<li v-show="cost"><strong>Итого: <span v-text="totalcost"></span>тг.</strong></li>
 		      			</ul>
-		      			 <!-- <div id="map" style="width: 300px; height: 400px"></div> -->
-		      			<div v-show="orderFinished" class="notification is-success">
- 								Заказ успешно сформирован!<br>
- 								В ближайшее время курьер свяжеться с Вами.
-						</div>
 		      		</div>
 		      		<!-- END RIGHT SIDE -->
 		      	</div>
 		      	<div v-show="orderFinished">
-		      		<p class="title is-5 has-text-centered marmelad">
-		      		Ваш заказ сформирован, ожидайте курьера!
+		      		<p class="title is-5 is-spaced has-text-centered marmelad">
+		      			Ваш заказ оформлен!
+		      		</p>
+		      		<p class="subtitle is-5 has-text-centered marmelad">
+		      			В ближайшее время с Вами свяжется менеджер ресторана для уточнения деталей
 		      		</p>
 		      	</div>
 		    </section>
@@ -235,14 +233,14 @@ methods: {
 					this.isLoading = true;
 					axios.post('/orders', this.orderDatas())
 						 .then(response => {
-						  	console.log(response);
+						  	// console.log(response);
 						  	this.isLoading = false;
 						  	this.orderFinished = true;
 						  	flash('Заявка успешно принята!');
 						  	setTimeout(() => {
-				                    this.$emit('close');
-				                    location.reload();
-				                }, 3500);
+				                    this.$emit('orderFinished');
+				                    // location.reload();
+				                }, 1500);
 						  })
 						 .catch(error => {
 						  	console.log(error);
