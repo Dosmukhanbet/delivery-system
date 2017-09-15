@@ -15,6 +15,13 @@
 		</section>
  		<div class="container">
  			<div class="columns">
+ 			{{-- Temporary --}}
+ 			 {{-- 	<div class="column is-12 has-text-centered mt-2">
+ 			 		<h2 class="title is-5">
+ 			 			В данный момент идеть регистрация ресторанов, фаст-фуд заведении, кулинарии. Скоро запуск!!! <br>
+						Для регистрации вашего заведения обращайтесь по тел.+77078835953
+ 			 		</h2>
+ 			 	</div> --}}
  				<div class="column is-7 mt-2 shops">
 		 			@foreach($shops as $shop)
 								<div class="box shop">

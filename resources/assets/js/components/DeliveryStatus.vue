@@ -34,7 +34,6 @@
 				this.isDelivered = ! this.isDelivered;
 
 				this.updateStatus();
-
 			},
 			updateStatus(){
 				let data = {

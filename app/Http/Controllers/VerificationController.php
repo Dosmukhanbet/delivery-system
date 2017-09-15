@@ -29,14 +29,13 @@ class VerificationController extends Controller
     
     public function verifyForApi ()
     {
-        if( ! preg_match('/(\+7)[0-9]{10}/',request('phoneNumber')) ) 
-        {
-            return Response::json([
-                'message' => 'Введите номер в формате +7хххххххххх'
-                ],422);
-
-        }
-
+        
+        // if( ! preg_match('/(\+7)[0-9]{10}/',request('phoneNumber')) ) 
+        // {
+        //     return Response::json([
+        //         'error_message' => 'Введите номер в формате +7хххххххххх' 
+        //         ],422);
+        // }
         $this->verify();
     } 
 
