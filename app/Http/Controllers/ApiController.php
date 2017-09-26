@@ -26,7 +26,7 @@ class ApiController extends Controller
 
     public function shops(City $city)
     {
-    	return Shop::where('city_id', $city->id)
+    	return   Shop::where('city_id', $city->id)
     				 ->get(['name', 'slug' , 'city_id']);
     }
 

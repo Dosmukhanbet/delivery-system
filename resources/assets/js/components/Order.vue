@@ -205,7 +205,7 @@ methods: {
 				let data = {
 					phoneNumber:this.phoneNumber
 				}
-
+				console.log(data);
 				if(this.signedIn) 
 				{ 
 				  return this.makeOrder();

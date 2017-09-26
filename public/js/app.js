@@ -28216,7 +28216,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			var data = {
 				phoneNumber: this.phoneNumber
 			};
-
+			console.log(data);
 			if (this.signedIn) {
 				return this.makeOrder();
 			}
