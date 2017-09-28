@@ -46,7 +46,7 @@ class ApiController extends Controller
         {
             return Response::json([
                  'shop' => $shop,
-                 'products'=> ['sushi', 'mushi', 'pushi']
+                 'products'=> $shop->products()
          ], 200);
         }
         
