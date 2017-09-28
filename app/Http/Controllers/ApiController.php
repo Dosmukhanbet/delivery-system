@@ -41,7 +41,7 @@ class ApiController extends Controller
     {
         $shop = Shop::where('id', $shopId)->first();
 
-        dd($shop->products);
+        // dd($shop->products);
 
         if($shop)
         {
