@@ -41,6 +41,8 @@ class ApiController extends Controller
     {
         $shop = Shop::with('products')->where('id', $shopId)->get(['brand_name', 'min_order', 'delivery_time', 'description', 'open_time', 'close_time', 'photo_path', 'thumbnail_path']);
 
+        dd($shop);
+
 
         if($shop)
         {
