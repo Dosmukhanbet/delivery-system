@@ -41,13 +41,11 @@ class ApiController extends Controller
     {
         $shop = Shop::where('id', $shopId)->first();
 
-        // dd($shop->products);
-
         if($shop)
         {
             return Response::json([
                  'shop' => $shop,
-                 'products'=> $shop->products->get('name', 'price')
+                 'products'=> $shop->products
          ], 200);
         }
         
