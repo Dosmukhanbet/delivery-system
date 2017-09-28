@@ -39,14 +39,13 @@ class ApiController extends Controller
     */
     public function shop($shopId)
     {
-        $shop = Shop::where('id', $shopId)->first(['brand_name', 'min_order', 'delivery_time', 'description', 'open_time', 'close_time', 'photo_path', 'thumbnail_path']);
+        $shop = Shop::with('products')->where('id', $shopId)->first(['brand_name', 'min_order', 'delivery_time', 'description', 'open_time', 'close_time', 'photo_path', 'thumbnail_path']);
 
 
         if($shop)
         {
             return Response::json([
-                 'shop' => $shop,
-                 'products'=> $shop->products()
+                 'shop' => $shop
          ], 200);
         }
         
