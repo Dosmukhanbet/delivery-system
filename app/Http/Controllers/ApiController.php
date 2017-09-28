@@ -44,9 +44,7 @@ class ApiController extends Controller
 
         if($shop)
         {
-            return Response::json([
-                 'shop' => $shop
-         ], 200);
+            return $shop;
         }
         
         return Response::json(['error_message' => 'Заведение не найдено'], 422);
