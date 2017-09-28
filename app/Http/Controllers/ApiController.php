@@ -41,16 +41,18 @@ class ApiController extends Controller
     {
         $shop = Shop::where('id', $shopId)->first(['brand_name', 'min_order', 'delivery_time', 'description', 'open_time', 'close_time', 'photo_path', 'thumbnail_path']);
 
+
         if($shop)
         {
             return Response::json([
                  'shop' => $shop,
-                 'products'=> $shop->products
+                 'products'=> ['sushi', 'mushi', 'pushi']
          ], 200);
         }
         
         return Response::json(['error_message' => 'Заведение не найдено'], 422);
     } 
+
 
     public function cities()
     {
