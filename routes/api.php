@@ -25,7 +25,8 @@ Route::group(['prefix' => 'v1'], function(){
 
 	Route::get('categories', 'ApiController@categories');
 	Route::get('cities', 'ApiController@cities');
-	Route::get('shops/{city}', 'ApiController@shops');
+	
+	Route::get('cities/{city}/categories/{category}/shops', 'ApiController@shops');
 	Route::get('shops/{shop}/products', 'ApiController@products');
 });
 

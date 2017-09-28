@@ -24,10 +24,14 @@ class ApiController extends Controller
     	return ShopCategory::all(['id' ,'name', 'slug', 'photo_path', 'thumbnail_path']);
     }  
 
-    public function shops(City $city)
+    // 'https://zakaz.express/api/v1/cities/' + this.props.user.citySlug + '/categories/' + category.slug + '/shops' 
+    public function shops(City $city, ShopCategory $category)
     {
-    	return   Shop::where('city_id', $city->id)
-    				 ->get(['name', 'slug' , 'city_id']);
+
+       return  $category->shops()
+                          ->where('city_id', $city->id)
+                          ->get();
+
     }
 
     public function cities()
