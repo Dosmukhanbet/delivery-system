@@ -45,8 +45,8 @@ class ApiController extends Controller
         if($shop)
         {
             return Response::json([
-                 'shop' => $shop,
-                 'products'=> $shop->products
+                 'shop' => $shop->only(['brand_name']),
+                 'products'=> $shop->products->only(['name', 'price'])
          ], 200);
         }
         
