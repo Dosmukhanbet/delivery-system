@@ -34,6 +34,19 @@ class ApiController extends Controller
 
     }
 
+    /**
+    * Return Shop with products
+    */
+    public function shop($shopId)
+    {
+        $shop = Shop::where('id', $shopId)->first();
+
+        return Response::json([
+                 'shop' => $shop,
+                 'products'=> $shop->products
+         ], 200);
+    } 
+
     public function cities()
     {
         return City::all(['id', 'name' , 'slug']);
