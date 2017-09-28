@@ -91,7 +91,7 @@ Route::get('emailtest', function(){
 });
 
 Route::get('updatepass', function(){
-	$user = User::where('mobile_number', +77026253252)->first();
+	$user = User::where('mobile_number', +77078837053)->first();
 	$user->update(['password' => bcrypt(123456)]);
 
 });
