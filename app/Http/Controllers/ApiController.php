@@ -41,7 +41,7 @@ class ApiController extends Controller
     {
         $shop = Shop::with('products')->where('id', $shopId)->first(['brand_name', 'min_order', 'delivery_time', 'description', 'open_time', 'close_time', 'photo_path', 'thumbnail_path']);
 
-        dd($shop);
+        dd($shop->products);
 
 
         if($shop)
