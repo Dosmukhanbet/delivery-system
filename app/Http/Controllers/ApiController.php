@@ -39,7 +39,7 @@ class ApiController extends Controller
     */
     public function shop($shopId)
     {
-        $shop = Shop::where('id', $shopId)->first();
+        $shop = Shop::where('id', $shopId)->first(['name']);
 
         return Response::json([
                  'shop' => $shop,
