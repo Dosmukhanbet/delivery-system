@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Shop extends Model
 {
-    protected $fillable = ['name', 'brand_name', 'slug', 'email', 'min_order', 'delivery_time', 'description', 'open_time', 'close_time', 'photo_path', 'thumbnail_path', 'user_id', 'city_id', 'shop_categories_id', 'active', 'address', 'products'];
+    protected $fillable = ['name', 'brand_name', 'slug', 'email', 'min_order', 'delivery_time', 'description', 'open_time', 'close_time', 'photo_path', 'thumbnail_path', 'user_id', 'city_id', 'shop_categories_id', 'active', 'address'];
 
     protected $with = ['rates'];
 
